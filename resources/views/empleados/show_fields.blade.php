@@ -1,0 +1,102 @@
+<!-- Id Field -->
+<div class="form-group">
+    {!! Form::label('id', 'Id:') !!}
+    <p>{!! $empleado->id !!}</p>
+</div>
+
+<!-- Identificacion Field -->
+<div class="form-group">
+    {!! Form::label('identificacion', 'Identificacion:') !!}
+    <p>{!! $empleado->identificacion !!}</p>
+</div>
+
+<!-- Name Field -->
+<div class="form-group">
+    {!! Form::label('name', 'Name:') !!}
+    <p>{!! $empleado->name !!}</p>
+</div>
+
+<!-- Apellido Field -->
+<div class="form-group">
+    {!! Form::label('apellido', 'Apellido:') !!}
+    <p>{!! $empleado->apellido !!}</p>
+</div>
+
+<!-- Telefono Field -->
+<div class="form-group">
+    {!! Form::label('telefono', 'Telefono:') !!}
+    <p>{!! $empleado->telefono !!}</p>
+</div>
+
+<!-- Correoelectronico Field -->
+<div class="form-group">
+    {!! Form::label('correoelectronico', 'Correoelectronico:') !!}
+    <p>{!! $empleado->correoelectronico !!}</p>
+</div>
+
+<!-- Id Tipovinculacion Field -->
+<div class="form-group">
+    {!! Form::label('id_tipovinculacion', 'Id Tipovinculacion:') !!}
+    <p>{!! $empleado->id_tipovinculacion !!}</p>
+</div>
+
+<!-- Fechadenacimiento Field -->
+<div class="form-group">
+    {!! Form::label('fechadenacimiento', 'Fechadenacimiento:') !!}
+    <p>{!! $empleado->fechadenacimiento !!}</p>
+</div>
+
+<!-- Salario Field -->
+<div class="form-group">
+    {!! Form::label('salario', 'Salario:') !!}
+    <p>{!! $empleado->salario !!}</p>
+</div>
+
+<!-- Id Cargo Field -->
+<div class="form-group">
+    {!! Form::label('id_cargo', 'Id Cargo:') !!}
+    <p>{!! $empleado->id_cargo !!}</p>
+</div>
+
+<!-- Id Sede Field -->
+<div class="form-group">
+    {!! Form::label('id_sede', 'Id Sede:') !!}
+    <p>{!! $empleado->id_sede !!}</p>
+</div>
+
+<!-- Fechadeingreso Field -->
+<div class="form-group">
+    {!! Form::label('fechadeingreso', 'Fechadeingreso:') !!}
+    <p>{!! $empleado->fechadeingreso !!}</p>
+</div>
+
+<!-- Estado Field -->
+<div class="form-group">
+    {!! Form::label('estado', 'Estado:') !!}
+    <p>{!! $empleado->estado !!}</p>
+</div>
+
+<!-- Genero Field -->
+<div class="form-group">
+    {!! Form::label('genero', 'Genero:') !!}
+    <p>{!! $empleado->genero !!}</p>
+</div>
+
+<!-- Created At Field -->
+<div class="form-group">
+    {!! Form::label('created_at', 'Created At:') !!}
+    <p>{!! $empleado->created_at !!}</p>
+</div>
+
+<!-- Updated At Field -->
+<div class="form-group">
+    {!! Form::label('updated_at', 'Updated At:') !!}
+    <p>{!! $empleado->updated_at !!}</p>
+</div>
+
+<!-- Deleted At Field -->
+<div class="form-group">
+    {!! Form::label('deleted_at', 'Deleted At:') !!}
+    <p>{!! $empleado->deleted_at !!}</p>
+</div>
+
