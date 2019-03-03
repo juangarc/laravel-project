@@ -10,6 +10,9 @@ use App\Repositories\AusentismoRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use App\Models\Empleado;
+use App\Models\TipoAusentismo;
+
 
 class AusentismoController extends AppBaseController
 {
@@ -39,7 +42,8 @@ class AusentismoController extends AppBaseController
      */
     public function create()
     {
-        return view('ausentismos.create');
+        $tipoausentismos = Tipoausentismo::all();
+        return view('ausentismos.create')->with(['tipoausentismos' => $tipoausentismos]);
     }
 
     /**
@@ -148,4 +152,11 @@ class AusentismoController extends AppBaseController
 
         return redirect(route('ausentismos.index'));
     }
+
+    public function showDataEmploy ($id)
+    {
+       $employ = Empleado::where('identificacion', '=', $id)->first()->toArray();
+    //    var_dump($employ);
+       echo json_encode($employ);
+   }
 }

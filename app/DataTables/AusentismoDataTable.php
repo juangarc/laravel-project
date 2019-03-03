@@ -67,7 +67,6 @@ class AusentismoDataTable extends DataTable
             'fecha_registro',
             'id_empleado',
             'id_tipoausentismo',
-            'id_cargo',
             'fecha_inicio',
             'tiempo_ausencia',
             'costo_ausencia',

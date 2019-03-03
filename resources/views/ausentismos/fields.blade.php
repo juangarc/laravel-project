@@ -1,59 +1,38 @@
-<!-- Fecha Registro Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('fecha_registro', 'Fecha Registro:') !!}
-    {!! Form::date('fecha_registro', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Id Empleado Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('id_empleado', 'Id Empleado:') !!}
-    {!! Form::number('id_empleado', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Id Tipoausentismo Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('id_tipoausentismo', 'Id Tipoausentismo:') !!}
-    {!! Form::number('id_tipoausentismo', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Id Cargo Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('id_cargo', 'Id Cargo:') !!}
-    {!! Form::number('id_cargo', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Fecha Inicio Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('fecha_inicio', 'Fecha Inicio:') !!}
-    {!! Form::date('fecha_inicio', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Tiempo Ausencia Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('tiempo_ausencia', 'Tiempo Ausencia:') !!}
-    {!! Form::number('tiempo_ausencia', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Costo Ausencia Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('costo_ausencia', 'Costo Ausencia:') !!}
-    {!! Form::number('costo_ausencia', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Grado Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('Grado', 'Grado:') !!}
-    {!! Form::text('Grado', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Observacion Field -->
-<div class="form-group col-sm-12 col-lg-12">
-    {!! Form::label('observacion', 'Observacion:') !!}
-    {!! Form::textarea('observacion', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Submit Field -->
-<div class="form-group col-sm-12">
-    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('ausentismos.index') !!}" class="btn btn-default">Cancel</a>
-</div>
+                    <label>Fecha de Registro* </label>
+                    <input type="date" name="fecha_registro" class="form-control">
+                    <label>Identificacion del empleado* </label>
+                    <input type="number"  class="form-control" id="codigo">
+                    <input type="button" class="btn btn-primary" value="Buscar" onclick="getMessage();">
+                    <br>
+                    <label>Nombre de Empleado* </label>
+                    <input type="text" name="id_ident" class="form-control" id="id_emple">
+                    <input name="id_empleado" type="hidden" id="iden">
+                    <label>Tipo de Ausentismo* </label>
+                    {{-- <input type="select" name="id_tipoausentismo" class="form-control"> --}}
+                     <select name="id_tipoausentismo" id="id_tipoausentismo" class="form-control">
+                        @foreach ($tipoausentismos as $tipoausentismo) 
+                        <option value="{{ $tipoausentismo['id'] }}">{{ $tipoausentismo['name'] }}</option>
+                        @endforeach
+                        </select> -->
+                    <label>Fecha de Inicio* </label>
+                    <input type="date" name="fecha_inicio" class="form-control">
+                    <label>Tiempo de Ausencia / Dias* </label>
+                    <input type="text" name="tiempo_ausencia" id="tiempo_ausencia" class="form-control">
+                    <input type="button" class="btn btn-primary" value="Calcular" onclick="sumar();">
+                    <br>
+                    <label>Costo de Ausencia / $ </label>
+                    <input  type="number" name="costo_ausencia" id="costo_ausencia" class="form-control">
+                    <label>Grado* </label>
+                    <select name="grado" id="grado" class="form-control">
+                    <option value="LEVE">LEVE</option>
+                    <option value="SEVERO">SEVERO</option>
+                    </select>                
+                    <label>Observacion* </label>
+                    <input type="text" name="observacion" class="form-control">
+                    </div>
+                    <!-- Submit Field -->
+    <div class="form-group col-sm-12">
+        {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+        <a href="{!! route('ausentismos.index') !!}" class="btn btn-default">Cancel</a>
+    </div>
