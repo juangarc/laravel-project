@@ -6,7 +6,7 @@
                     <input type="button" class="btn btn-primary" value="Buscar" onclick="getMessage();">
                     <br>
                     <label>Nombre de Empleado* </label>
-                    <input type="text" name="id_ident" class="form-control" id="id_emple">
+                    <input type="text" name="id_ident" class="form-control" id="id_emple" disabled>
                     <input name="id_empleado" type="hidden" id="iden">
                     <label>Tipo de Ausentismo* </label>
                     {{-- <input type="select" name="id_tipoausentismo" class="form-control"> --}}
