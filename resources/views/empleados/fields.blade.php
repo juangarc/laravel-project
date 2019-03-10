@@ -66,15 +66,22 @@
 
 <!-- Estado Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('estado', 'Estado:') !!}
-    {!! Form::text('estado', null, ['class' => 'form-control']) !!}
+        <label>Estado </label>
+        <select name="estado" id="estado" class="form-control">
+        <option value="ACTIVO">ACTIVO</option>
+        <option value="INACTIVO">INACTIVO</option>
+        </select>
 </div>
 
 <!-- Genero Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('genero', 'Genero:') !!}
-    {!! Form::text('genero', null, ['class' => 'form-control']) !!}
+        <label>Genero </label>
+        <select name="genero" id="genero" class="form-control">
+        <option value="MASCULINO">MASCULINO</option>
+        <option value="FEMENINO">FEMENINO</option>
+        </select>
 </div>
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
