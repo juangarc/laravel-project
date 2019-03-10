@@ -34,3 +34,7 @@
     <a href="{!! route('empleados.index') !!}"><i class="fa fa-edit"></i><span>Empleados</span></a>
 </li>
 
+<li class="{{ Request::is('instituciones*') ? 'active' : '' }}">
+    <a href="{!! route('instituciones.index') !!}"><i class="fa fa-edit"></i><span>Instituciones</span></a>
+</li>
+
