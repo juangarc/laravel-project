@@ -10,6 +10,8 @@ use App\Repositories\Examen_InstitucionRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
+use App\Models\Examenes;
+use App\Models\Instituciones;
 
 class Examen_InstitucionController extends AppBaseController
 {
@@ -39,7 +41,9 @@ class Examen_InstitucionController extends AppBaseController
      */
     public function create()
     {
-        return view('examen__institucions.create');
+        $examenes = Examenes::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id');
+        return view('examen__institucions.create', ['examenes' => $examenes, 'instituciones' => $instituciones]);
     }
 
     /**
@@ -89,6 +93,8 @@ class Examen_InstitucionController extends AppBaseController
      */
     public function edit($id)
     {
+        $examenes = Examenes::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id');
         $examenInstitucion = $this->examenInstitucionRepository->findWithoutFail($id);
 
         if (empty($examenInstitucion)) {
@@ -97,7 +103,7 @@ class Examen_InstitucionController extends AppBaseController
             return redirect(route('examenInstitucions.index'));
         }
 
-        return view('examen__institucions.edit')->with('examenInstitucion', $examenInstitucion);
+        return view('examen__institucions.edit', ['examenInstitucion' => $examenInstitucion, 'examenes' => $examenes, 'instituciones' => $instituciones]);
     }
 
     /**

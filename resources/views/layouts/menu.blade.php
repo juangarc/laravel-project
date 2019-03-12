@@ -17,7 +17,7 @@
 </li>
 
 <li class="nav-item nav-dropdown">
-    <a class="dropdown-btn" href="#"> Registrar de ausentismo <i class="fa fa-caret-down"></i> </a>
+    <a class="dropdown-btn" href="#"> Modulo de ausentismos <i class="fa fa-caret-down"></i> </a>
         <ul class="nav-dropdown-items">
             <li class="nav-item {{ Request::is('ausentismos*') ? 'active' : '' }}">
                 <a href="{!! route('ausentismos.index') !!}"><i class="fa fa-edit"></i><span>Ausentismos</span></a>
@@ -35,9 +35,9 @@
 <li class="nav-item nav-dropdown">
     <a class="dropdown-btn" href="#"> Modulo citas <i class="fa fa-caret-down"></i></a>
         <ul class="nav-dropdown-items">
-            <li class="nav-item {{ Request::is('tipoEspecialidads*') ? 'active' : '' }}">
+            <!--<li class="nav-item {{ Request::is('tipoEspecialidads*') ? 'active' : '' }}">
                 <a href="{!! route('tipoEspecialidads.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Especialidad</span></a>
-            </li>
+            </li>-->
 
             <li class="nav-item {{ Request::is('tipoExamens*') ? 'active' : '' }}">
                 <a href="{!! route('tipoExamens.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Examen</span></a>
