@@ -50,7 +50,11 @@
             <li class="nav-item {{ Request::is('examenes*') ? 'active' : '' }}">
                 <a href="{!! route('examenes.index') !!}"><i class="fa fa-edit"></i><span>Examenes</span></a>
             </li>
-        </ul>
+
+            <li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
+                <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen  Institucions</span></a>
+            </li>
+          </ul>
 </li>
 <style>
     .dropdown-btn {
@@ -94,5 +98,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
+
+
 
 
