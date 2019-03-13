@@ -2,56 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\clienteDataTable;
+use App\DataTables\ClienteDataTable;
 use App\Http\Requests;
-use App\Http\Requests\CreateclienteRequest;
-use App\Http\Requests\UpdateclienteRequest;
-use App\Repositories\clienteRepository;
+use App\Http\Requests\CreateClienteRequest;
+use App\Http\Requests\UpdateClienteRequest;
+use App\Repositories\ClienteRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Ciudad;
 
-class clienteController extends AppBaseController
+class ClienteController extends AppBaseController
 {
-    /** @var  clienteRepository */
+    /** @var  ClienteRepository */
     private $clienteRepository;
 
-    public function __construct(clienteRepository $clienteRepo)
+    public function __construct(ClienteRepository $clienteRepo)
     {
         $this->clienteRepository = $clienteRepo;
     }
 
     /**
-     * Display a listing of the cliente.
+     * Display a listing of the Cliente.
      *
-     * @param clienteDataTable $clienteDataTable
+     * @param ClienteDataTable $clienteDataTable
      * @return Response
      */
-    public function index(clienteDataTable $clienteDataTable)
+    public function index(ClienteDataTable $clienteDataTable)
     {
         return $clienteDataTable->render('clientes.index');
     }
 
     /**
-     * Show the form for creating a new cliente.
+     * Show the form for creating a new Cliente.
      *
      * @return Response
      */
     public function create()
     {
-        $ciudad = Ciudad::pluck('name','id');
-        return view('clientes.create',['ciudad' => $ciudad]);
+        $ciudad = Ciudad::pluck('name', 'id');
+        return view('clientes.create', ['ciudad' => $ciudad]);
     }
 
     /**
-     * Store a newly created cliente in storage.
+     * Store a newly created Cliente in storage.
      *
-     * @param CreateclienteRequest $request
+     * @param CreateClienteRequest $request
      *
      * @return Response
      */
-    public function store(CreateclienteRequest $request)
+    public function store(CreateClienteRequest $request)
     {
         $input = $request->all();
 
@@ -63,7 +63,7 @@ class clienteController extends AppBaseController
     }
 
     /**
-     * Display the specified cliente.
+     * Display the specified Cliente.
      *
      * @param  int $id
      *
@@ -83,7 +83,7 @@ class clienteController extends AppBaseController
     }
 
     /**
-     * Show the form for editing the specified cliente.
+     * Show the form for editing the specified Cliente.
      *
      * @param  int $id
      *
@@ -91,8 +91,8 @@ class clienteController extends AppBaseController
      */
     public function edit($id)
     {
+        $ciudad = Ciudad::pluck('name', 'id');
         $cliente = $this->clienteRepository->findWithoutFail($id);
-        $ciudad = Ciudad::pluck('name','id');
 
         if (empty($cliente)) {
             Flash::error('Cliente not found');
@@ -100,18 +100,18 @@ class clienteController extends AppBaseController
             return redirect(route('clientes.index'));
         }
 
-        return view('clientes.edit')->with(['cliente' => $cliente, 'ciudad' => $ciudad]);
+        return view('clientes.edit', ['cliente' => $cliente, 'ciudad' => $ciudad]);
     }
 
     /**
-     * Update the specified cliente in storage.
+     * Update the specified Cliente in storage.
      *
      * @param  int              $id
-     * @param UpdateclienteRequest $request
+     * @param UpdateClienteRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateclienteRequest $request)
+    public function update($id, UpdateClienteRequest $request)
     {
         $cliente = $this->clienteRepository->findWithoutFail($id);
 
@@ -129,7 +129,7 @@ class clienteController extends AppBaseController
     }
 
     /**
-     * Remove the specified cliente from storage.
+     * Remove the specified Cliente from storage.
      *
      * @param  int $id
      *

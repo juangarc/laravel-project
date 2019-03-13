@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Cliente;
+use App\Models\Cargo;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class ClienteDataTable extends DataTable
+class CargoDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,16 +18,16 @@ class ClienteDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'clientes.datatables_actions');
+        return $dataTable->addColumn('action', 'cargos.datatables_actions');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Cliente $model
+     * @param \App\Models\Cargo $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Cliente $model)
+    public function query(Cargo $model)
     {
         return $model->newQuery();
     }
@@ -64,14 +64,7 @@ class ClienteDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'identificacion',
-            'nombre',
-            'apellido',
-            'telefono',
-            'direccion',
-            'correo',
-            'genero',
-            'cod_ciudad'
+            'name'
         ];
     }
 
@@ -82,6 +75,6 @@ class ClienteDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'clientesdatatable_' . time();
+        return 'cargosdatatable_' . time();
     }
 }

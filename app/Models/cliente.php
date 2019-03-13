@@ -6,9 +6,9 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class cliente
+ * Class Cliente
  * @package App\Models
- * @version March 13, 2019, 4:05 am UTC
+ * @version March 13, 2019, 9:22 pm UTC
  *
  * @property integer identificacion
  * @property string nombre
@@ -19,7 +19,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property enum genero
  * @property integer cod_ciudad
  */
-class cliente extends Model
+class Cliente extends Model
 {
     use SoftDeletes;
 

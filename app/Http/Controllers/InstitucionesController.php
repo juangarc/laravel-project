@@ -91,6 +91,7 @@ class InstitucionesController extends AppBaseController
      */
     public function edit($id)
     {
+        $ciudad = Ciudad::pluck('name', 'id');
         $instituciones = $this->institucionesRepository->findWithoutFail($id);
 
         if (empty($instituciones)) {
@@ -99,7 +100,7 @@ class InstitucionesController extends AppBaseController
             return redirect(route('instituciones.index'));
         }
 
-        return view('instituciones.edit')->with('instituciones', $instituciones);
+        return view('instituciones.edit', ['instituciones' => $instituciones, 'ciudad' => $ciudad]);
     }
 
     /**

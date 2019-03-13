@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateclientesTable extends Migration
+class CreateClientesTable extends Migration
 {
 
     /**
@@ -16,8 +16,8 @@ class CreateclientesTable extends Migration
         Schema::create('clientes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('identificacion');
-            $table->string('nombre', 50);
-            $table->string('apellido', 50);
+            $table->string('nombre', 45);
+            $table->string('apellido', 45);
             $table->string('telefono', 15);
             $table->string('direccion', 45);
             $table->string('correo', 40);

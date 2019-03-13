@@ -6,24 +6,30 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Cargo
+ * Class Producto
  * @package App\Models
- * @version March 13, 2019, 7:34 pm UTC
+ * @version March 13, 2019, 9:45 pm UTC
  *
- * @property string name
+ * @property string nombre
+ * @property date fecha_inicio
+ * @property date fecha_fin
+ * @property integer valor
  */
-class Cargo extends Model
+class Producto extends Model
 {
     use SoftDeletes;
 
-    public $table = 'cargos';
+    public $table = 'productos';
     
 
     protected $dates = ['deleted_at'];
 
 
     public $fillable = [
-        'name'
+        'nombre',
+        'fecha_inicio',
+        'fecha_fin',
+        'valor'
     ];
 
     /**
@@ -32,7 +38,10 @@ class Cargo extends Model
      * @var array
      */
     protected $casts = [
-        'name' => 'string'
+        'nombre' => 'string',
+        'fecha_inicio' => 'date',
+        'fecha_fin' => 'date',
+        'valor' => 'integer'
     ];
 
     /**
