@@ -2,19 +2,19 @@
 
 namespace App\Repositories;
 
-use App\Models\cliente;
+use App\Models\Cliente;
 use InfyOm\Generator\Common\BaseRepository;
 
 /**
- * Class clienteRepository
+ * Class ClienteRepository
  * @package App\Repositories
- * @version March 13, 2019, 4:05 am UTC
+ * @version March 13, 2019, 8:19 pm UTC
  *
- * @method cliente findWithoutFail($id, $columns = ['*'])
- * @method cliente find($id, $columns = ['*'])
- * @method cliente first($columns = ['*'])
+ * @method Cliente findWithoutFail($id, $columns = ['*'])
+ * @method Cliente find($id, $columns = ['*'])
+ * @method Cliente first($columns = ['*'])
 */
-class clienteRepository extends BaseRepository
+class ClienteRepository extends BaseRepository
 {
     /**
      * @var array
@@ -35,6 +35,6 @@ class clienteRepository extends BaseRepository
      **/
     public function model()
     {
-        return cliente::class;
+        return Cliente::class;
     }
 }

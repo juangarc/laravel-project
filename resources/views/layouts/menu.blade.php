@@ -69,14 +69,14 @@
             <li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
                 <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen  Institucions</span></a>
             </li>
-            <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
-                <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
-            </li>
-
           </ul>
 </li>
 
 <li class="{{ Request::is('productos*') ? 'active' : '' }}">
     <a href="{!! route('productos.index') !!}"><i class="fa fa-cube"></i><span>Productos</span></a>
+</li>
+
+<li class="{{ Request::is('clientes*') ? 'active' : '' }}">
+    <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
 </li>
 

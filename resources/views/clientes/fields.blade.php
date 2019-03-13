@@ -43,12 +43,11 @@
         </select>
 </div>
 
-<!-- Ciudads Field -->
-<div class="from-group col-sm-6">
+<!-- Ciudad Field -->
+<div class="form-group col-sm-6">
     {!! Form::label('cod_ciudad', 'Ciudad:') !!}
     {!! Form::select('cod_ciudad', $ciudad , null, ['class' => 'form-control']) !!}
 </div>
-
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
