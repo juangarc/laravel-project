@@ -34,6 +34,15 @@
     {!! Form::text('correo', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Genero Field -->
+<div class="form-group col-sm-6">
+        <label>Genero </label>
+        <select name="genero" id="genero" class="form-control">
+        <option value="MASCULINO">MASCULINO</option>
+        <option value="FEMENINO">FEMENINO</option>
+        </select>
+</div>
+
 <!-- Ciudads Field -->
 <div class="from-group col-sm-6">
     {!! Form::label('cod_ciudad', 'Ciudad:') !!}
