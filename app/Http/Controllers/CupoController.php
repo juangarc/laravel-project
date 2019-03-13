@@ -10,8 +10,8 @@ use App\Repositories\CupoRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
-use App\Cliente;
-use App\Producto;
+use App\Models\cliente;
+use App\Models\Producto;
 
 class CupoController extends AppBaseController 
 {
@@ -43,7 +43,7 @@ class CupoController extends AppBaseController
     {
         $cliente = Cliente::pluck('nombre', 'id');
         $producto = Producto::pluck('nombre', 'id');
-        return view('cupos.create')->with(['cliente' => $cliente,'producto' => $producto]);
+        return view('cupos.create', ['cliente' => $cliente,'producto' => $producto]);
     }
 
     /**
@@ -81,7 +81,7 @@ class CupoController extends AppBaseController
             return redirect(route('cupos.index'));
         }
 
-        return view('cupos.show')->with(['cupo'=> $cupo, 'cliente' => $cliente,'producto' => $producto]);
+        return view('cupos.show')->with('cupo', $cupo);
     }
 
     /**
@@ -93,9 +93,9 @@ class CupoController extends AppBaseController
      */
     public function edit($id)
     {
-        $cupo = $this->cupoRepository->findWithoutFail($id);
         $cliente = Cliente::pluck('nombre', 'id');
         $producto = Producto::pluck('nombre', 'id');
+        $cupo = $this->cupoRepository->findWithoutFail($id);
 
         if (empty($cupo)) {
             Flash::error('Cupo not found');
@@ -103,7 +103,7 @@ class CupoController extends AppBaseController
             return redirect(route('cupos.index'));
         }
 
-        return view('cupos.edit')->with('cupo', $cupo);
+        return view('cupos.edit', ['cupo'=> $cupo,'cliente' => $cliente,'producto' => $producto]);
     }
 
     /**

@@ -40,16 +40,19 @@
     });
 }
 
-    function sumar() {
+    function sumar() {   
     var diasAusencia = document.getElementById('tiempo_ausencia').value;
     var costoAusencia = document.getElementById('costo_ausencia').value;
     if (parseInt(diasAusencia) > 2) {
-        var totalPago = ((parseFloat(costoAusencia)/30) * parseInt(diasAusencia) * 0.666);    
+        var totalPago = ((parseInt(costoAusencia)/30) * parseInt(diasAusencia) * 0.666);    
     }
-    var totalPago = ((parseFloat(costoAusencia)/30) * parseInt(diasAusencia));
+    else {
+        var totalPago = ((parseInt(costoAusencia)/30) * parseInt(diasAusencia));
+    }
+    
 
     //total = parseInt(diasAusencia) * parseInt(costoAusencia);
-    document.getElementById('costo_ausencia').value = totalPago;
+    document.getElementById('costo_ausencia').value = parseInt(totalPago);
 
 }
     </script>
