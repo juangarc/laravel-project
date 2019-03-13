@@ -14,7 +14,7 @@
 
         <div class="clearfix"></div>
         <div class="box box-primary">
-            <div class="box-body">
+            <div class="box-body scrollmenu">
                     @include('empleados.table')
             </div>
         </div>
@@ -22,5 +22,11 @@
         
         </div>
     </div>
+    <style>
+    div.scrollmenu {
+    overflow: auto;
+    white-space: nowrap;
+    }
+</style>
 @endsection
 

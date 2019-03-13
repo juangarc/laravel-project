@@ -1,7 +1,7 @@
 <aside class="main-sidebar" id="sidebar-wrapper">
 
     <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
+    <section class="sidebar" style="height: auto;">
 
         <!-- Sidebar user panel (optional) -->
         <div class="user-panel">
@@ -33,6 +33,7 @@
         <!-- Sidebar Menu -->
 
         <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MENU</li>
             @include('layouts.menu')
         </ul>
         <!-- /.sidebar-menu -->
