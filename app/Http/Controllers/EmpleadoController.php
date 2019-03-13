@@ -95,6 +95,9 @@ class EmpleadoController extends AppBaseController
      */
     public function edit($id)
     {
+        $cargo = Cargo::pluck('name', 'id');
+        $tipoVinculacion = TipoVinculacion::pluck('name' , 'id');
+        $sede = Sede::pluck('name', 'id');
         $empleado = $this->empleadoRepository->findWithoutFail($id);
 
         if (empty($empleado)) {
@@ -103,7 +106,7 @@ class EmpleadoController extends AppBaseController
             return redirect(route('empleados.index'));
         }
 
-        return view('empleados.edit')->with('empleado', $empleado);
+        return view('empleados.edit', ['empleado' => $empleado, 'cargo' => $cargo, 'sede' => $sede, 'tipoVinculacion' => $tipoVinculacion]);
     }
 
     /**
