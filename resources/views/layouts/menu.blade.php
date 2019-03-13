@@ -56,7 +56,7 @@
             <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
                 <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
             </li>
-
+            
             <li class=" {{ Request::is('tipoExamens*') ? 'active' : '' }}">
                 <a href="{!! route('tipoExamens.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Examen</span></a>
             </li>
@@ -78,6 +78,7 @@
 <li class="{{ Request::is('productos*') ? 'active' : '' }}">
     <a href="{!! route('productos.index') !!}"><i class="fa fa-cube"></i><span>Productos</span></a>
 </li>
+
 
 
 

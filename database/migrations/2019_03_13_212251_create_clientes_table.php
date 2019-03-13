@@ -18,7 +18,7 @@ class CreateClientesTable extends Migration
             $table->integer('identificacion');
             $table->string('nombre', 45);
             $table->string('apellido', 45);
-            $table->string('telefono', 45);
+            $table->string('telefono', 15);
             $table->string('direccion', 45);
             $table->string('correo', 40);
             $table->enum('genero', ['MASCULINO','FEMENINO']);

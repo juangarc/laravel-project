@@ -100,7 +100,7 @@ class ClienteController extends AppBaseController
             return redirect(route('clientes.index'));
         }
 
-        return view('clientes.edit',['cliente' => $cliente, 'ciudad' => $ciudad]);
+        return view('clientes.edit', ['cliente' => $cliente, 'ciudad' => $ciudad]);
     }
 
     /**
