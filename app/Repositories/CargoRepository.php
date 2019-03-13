@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CargoRepository
  * @package App\Repositories
- * @version February 24, 2019, 4:24 pm UTC
+ * @version March 13, 2019, 7:34 pm UTC
  *
  * @method Cargo findWithoutFail($id, $columns = ['*'])
  * @method Cargo find($id, $columns = ['*'])

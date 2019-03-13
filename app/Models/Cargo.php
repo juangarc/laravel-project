@@ -8,10 +8,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Cargo
  * @package App\Models
- * @version February 24, 2019, 4:24 pm UTC
+ * @version March 13, 2019, 7:34 pm UTC
  *
- * @property \Illuminate\Database\Eloquent\Collection Ausentismo
- * @property \Illuminate\Database\Eloquent\Collection Empleado
  * @property string name
  */
 class Cargo extends Model
@@ -20,9 +18,6 @@ class Cargo extends Model
 
     public $table = 'cargos';
     
-    const CREATED_AT = 'created_at';
-    const UPDATED_AT = 'updated_at';
-
 
     protected $dates = ['deleted_at'];
 
@@ -37,7 +32,6 @@ class Cargo extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'integer',
         'name' => 'string'
     ];
 
@@ -50,19 +44,5 @@ class Cargo extends Model
         
     ];
 
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function ausentismos()
-    {
-        return $this->hasMany(\App\Models\Ausentismo::class);
-    }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
-     **/
-    public function empleados()
-    {
-        return $this->hasMany(\App\Models\Empleado::class);
-    }
+    
 }

@@ -6,8 +6,8 @@
             </span>
         </a>
         <ul class="treeview-menu">
-            <li class=" {{ Request::is('cargos*') ? 'active' : '' }}">
-            <a href="{!! route('cargos.index') !!}"><i class="fa fa-edit"></i><span>Cargos</span></a>
+            <li class="{{ Request::is('cargos*') ? 'active' : '' }}">
+                <a href="{!! route('cargos.index') !!}"><i class="fa fa-edit"></i><span>Cargos</span></a>
             </li>
             <li class=" {{ Request::is('sedes*') ? 'active' : '' }}">
             <a href="{!! route('sedes.index') !!}"><i class="fa fa-edit"></i><span>Sedes</span></a>

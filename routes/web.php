@@ -20,8 +20,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-Route::resource('cargos', 'CargoController');
-
 Route::resource('sedes', 'SedeController');
 
 Route::resource('tipoAusentismos', 'TipoAusentismoController');
@@ -51,3 +49,5 @@ Route::resource('examenInstitucions', 'Examen_InstitucionController');
 Route::resource('clientes', 'clienteController');
 
 Route::resource('productos', 'productoController');
+
+Route::resource('cargos', 'CargoController');
