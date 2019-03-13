@@ -54,6 +54,10 @@
             <li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
                 <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen  Institucions</span></a>
             </li>
+            <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
+                <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
+            </li>
+
           </ul>
 </li>
 <style>
@@ -98,7 +102,3 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-
-
-
-
