@@ -51,3 +51,5 @@ Route::resource('cargos', 'CargoController');
 Route::resource('clientes', 'ClienteController');
 
 Route::resource('productos', 'ProductoController');
+
+Route::resource('cupos', 'CupoController');
