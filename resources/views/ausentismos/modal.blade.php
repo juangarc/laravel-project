@@ -8,13 +8,13 @@
                 <h4>Anadir Prorroga</h4>
             </div>
             <div class="modal-body">
-            <form method="post" action="{{ route('prorrogas.store') }}">
+            <form id="formulario">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label>Cantidad de Dias* </label>
                     <input type="number" name="cantidad_dia_prorroga" class="form-control">
-                    <input name="id_ausentismo" type="hidden" id="iden" values={{$ausentismo->id}}>
-                </div>
+                    <input name="id_ausentismo" type="hidden" id="iden" value={{$ausentismo->id}}>
+                </div>            
                 <div class="form-group">
                     <label>Fecha de incio* </label>
                     <input type="date" name="fechainicio" class="form-control">
@@ -38,8 +38,10 @@
             </div>
             <div class="modal-footer">
             <a href="{{ route('ausentismos.index') }}" class="btn btn-default">Cancelar</a>
-                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-primary" id="btn-crear">Crear</button>
             </div>
         </div>
     </div>
 </div>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   

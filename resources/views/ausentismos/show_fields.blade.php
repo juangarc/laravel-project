@@ -109,3 +109,16 @@
                  }
     })
             </script>
+    <script>     
+    $('#btn-crear').click(function(){
+        $.ajax({                        
+           type: "POST",                 
+           url: '/prorrogas',                     
+           data: $("#formulario").serialize(), 
+           success: function(data)             
+           {
+               alert("Prorroga anadida");
+        }
+       });
+    });
+    </script>

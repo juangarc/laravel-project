@@ -1,9 +1,10 @@
-function sumar() 
-{
+function sumar() {
     var diasAusencia = document.getElementById('tiempo_ausencia').value;
     var costoAusencia = document.getElementById('costo_ausencia').value;
-    total = parseInt(diasAusencia) * parseInt(costoAusencia);
-    document.getElementById('costo_ausencia').value=total;
+    var totalPago = ((parseFloat(costoAusencia)/30) * parseInt(diasAusencia) * 0.666);
+
+    //total = parseInt(diasAusencia) * parseInt(costoAusencia);
+    document.getElementById('costo_ausencia').value = totalPago;
 
 }
 
@@ -32,7 +33,7 @@ function sumar()
 //      var AnyoFecha = Fecha1.getFullYear();
 //      var MesFecha = Fecha1.getMonth();
 //      var DiaFecha = Fecha1.getDate();
-      
+
 //      var AnyoHoy = Hoy.getFullYear();
 //      var MesHoy = Hoy.getMonth();
 //      var DiaHoy = Hoy.getDate();
@@ -45,8 +46,8 @@ function sumar()
 //                     producto1.style.display = 'none';
 //                  }
 //     }
-         
-     
+
+
 
 
 
@@ -54,5 +55,5 @@ function sumar()
 //     $('#btn-edi').click(function() {
 //         alert("documento listo");
 //     });
-    
+
 // })
