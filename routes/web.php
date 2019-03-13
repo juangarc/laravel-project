@@ -49,3 +49,5 @@ Route::resource('examenInstitucions', 'Examen_InstitucionController');
 Route::resource('cargos', 'CargoController');
 
 Route::resource('clientes', 'ClienteController');
+
+Route::resource('productos', 'ProductoController');

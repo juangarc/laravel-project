@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateproductosTable extends Migration
+class CreateProductosTable extends Migration
 {
 
     /**
@@ -17,7 +17,7 @@ class CreateproductosTable extends Migration
             $table->increments('id');
             $table->string('nombre', 45);
             $table->date('fecha_inicio');
-            $table->date('fecha_final');
+            $table->date('fecha_fin');
             $table->integer('valor');
             $table->timestamps();
             $table->softDeletes();

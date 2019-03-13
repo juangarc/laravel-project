@@ -78,3 +78,7 @@
 
 
 
+<li class="{{ Request::is('productos*') ? 'active' : '' }}">
+    <a href="{!! route('productos.index') !!}"><i class="fa  fa-cube"></i><span>Productos</span></a>
+</li>
+
