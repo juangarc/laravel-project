@@ -41,7 +41,7 @@ class ClienteController extends AppBaseController
     public function create()
     {
         $ciudad = Ciudad::pluck('name', 'id');
-        return view('clientes.create',['ciudad' => $ciudad]);
+        return view('clientes.create', ['ciudad' => $ciudad]);
     }
 
     /**
@@ -100,7 +100,7 @@ class ClienteController extends AppBaseController
             return redirect(route('clientes.index'));
         }
 
-        return view('clientes.edit',['instituciones' => $instituciones, 'ciudad' => $ciudad]);
+        return view('clientes.edit',['cliente' => $cliente, 'ciudad' => $ciudad]);
     }
 
     /**

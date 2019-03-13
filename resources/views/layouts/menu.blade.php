@@ -53,6 +53,9 @@
             <!--<li class="nav-item {{ Request::is('tipoEspecialidads*') ? 'active' : '' }}">
                 <a href="{!! route('tipoEspecialidads.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Especialidad</span></a>
             </li>-->
+            <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
+                <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
+            </li>
 
             <li class=" {{ Request::is('tipoExamens*') ? 'active' : '' }}">
                 <a href="{!! route('tipoExamens.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Examen</span></a>
@@ -76,7 +79,5 @@
     <a href="{!! route('productos.index') !!}"><i class="fa fa-cube"></i><span>Productos</span></a>
 </li>
 
-<li class="{{ Request::is('clientes*') ? 'active' : '' }}">
-    <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
-</li>
+
 
