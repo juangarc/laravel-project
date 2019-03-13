@@ -13,6 +13,7 @@
                 <div class="form-group">
                     <label>Cantidad de Dias* </label>
                     <input type="number" name="cantidad_dia_prorroga" class="form-control">
+                    <input name="id_ausentismo" type="hidden" id="iden" values={{$ausentismo->id}}>
                 </div>
                 <div class="form-group">
                     <label>Fecha de incio* </label>

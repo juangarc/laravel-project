@@ -69,13 +69,12 @@
     <p>{!! $ausentismo->updated_at !!}</p>
 </div>
 
-<a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Anadir Prorroga</a>
+<!-- <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Anadir Prorroga</a> -->
 @include('ausentismos.modal')
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script>
      $(document).ready(function() {
         var fecha_aux = document.getElementById("fechaqwe").value.split("-");
-        console.log(fecha_aux);
     var Fecha1 = new Date(parseInt(fecha_aux[0]),parseInt(fecha_aux[1]-1),parseInt(fecha_aux[2]));
     //  console.log(Fecha1.setDate(Fecha1.getDate + 5));
      Hoy = new Date();//Fecha actual del sistema
@@ -87,20 +86,22 @@
      var AnyoFecha = Fecha1.getFullYear();
      var MesFecha = Fecha1.getMonth() + 1;
      var DiaFecha = Fecha1.getDate() + diasAnadir;
-     
+     if (MesFecha < 10 && DiaFecha < 10) {
+        var Fecha2 = AnyoFecha+"-0"+MesFecha+"-0"+DiaFecha;     
+     }else {
      var Fecha2 = AnyoFecha+"-"+MesFecha+"-"+DiaFecha; 
+     }
     //  var Fecha3 = Date.parse(Fecha2);
     //  var Fecha4 = new Date(Fecha3);
     document.getElementById('fecha_final').value=Fecha2;
     console.log(Fecha2);
-     
       
      var AnyoHoy = Hoy.getFullYear();
-     var MesHoy = Hoy.getMonth();
+     var MesHoy = Hoy.getMonth() + 1;
      var DiaHoy = Hoy.getDate();
 
      var producto1 = document.getElementById('botonProrroga');
-                 if (AnyoFecha >= AnyoHoy && MesFecha >= MesHoy && DiaFecha >= DiaHoy){
+                 if (AnyoFecha <= AnyoHoy && MesFecha <= MesHoy && DiaFecha <= DiaHoy){
                     producto1.style.display = 'inline';
                  }
                  else{
