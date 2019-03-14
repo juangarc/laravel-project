@@ -72,6 +72,10 @@
             <li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
                 <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen  Institucions</span></a>
             </li>
+
+            <li class="{{ Request::is('cupos*') ? 'active' : '' }}">
+                <a href="{!! route('cupos.index') !!}"><i class="fa fa-edit"></i><span>Cupos</span></a>
+            </li>
           </ul>
 </li>
 
@@ -82,7 +86,5 @@
     <a href="{!! route('productos.index') !!}"><i class="fa  fa-cube"></i><span>Productos</span></a>
 </li>
 
-<li class="{{ Request::is('cupos*') ? 'active' : '' }}">
-    <a href="{!! route('cupos.index') !!}"><i class="fa fa-edit"></i><span>Cupos</span></a>
-</li>
+
 
