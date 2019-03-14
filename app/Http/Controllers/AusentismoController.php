@@ -93,6 +93,7 @@ class AusentismoController extends AppBaseController
      */
     public function edit($id)
     {
+        $tipoausentismos = Tipoausentismo::all();
         $ausentismo = $this->ausentismoRepository->findWithoutFail($id);
 
         if (empty($ausentismo)) {
@@ -101,7 +102,7 @@ class AusentismoController extends AppBaseController
             return redirect(route('ausentismos.index'));
         }
 
-        return view('ausentismos.edit')->with('ausentismo', $ausentismo);
+        return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos]);
     }
 
     /**
