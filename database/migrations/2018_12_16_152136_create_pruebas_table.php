@@ -16,6 +16,7 @@ class CreatePruebasTable extends Migration
         Schema::create('pruebas', function (Blueprint $table) {
             $table->increments('id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

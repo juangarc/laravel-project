@@ -23,6 +23,7 @@ class CreateProrrogasTable extends Migration
             $table->integer('id_ausentismo')->unsigned();
             $table->foreign('id_ausentismo')->references('id')->on('ausentismos');            
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -19,6 +19,7 @@ class CreateCiudadsTable extends Migration
             $table->integer('id_departamento')->unsigned();
             $table->foreign('id_departamento')->references('id')->on('departamentos');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

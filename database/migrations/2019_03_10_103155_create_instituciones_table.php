@@ -23,6 +23,7 @@ class CreateInstitucionesTable extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->foreign('cod_ciudad')->references('id')->on('ciudads');
+            
         });
     }
 
