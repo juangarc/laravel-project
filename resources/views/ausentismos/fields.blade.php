@@ -24,7 +24,7 @@
                     <label>Costo de Ausencia / $ </label>
                     <input  type="number" name="costo_ausencia" id="costo_ausencia" class="form-control">
                     <label>Grado* </label>
-                    <select name="grado" id="grado" class="form-control">
+                    <select name="Grado" id="grado" class="form-control">
                     <option value="LEVE">LEVE</option>
                     <option value="SEVERO">SEVERO</option>
                     </select>                
