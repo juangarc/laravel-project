@@ -88,3 +88,7 @@
 
 
 
+<li class="{{ Request::is('bieneficiarios*') ? 'active' : '' }}">
+    <a href="{!! route('bieneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Bieneficiarios</span></a>
+</li>
+
