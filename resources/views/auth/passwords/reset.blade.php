@@ -40,7 +40,7 @@
 
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p class="login-box-msg">Reset your password</p>
+        <p class="login-box-msg">Restablecer su contraseña</p>
 
         <form method="post" action="{{ url('/password/reset') }}">
             {!! csrf_field() !!}
@@ -48,7 +48,7 @@
             <input type="hidden" name="token" value="{{ $token }}">
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @if ($errors->has('email'))
                     <span class="help-block">
@@ -58,7 +58,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password'))
@@ -69,7 +69,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password_confirmation'))
@@ -82,7 +82,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <button type="submit" class="btn btn-primary pull-right">
-                        <i class="fa fa-btn fa-refresh"></i>Reset Password
+                        <i class="fa fa-btn fa-refresh"></i>Restablecer contraseña
                     </button>
                 </div>
             </div>

@@ -38,14 +38,14 @@
     </div>
 
     <div class="register-box-body">
-        <p class="login-box-msg">Register a new membership</p>
+        <p class="login-box-msg">Registrar una nueva cuenta</p>
 
         <form method="post" action="{{ url('/register') }}">
 
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name">
+                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre completo">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
                 @if ($errors->has('name'))
@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email">
+                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
 
                 @if ($errors->has('email'))
@@ -67,7 +67,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password'))
@@ -78,7 +78,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password_confirmation'))
@@ -92,19 +92,19 @@
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox"> I agree to the <a href="#">terms</a>
+                            <input type="checkbox"> Estoy deacuerdo con los  <a href="#">terminos</a>
                         </label>
                     </div>
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Register</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Registro</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/login') }}" class="text-center">I already have a membership</a>
+        <a href="{{ url('/login') }}" class="text-center">Ya tengo cuenta</a>
     </div>
     <!-- /.form-box -->
 </div>
