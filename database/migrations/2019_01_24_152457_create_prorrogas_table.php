@@ -15,7 +15,7 @@ class CreateProrrogasTable extends Migration
     {
         Schema::create('prorrogas', function (Blueprint $table) {
             $table->increments('id');
-            $table->time('cantidad_dia_prorroga');
+            $table->integer('cantidad_dia_prorroga');
             $table->date('fechainicio');
             $table->enum('incapacidad',['PERMANENTE','PARCIAL']);
             $table->float('%incapacidad');
