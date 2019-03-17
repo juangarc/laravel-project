@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateBieneficiariosTable extends Migration
+class CreateBeneficiariosTable extends Migration
 {
 
     /**
@@ -13,11 +13,11 @@ class CreateBieneficiariosTable extends Migration
      */
     public function up()
     {
-        Schema::create('bieneficiarios', function (Blueprint $table) {
+        Schema::create('beneficiarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('nombre', 45);
-            $table->string('Parenteso', 45);
-            $table->string('Edad', 45);
+            $table->string('name', 45);
+            $table->string('parentesco', 20);
+            $table->string('edad', 10);
             $table->integer('cod_cupo')->unsigned();
             $table->timestamps();
             $table->softDeletes();
@@ -32,6 +32,6 @@ class CreateBieneficiariosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('bieneficiarios');
+        Schema::drop('beneficiarios');
     }
 }
