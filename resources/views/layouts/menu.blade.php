@@ -85,10 +85,3 @@
 <li class="{{ Request::is('productos*') ? 'active' : '' }}">
     <a href="{!! route('productos.index') !!}"><i class="fa  fa-cube"></i><span>Productos</span></a>
 </li>
-
-
-
-<li class="{{ Request::is('bieneficiarios*') ? 'active' : '' }}">
-    <a href="{!! route('bieneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Bieneficiarios</span></a>
-</li>
-
