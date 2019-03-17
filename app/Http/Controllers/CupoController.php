@@ -41,9 +41,9 @@ class CupoController extends AppBaseController
      */
     public function create()
     {
-        $clientes = cliente::pluck('name', 'id');
-        $producto = Producto::pluck('name' , 'id');
-        return view('cupos.create', ['clientes' => $cleintes, 'producto' => $producto]);
+        $cliente = Cliente::pluck('nombre', 'id');
+        $producto = Producto::pluck('nombre' , 'id');
+        return view('cupos.create', ['cliente' => $cliente, 'producto' => $producto]);
     }
 
     /**
@@ -94,8 +94,8 @@ class CupoController extends AppBaseController
     public function edit($id)
     {
         $cupo = $this->cupoRepository->findWithoutFail($id);
-        $clientes = cliente::pluck('name', 'id');
-        $producto = Producto::pluck('name' , 'id');
+        $cliente = Cliente::pluck('nombre', 'id');
+        $producto = Producto::pluck('nombre' , 'id');
 
         if (empty($cupo)) {
             Flash::error('Cupo not found');
@@ -103,7 +103,7 @@ class CupoController extends AppBaseController
             return redirect(route('cupos.index'));
         }
 
-        return view('cupos.edit', ['clientes' => $clientes, 'producto' => $producto]);
+        return view('cupos.edit', ['cupo' => $cupo, 'cliente' => $cliente, 'producto' => $producto]);
     }
 
     /**
