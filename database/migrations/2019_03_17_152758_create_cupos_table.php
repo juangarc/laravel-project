@@ -15,6 +15,7 @@ class CreateCuposTable extends Migration
     {
         Schema::create('cupos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('serial', 20);
             $table->date('fecha_inicio');
             $table->date('fecha_fin');
             $table->enum('estado', ['ACTIVO','INACTIVO']);

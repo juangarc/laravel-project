@@ -4,6 +4,12 @@
     <p>{!! $cupo->id !!}</p>
 </div>
 
+<!-- Serial Field -->
+<div class="form-group">
+    {!! Form::label('serial', 'Serial:') !!}
+    <p>{!! $cupo->serial !!}</p>
+</div>
+
 <!-- Fecha Inicio Field -->
 <div class="form-group">
     {!! Form::label('fecha_inicio', 'Fecha Inicio:') !!}

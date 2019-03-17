@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class CupoRepository
  * @package App\Repositories
- * @version March 13, 2019, 10:18 pm UTC
+ * @version March 17, 2019, 3:27 pm UTC
  *
  * @method Cupo findWithoutFail($id, $columns = ['*'])
  * @method Cupo find($id, $columns = ['*'])
@@ -20,6 +20,7 @@ class CupoRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'serial',
         'fecha_inicio',
         'fecha_fin',
         'estado',

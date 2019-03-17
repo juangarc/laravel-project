@@ -53,6 +53,3 @@ Route::resource('clientes', 'ClienteController');
 Route::resource('productos', 'ProductoController');
 
 Route::resource('cupos', 'CupoController');
-
-
-Route::resource('beneficiarios', 'BeneficiarioController');

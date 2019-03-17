@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Cupo
  * @package App\Models
- * @version March 13, 2019, 10:18 pm UTC
+ * @version March 17, 2019, 3:27 pm UTC
  *
+ * @property string serial
  * @property date fecha_inicio
  * @property date fecha_fin
  * @property enum estado
@@ -27,6 +28,7 @@ class Cupo extends Model
 
 
     public $fillable = [
+        'serial',
         'fecha_inicio',
         'fecha_fin',
         'estado',
@@ -40,6 +42,7 @@ class Cupo extends Model
      * @var array
      */
     protected $casts = [
+        'serial' => 'string',
         'fecha_inicio' => 'date',
         'fecha_fin' => 'date',
         'estado' => 'string',

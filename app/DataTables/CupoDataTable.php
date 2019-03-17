@@ -64,6 +64,7 @@ class CupoDataTable extends DataTable
     protected function getColumns()
     {
         return [
+            'serial',
             'fecha_inicio',
             'fecha_fin',
             'estado',
