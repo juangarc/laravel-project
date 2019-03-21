@@ -150,7 +150,7 @@ class CupoController extends AppBaseController
 
         $this->cupoRepository->delete($id);
 
-        Flash::success('Cupo deleted successfully.');
+        Flash::success('Cupo eliminado con éxito.');
 
         return redirect(route('cupos.index'));
     }

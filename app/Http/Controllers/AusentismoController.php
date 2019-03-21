@@ -149,7 +149,7 @@ class AusentismoController extends AppBaseController
 
         $this->ausentismoRepository->delete($id);
 
-        Flash::success('Ausentismo deleted successfully.');
+        Flash::success('Ausentismo eliminado con éxito.');
 
         return redirect(route('ausentismos.index'));
     }

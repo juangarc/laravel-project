@@ -144,7 +144,7 @@ class TipoEspecialidadController extends AppBaseController
 
         $this->tipoEspecialidadRepository->delete($id);
 
-        Flash::success('Tipo Especialidad deleted successfully.');
+        Flash::success('Tipo Especialidad eliminado con éxito.');
 
         return redirect(route('tipoEspecialidads.index'));
     }

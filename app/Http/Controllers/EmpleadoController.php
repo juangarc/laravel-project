@@ -153,7 +153,7 @@ class EmpleadoController extends AppBaseController
 
         $this->empleadoRepository->delete($id);
 
-        Flash::success('Empleado deleted successfully.');
+        Flash::success('Empleado eliminado con éxito.');
 
         return redirect(route('empleados.index'));
     }

@@ -147,7 +147,7 @@ class InstitucionesController extends AppBaseController
 
         $this->institucionesRepository->delete($id);
 
-        Flash::success('Instituciones deleted successfully.');
+        Flash::success('Instituciones eliminado con éxito.');
 
         return redirect(route('instituciones.index'));
     }

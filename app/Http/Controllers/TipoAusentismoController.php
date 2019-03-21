@@ -144,7 +144,7 @@ class TipoAusentismoController extends AppBaseController
 
         $this->tipoAusentismoRepository->delete($id);
 
-        Flash::success('Tipo Ausentismo deleted successfully.');
+        Flash::success('Tipo Ausentismo eliminado con éxito.');
 
         return redirect(route('tipoAusentismos.index'));
     }

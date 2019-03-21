@@ -147,7 +147,7 @@ class ClienteController extends AppBaseController
 
         $this->clienteRepository->delete($id);
 
-        Flash::success('Cliente deleted successfully.');
+        Flash::success('Cliente eliminado con éxito.');
 
         return redirect(route('clientes.index'));
     }

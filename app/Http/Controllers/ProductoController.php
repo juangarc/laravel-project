@@ -144,7 +144,7 @@ class ProductoController extends AppBaseController
 
         $this->productoRepository->delete($id);
 
-        Flash::success('Producto deleted successfully.');
+        Flash::success('Producto eliminado con éxito.');
 
         return redirect(route('productos.index'));
     }

@@ -150,7 +150,7 @@ class Examen_InstitucionController extends AppBaseController
 
         $this->examenInstitucionRepository->delete($id);
 
-        Flash::success('Examen  Institucion deleted successfully.');
+        Flash::success('Examen  Institucion eliminado con éxito.');
 
         return redirect(route('examenInstitucions.index'));
     }

@@ -144,7 +144,7 @@ class TipoVinculacionController extends AppBaseController
 
         $this->tipoVinculacionRepository->delete($id);
 
-        Flash::success('Tipo Vinculacion deleted successfully.');
+        Flash::success('Tipo Vinculacion eliminado con éxito.');
 
         return redirect(route('tipoVinculacions.index'));
     }

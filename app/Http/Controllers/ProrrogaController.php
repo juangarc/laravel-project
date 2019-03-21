@@ -144,7 +144,7 @@ class ProrrogaController extends AppBaseController
 
         $this->prorrogaRepository->delete($id);
 
-        Flash::success('Prorroga deleted successfully.');
+        Flash::success('Prorroga eliminado con éxito.');
 
         return redirect(route('prorrogas.index'));
     }

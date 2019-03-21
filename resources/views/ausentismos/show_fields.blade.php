@@ -69,7 +69,7 @@
     <p>{!! $ausentismo->updated_at !!}</p>
 </div>
 
-<!-- <a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Anadir Prorroga</a> -->
+<a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Anadir Prorroga</a>
 @include('ausentismos.modal')
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script>

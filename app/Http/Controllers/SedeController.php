@@ -144,7 +144,7 @@ class SedeController extends AppBaseController
 
         $this->sedeRepository->delete($id);
 
-        Flash::success('Sede deleted successfully.');
+        Flash::success('Sede eliminado con éxito.');
 
         return redirect(route('sedes.index'));
     }

@@ -144,7 +144,7 @@ class TipoExamenController extends AppBaseController
 
         $this->tipoExamenRepository->delete($id);
 
-        Flash::success('Tipo Examen deleted successfully.');
+        Flash::success('Tipo Examen eliminado con éxito.');
 
         return redirect(route('tipoExamens.index'));
     }

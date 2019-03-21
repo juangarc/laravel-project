@@ -144,7 +144,7 @@ class CargoController extends AppBaseController
 
         $this->cargoRepository->delete($id);
 
-        Flash::success('Cargo deleted successfully.');
+        Flash::success('Cargo eliminado con éxito.');
 
         return redirect(route('cargos.index'));
     }

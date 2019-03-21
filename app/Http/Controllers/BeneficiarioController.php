@@ -147,7 +147,7 @@ class BeneficiarioController extends AppBaseController
 
         $this->beneficiarioRepository->delete($id);
 
-        Flash::success('Beneficiario deleted successfully.');
+        Flash::success('Beneficiario eliminado con éxito.');
 
         return redirect(route('beneficiarios.index'));
     }
