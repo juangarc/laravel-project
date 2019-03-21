@@ -28,15 +28,15 @@
     <p>{!! $producto->valor !!}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Creado en Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Created At:') !!}
+    {!! Form::label('created_at', 'Creado en:') !!}
     <p>{!! $producto->created_at !!}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- Actualizado en Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Updated At:') !!}
+    {!! Form::label('updated_at', 'Actualizado en:') !!}
     <p>{!! $producto->updated_at !!}</p>
 </div>
 
