@@ -55,7 +55,7 @@ class TipoVinculacionController extends AppBaseController
 
         $tipoVinculacion = $this->tipoVinculacionRepository->create($input);
 
-        Flash::success('Tipo Vinculacion saved successfully.');
+        Flash::success('Tipo Vinculacion guardado exitosamente.');
 
         return redirect(route('tipoVinculacions.index'));
     }

@@ -55,7 +55,7 @@ class TipoEspecialidadController extends AppBaseController
 
         $tipoEspecialidad = $this->tipoEspecialidadRepository->create($input);
 
-        Flash::success('Tipo Especialidad saved successfully.');
+        Flash::success('Tipo Especialidad guardado exitosamente.');
 
         return redirect(route('tipoEspecialidads.index'));
     }

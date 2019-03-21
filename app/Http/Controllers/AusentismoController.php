@@ -59,7 +59,7 @@ class AusentismoController extends AppBaseController
 
         $ausentismo = $this->ausentismoRepository->create($input);
 
-        Flash::success('Ausentismo saved successfully.');
+        Flash::success('Ausentismo guardado exitosamente.');
 
         return redirect(route('ausentismos.index'));
     }

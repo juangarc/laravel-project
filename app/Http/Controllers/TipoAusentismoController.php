@@ -55,7 +55,7 @@ class TipoAusentismoController extends AppBaseController
 
         $tipoAusentismo = $this->tipoAusentismoRepository->create($input);
 
-        Flash::success('Tipo Ausentismo saved successfully.');
+        Flash::success('Tipo Ausentismo guardado exitosamente.');
 
         return redirect(route('tipoAusentismos.index'));
     }

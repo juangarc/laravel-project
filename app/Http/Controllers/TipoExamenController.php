@@ -55,7 +55,7 @@ class TipoExamenController extends AppBaseController
 
         $tipoExamen = $this->tipoExamenRepository->create($input);
 
-        Flash::success('Tipo Examen saved successfully.');
+        Flash::success('Tipo Examen guardado exitosamente.');
 
         return redirect(route('tipoExamens.index'));
     }

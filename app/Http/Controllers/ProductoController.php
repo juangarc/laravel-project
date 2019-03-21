@@ -55,7 +55,7 @@ class ProductoController extends AppBaseController
 
         $producto = $this->productoRepository->create($input);
 
-        Flash::success('Producto saved successfully.');
+        Flash::success('Producto guardado exitosamente.');
 
         return redirect(route('productos.index'));
     }

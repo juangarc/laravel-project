@@ -61,7 +61,7 @@ class EmpleadoController extends AppBaseController
 
         $empleado = $this->empleadoRepository->create($input);
 
-        Flash::success('Empleado saved successfully.');
+        Flash::success('Empleado guardado exitosamente.');
 
         return redirect(route('empleados.index'));
     }

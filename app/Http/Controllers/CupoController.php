@@ -59,7 +59,7 @@ class CupoController extends AppBaseController
 
         $cupo = $this->cupoRepository->create($input);
 
-        Flash::success('Cupo saved successfully.');
+        Flash::success('Cupo guardado exitosamente.');
 
         return redirect(route('cupos.index'));
     }

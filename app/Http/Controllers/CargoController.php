@@ -55,7 +55,7 @@ class CargoController extends AppBaseController
 
         $cargo = $this->cargoRepository->create($input);
 
-        Flash::success('Cargo saved successfully.');
+        Flash::success('Cargo guardado exitosamente.');
 
         return redirect(route('cargos.index'));
     }

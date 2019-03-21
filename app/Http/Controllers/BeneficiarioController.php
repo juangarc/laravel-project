@@ -57,7 +57,7 @@ class BeneficiarioController extends AppBaseController
 
         $beneficiario = $this->beneficiarioRepository->create($input);
 
-        Flash::success('Beneficiario saved successfully.');
+        Flash::success('Beneficiario guardado exitosamente.');
 
         return redirect(route('beneficiarios.index'));
     }

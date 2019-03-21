@@ -55,7 +55,7 @@ class SedeController extends AppBaseController
 
         $sede = $this->sedeRepository->create($input);
 
-        Flash::success('Sede saved successfully.');
+        Flash::success('Sede guardado exitosamente.');
 
         return redirect(route('sedes.index'));
     }

@@ -59,7 +59,7 @@ class Examen_InstitucionController extends AppBaseController
 
         $examenInstitucion = $this->examenInstitucionRepository->create($input);
 
-        Flash::success('Examen  Institucion saved successfully.');
+        Flash::success('Examen  Institucion guardado exitosamente.');
 
         return redirect(route('examenInstitucions.index'));
     }

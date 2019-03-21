@@ -57,7 +57,7 @@ class InstitucionesController extends AppBaseController
 
         $instituciones = $this->institucionesRepository->create($input);
 
-        Flash::success('Instituciones saved successfully.');
+        Flash::success('Instituciones guardado exitosamente.');
 
         return redirect(route('instituciones.index'));
     }

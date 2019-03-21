@@ -55,7 +55,7 @@ class ProrrogaController extends AppBaseController
 
         $prorroga = $this->prorrogaRepository->create($input);
 
-        Flash::success('Prorroga saved successfully.');
+        Flash::success('Prorroga guardado exitosamente.');
 
         return redirect(route('prorrogas.index'));
     }
