@@ -11,9 +11,13 @@
             <form id="formulario">
                 {{ csrf_field() }}
                 <div class="form-group">
+                    <label>Identificación* </label>
+                    <input type="text" name="identificacion" class="form-control">
+                    <input name="cod_cupo" type="hidden"  value={{$cupo->id}}>
+                </div> 
+                <div class="form-group">
                     <label>Nombre* </label>
                     <input type="text" name="name" class="form-control">
-                    <input name="cod_cupo" type="hidden"  value={{$cupo->id}}>
                 </div>            
                 <div class="form-group">
                     <label>Parentesco* </label>
