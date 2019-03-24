@@ -85,7 +85,3 @@
     <a href="{!! route('cupos.index') !!}"><i class="fa fa-edit"></i><span>Cupos</span></a>
 </li>
 
-<li class="{{ Request::is('beneficiarios*') ? 'active' : '' }}">
-    <a href="{!! route('beneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Beneficiarios</span></a>
-</li>
-
