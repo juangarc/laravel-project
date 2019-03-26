@@ -69,9 +69,6 @@
                 <a href="{!! route('examenes.index') !!}"><i class="fa fa-edit"></i><span>Examenes</span></a>
             </li>
 
-            <li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
-                <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen  Institucions</span></a>
-            </li>
           </ul>
 </li>
 
@@ -88,12 +85,3 @@
 <li class="{{ Request::is('beneficiarios*') ? 'active' : '' }}">
     <a href="{!! route('beneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Beneficiarios</span></a>
 </li>
-
-<li class="{{ Request::is('servicios*') ? 'active' : '' }}">
-    <a href="{!! route('servicios.index') !!}"><i class="fa fa-edit"></i><span>Servicios</span></a>
-</li>
-
-<li class="{{ Request::is('servicioExamens*') ? 'active' : '' }}">
-    <a href="{!! route('servicioExamens.index') !!}"><i class="fa fa-edit"></i><span>Servicio  Examens</span></a>
-</li>
-

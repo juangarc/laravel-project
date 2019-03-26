@@ -44,8 +44,6 @@ Route::resource('instituciones', 'InstitucionesController');
 
 Route::resource('examenes', 'ExamenesController');
 
-Route::resource('examenInstitucions', 'Examen_InstitucionController');
-
 Route::resource('cargos', 'CargoController');
 
 Route::resource('clientes', 'ClienteController');
@@ -56,6 +54,3 @@ Route::resource('cupos', 'CupoController');
 
 Route::resource('beneficiarios', 'BeneficiarioController');
 
-Route::resource('servicios', 'ServicioController');
-
-Route::resource('servicioExamens', 'Servicio_ExamenController');
