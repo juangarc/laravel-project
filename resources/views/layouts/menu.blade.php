@@ -93,3 +93,7 @@
     <a href="{!! route('servicios.index') !!}"><i class="fa fa-edit"></i><span>Servicios</span></a>
 </li>
 
+<li class="{{ Request::is('servicioExamens*') ? 'active' : '' }}">
+    <a href="{!! route('servicioExamens.index') !!}"><i class="fa fa-edit"></i><span>Servicio  Examens</span></a>
+</li>
+
