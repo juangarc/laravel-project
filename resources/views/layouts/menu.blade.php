@@ -85,3 +85,7 @@
 <li class="{{ Request::is('beneficiarios*') ? 'active' : '' }}">
     <a href="{!! route('beneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Beneficiarios</span></a>
 </li>
+<li class="{{ Request::is('examenInstitucions*') ? 'active' : '' }}">
+    <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen Institucions</span></a>
+</li>
+

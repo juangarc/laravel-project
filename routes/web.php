@@ -54,3 +54,6 @@ Route::resource('cupos', 'CupoController');
 
 Route::resource('beneficiarios', 'BeneficiarioController');
 
+
+
+Route::resource('examenInstitucions', 'ExamenInstitucionController');
