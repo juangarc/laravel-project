@@ -59,5 +59,14 @@ class Cupo extends Model
         
     ];
 
+    public function cliente()
+    {
+        return $this->belongsTo(\App\Models\cliente::class, 'cod_cliente');
+    }
+    public function producto()
+    {
+        return $this->belongsTo(\App\Models\Producto::class, 'cod_producto');
+    }
+
     
 }

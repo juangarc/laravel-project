@@ -29,7 +29,7 @@ class BeneficiarioDataTable extends DataTable
      */
     public function query(Beneficiario $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['cupo']);
     }
 
     /**
@@ -68,7 +68,10 @@ class BeneficiarioDataTable extends DataTable
             'name',
             'parentesco',
             'edad',
-            'cod_cupo'
+            //'cod_cupo'
+            ['title' => 'Serial de Cupo',
+            'data' => 'cupo.serial',
+            'name' => 'cupo.serial'],
         ];
     }
 

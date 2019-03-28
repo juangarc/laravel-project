@@ -29,7 +29,7 @@ class CupoDataTable extends DataTable
      */
     public function query(Cupo $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['cliente','producto']);
     }
 
     /**
@@ -68,8 +68,14 @@ class CupoDataTable extends DataTable
             'fecha_inicio',
             'fecha_fin',
             'estado',
-            'cod_cliente',
-            'cod_producto'
+            //'cod_cliente',
+            ['title' => 'Cliente',
+            'data' => 'cliente.nombre',
+            'name' => 'cliente.nombre'],
+            //'cod_producto'
+            ['title' => 'Producto',
+            'data' => 'producto.nombre',
+            'name' => 'producto.nombre']
         ];
     }
 

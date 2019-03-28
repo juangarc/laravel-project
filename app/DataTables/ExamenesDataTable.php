@@ -29,7 +29,7 @@ class ExamenesDataTable extends DataTable
      */
     public function query(Examenes $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['tipoexamen']);
     }
 
     /**
@@ -64,8 +64,13 @@ class ExamenesDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name',
-            'cod_tipoexamen'
+            ['title' => 'Nombre',
+            'data' => 'name',
+            'name' => 'name'],
+            //'cod_tipoexamen'
+            ['title' => 'Tipo de Examen',
+            'data' => 'tipoexamen.name',
+            'name' => 'tipoexamen.name'],
         ];
     }
 

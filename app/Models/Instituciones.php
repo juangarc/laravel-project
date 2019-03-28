@@ -56,5 +56,10 @@ class Instituciones extends Model
         
     ];
 
+    public function ciudad()
+    {
+        return $this->belongsTo(\App\Ciudad::class, 'cod_ciudad');
+    }
+
     
 }

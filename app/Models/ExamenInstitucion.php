@@ -52,6 +52,14 @@ class ExamenInstitucion extends Model
     public static $rules = [
         
     ];
+    public function examen()
+    {
+        return $this->belongsTo(\App\Models\Examenes::class, 'cod_examen');
+    }
+    public function institucion()
+    {
+        return $this->belongsTo(\App\Models\Instituciones::class, 'cod_institucion');
+    }
 
     
 }

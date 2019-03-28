@@ -32,7 +32,7 @@ class EmpleadoDataTable extends DataTable
     public function query(Empleado $model)
     {
         //$tipoVinculacion = TipoVinculacion::all();
-        return $model->newQuery()->with(['tipoVinculacion','cargo']);
+        return $model->newQuery()->with(['tipoVinculacion','cargo','sede']);
     }
 
     /**
@@ -84,8 +84,12 @@ class EmpleadoDataTable extends DataTable
              'name' => 'tipo_vinculacion.name'],
             'fechadenacimiento',
             'salario',
-            'id_cargo',
-            'id_sede',
+            ['title' => 'Cargo',
+            'data' => 'cargo.name',
+            'name' => 'cargo.name'],
+            ['title' => 'Sede',
+            'data' => 'sede.name',
+            'name' => 'sede.name'],
             'fechadeingreso',
             'estado',
             'genero'
