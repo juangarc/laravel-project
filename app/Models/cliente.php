@@ -65,5 +65,12 @@ class Cliente extends Model
         
     ];
 
-    
+        /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function ciudad()
+    {
+        return $this->belongsTo(\App\Ciudad::class, 'cod_ciudad');
+    }
+
 }

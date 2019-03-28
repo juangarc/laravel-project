@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\TipoExamen;
+use App\Models\Sede;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class TipoExamenDataTable extends DataTable
+class SedeDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,16 +18,16 @@ class TipoExamenDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'tipo_examens.datatables_actions');
+        return $dataTable->addColumn('action', 'sedes.datatables_actions');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\TipoExamen $model
+     * @param \App\Models\Sede $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(TipoExamen $model)
+    public function query(Sede $model)
     {
         return $model->newQuery();
     }
@@ -77,6 +77,6 @@ class TipoExamenDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'tipo_examensdatatable_' . time();
+        return 'sedesdatatable_' . time();
     }
 }

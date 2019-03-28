@@ -29,7 +29,7 @@ class InstitucionesDataTable extends DataTable
      */
     public function query(Instituciones $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['ciudad']);
     }
 
     /**
@@ -64,11 +64,16 @@ class InstitucionesDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name',
+            ['title' => 'Nombre',
+            'data' => 'name',
+            'name' => 'name'],
             'direccion',
             'telefono',
             'correo_electronico',
-            'cod_ciudad'
+            //'cod_ciudad'
+            ['title' => 'Ciudad',
+            'data' => 'ciudad.name',
+            'name' => 'ciudad.name'],
         ];
     }
 

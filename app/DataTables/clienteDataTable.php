@@ -29,7 +29,7 @@ class ClienteDataTable extends DataTable
      */
     public function query(Cliente $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['ciudad']);
     }
 
     /**
@@ -71,7 +71,10 @@ class ClienteDataTable extends DataTable
             'direccion',
             'correo',
             'genero',
-            'cod_ciudad'
+            //'cod_ciudad'
+            ['title' => 'Ciudad',
+            'data' => 'ciudad.name',
+            'name' => 'ciudad.name'],
         ];
     }
 

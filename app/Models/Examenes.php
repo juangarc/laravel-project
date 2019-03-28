@@ -46,6 +46,15 @@ class Examenes extends Model
     public static $rules = [
         
     ];
+        /**
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     **/
+    public function tipoexamen()
+    {
+        return $this->belongsTo(\App\Models\TipoExamen::class, 'cod_tipoexamen');
+    }
+
+
 
     
 }

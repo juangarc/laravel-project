@@ -11,7 +11,7 @@ class ChartContoller extends Controller
 {
     public function index()
     {
-    	$users = Ausentismo::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
+    	$users = Ausentismo::where(DB::raw("(TO_DATE(created_at,'%Y'))"),date('Y'))
     				->get();
         $chart = Charts::database($users, 'bar', 'highcharts')
 			      ->title("Evaluacion de ausentismos")

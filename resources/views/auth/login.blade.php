@@ -32,7 +32,7 @@
     <![endif]-->
 
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" background="img/fondo.png">
 <div class="login-box">
     <div class="login-logo">
         <a href="{{ url('/home') }}"><b>AserWeb</b></a>
@@ -88,6 +88,14 @@
     <!-- /.login-box-body -->
 </div>
 <!-- /.login-box -->
+<style>
+body{
+    background: rgba(30, 115, 190, 1);
+}
+.login-logo{
+    background-color: #fff;
+}
+</style>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
