@@ -93,7 +93,7 @@ class Empleado extends Model
      **/
     public function cargo()
     {
-        return $this->belongsTo(\App\Models\Cargo::class);
+        return $this->belongsTo(\App\Models\Cargo::class, 'id_cargo');
     }
 
     /**
@@ -109,7 +109,7 @@ class Empleado extends Model
      **/
     public function tipoVinculacion()
     {
-        return $this->belongsTo(\App\Models\TipoVinculacion::class);
+        return $this->belongsTo(\App\Models\TipoVinculacion::class, 'id_tipovinculacion');
     }
 
     /**

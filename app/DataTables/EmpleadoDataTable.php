@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\Empleado;
+use App\Models\TipoVinculacion;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
@@ -20,6 +21,7 @@ class EmpleadoDataTable extends DataTable
 
         return $dataTable->addColumn('action', 'empleados.datatables_actions');
     }
+    
 
     /**
      * Get query source of dataTable.
@@ -29,7 +31,8 @@ class EmpleadoDataTable extends DataTable
      */
     public function query(Empleado $model)
     {
-        return $model->newQuery();
+        //$tipoVinculacion = TipoVinculacion::all();
+        return $model->newQuery()->with(['tipoVinculacion','cargo']);
     }
 
     /**
@@ -46,6 +49,9 @@ class EmpleadoDataTable extends DataTable
             ->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
+                'language' => [
+                    'url' => url('http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json'),//<--here
+                ],
                 'buttons' => [
                     ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
@@ -64,12 +70,18 @@ class EmpleadoDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'identificacion',
-            'name',
+            ['title' => 'Identificación',
+             'data' => 'identificacion',
+             'name' => 'identificacion'],
+            ['title' => 'Nombre',
+             'data' => 'name',
+             'name' => 'name'],
             'apellido',
             'telefono',
             'correoelectronico',
-            'id_tipovinculacion',
+            ['title' => 'Tipo Vinculacion',
+             'data' => 'tipo_vinculacion.name',
+             'name' => 'tipo_vinculacion.name'],
             'fechadenacimiento',
             'salario',
             'id_cargo',
