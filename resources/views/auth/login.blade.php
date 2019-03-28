@@ -89,7 +89,7 @@
 </div>
 <!-- /.login-box -->
 <style>
-body{
+.login-page{
     background: rgba(30, 115, 190, 1);
 }
 .login-logo{

@@ -15,9 +15,9 @@
             <li class=" {{ Request::is('tipoAusentismos*') ? 'active' : '' }}">
             <a href="{!! route('tipoAusentismos.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Ausentismo</span></a>
             </li>
-            <!-- <li class="{{ Request::is('tipoVinculacions*') ? 'active' : '' }}">
+            <li class="{{ Request::is('tipoVinculacions*') ? 'active' : '' }}">
             <a href="{!! route('tipoVinculacions.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Vinculacion</span></a>
-            </li> -->
+            </li>
         </ul>
 </li>
 
