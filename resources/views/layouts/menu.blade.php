@@ -89,3 +89,7 @@
     <a href="{!! route('examenInstitucions.index') !!}"><i class="fa fa-edit"></i><span>Examen Institucions</span></a>
 </li>
 
+<li class="{{ Request::is('solicituds*') ? 'active' : '' }}">
+    <a href="{!! route('solicituds.index') !!}"><i class="fa fa-edit"></i><span>Solicituds</span></a>
+</li>
+

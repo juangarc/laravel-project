@@ -57,3 +57,5 @@ Route::resource('beneficiarios', 'BeneficiarioController');
 
 
 Route::resource('examenInstitucions', 'ExamenInstitucionController');
+
+Route::resource('solicituds', 'SolicitudController');

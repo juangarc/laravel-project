@@ -11,6 +11,7 @@ use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\TipoExamen;
+use DB;
 
 class ExamenesController extends AppBaseController
 {
