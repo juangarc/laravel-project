@@ -8,7 +8,7 @@ use InfyOm\Generator\Common\BaseRepository;
 /**
  * Class BeneficiarioRepository
  * @package App\Repositories
- * @version March 17, 2019, 3:57 pm UTC
+ * @version March 24, 2019, 2:53 pm UTC
  *
  * @method Beneficiario findWithoutFail($id, $columns = ['*'])
  * @method Beneficiario find($id, $columns = ['*'])
@@ -20,6 +20,7 @@ class BeneficiarioRepository extends BaseRepository
      * @var array
      */
     protected $fieldSearchable = [
+        'identificacion',
         'name',
         'parentesco',
         'edad',

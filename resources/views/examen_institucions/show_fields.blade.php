@@ -28,15 +28,15 @@
     <p>{!! $examenInstitucion->valor_previser !!}</p>
 </div>
 
-<!-- Creado en Field -->
+<!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Creado en:') !!}
+    {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $examenInstitucion->created_at !!}</p>
 </div>
 
-<!-- Actualizado en Field -->
+<!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Actualizado en:') !!}
+    {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $examenInstitucion->updated_at !!}</p>
 </div>
 

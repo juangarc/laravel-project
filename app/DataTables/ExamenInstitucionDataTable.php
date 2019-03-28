@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Examen_Institucion;
+use App\Models\ExamenInstitucion;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class Examen_InstitucionDataTable extends DataTable
+class ExamenInstitucionDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,16 +18,16 @@ class Examen_InstitucionDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'examen__institucions.datatables_actions');
+        return $dataTable->addColumn('action', 'examen_institucions.datatables_actions');
     }
 
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Examen_Institucion $model
+     * @param \App\Models\ExamenInstitucion $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Examen_Institucion $model)
+    public function query(ExamenInstitucion $model)
     {
         return $model->newQuery();
     }
@@ -78,6 +78,6 @@ class Examen_InstitucionDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'examen__institucionsdatatable_' . time();
+        return 'examen_institucionsdatatable_' . time();
     }
 }

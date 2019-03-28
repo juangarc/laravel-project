@@ -2,70 +2,69 @@
 
 namespace App\Http\Controllers;
 
-use App\DataTables\Examen_InstitucionDataTable;
+use App\DataTables\ExamenInstitucionDataTable;
 use App\Http\Requests;
-use App\Http\Requests\CreateExamen_InstitucionRequest;
-use App\Http\Requests\UpdateExamen_InstitucionRequest;
-use App\Repositories\Examen_InstitucionRepository;
+use App\Http\Requests\CreateExamenInstitucionRequest;
+use App\Http\Requests\UpdateExamenInstitucionRequest;
+use App\Repositories\ExamenInstitucionRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\Examenes;
 use App\Models\Instituciones;
-
-class Examen_InstitucionController extends AppBaseController
+class ExamenInstitucionController extends AppBaseController
 {
-    /** @var  Examen_InstitucionRepository */
+    /** @var  ExamenInstitucionRepository */
     private $examenInstitucionRepository;
 
-    public function __construct(Examen_InstitucionRepository $examenInstitucionRepo)
+    public function __construct(ExamenInstitucionRepository $examenInstitucionRepo)
     {
         $this->examenInstitucionRepository = $examenInstitucionRepo;
     }
 
     /**
-     * Display a listing of the Examen_Institucion.
+     * Display a listing of the ExamenInstitucion.
      *
-     * @param Examen_InstitucionDataTable $examenInstitucionDataTable
+     * @param ExamenInstitucionDataTable $examenInstitucionDataTable
      * @return Response
      */
-    public function index(Examen_InstitucionDataTable $examenInstitucionDataTable)
+    public function index(ExamenInstitucionDataTable $examenInstitucionDataTable)
     {
-        return $examenInstitucionDataTable->render('examen__institucions.index');
+        return $examenInstitucionDataTable->render('examen_institucions.index');
     }
 
     /**
-     * Show the form for creating a new Examen_Institucion.
+     * Show the form for creating a new ExamenInstitucion.
      *
      * @return Response
      */
     public function create()
     {
         $examenes = Examenes::pluck('name', 'id');
-        $instituciones = Instituciones::pluck('name', 'id');
-        return view('examen__institucions.create', ['examenes' => $examenes, 'instituciones' => $instituciones]);
+        $instituciones = Instituciones::pluck('name', 'id'); 
+        return view('examen_institucions.create', ['examenes' => $examenes, 'instituciones' => $instituciones]);
     }
 
     /**
-     * Store a newly created Examen_Institucion in storage.
+     * Store a newly created ExamenInstitucion in storage.
      *
-     * @param CreateExamen_InstitucionRequest $request
+     * @param CreateExamenInstitucionRequest $request
      *
      * @return Response
      */
-    public function store(CreateExamen_InstitucionRequest $request)
+    public function store(CreateExamenInstitucionRequest $request)
     {
         $input = $request->all();
 
         $examenInstitucion = $this->examenInstitucionRepository->create($input);
 
-        Flash::success('Examen  Institucion guardado exitosamente.');
+        Flash::success('Examen Institucion saved successfully.');
 
         return redirect(route('examenInstitucions.index'));
     }
 
     /**
-     * Display the specified Examen_Institucion.
+     * Display the specified ExamenInstitucion.
      *
      * @param  int $id
      *
@@ -76,16 +75,16 @@ class Examen_InstitucionController extends AppBaseController
         $examenInstitucion = $this->examenInstitucionRepository->findWithoutFail($id);
 
         if (empty($examenInstitucion)) {
-            Flash::error('Examen  Institucion not found');
+            Flash::error('Examen Institucion not found');
 
             return redirect(route('examenInstitucions.index'));
         }
 
-        return view('examen__institucions.show')->with('examenInstitucion', $examenInstitucion);
+        return view('examen_institucions.show')->with('examenInstitucion', $examenInstitucion);
     }
 
     /**
-     * Show the form for editing the specified Examen_Institucion.
+     * Show the form for editing the specified ExamenInstitucion.
      *
      * @param  int $id
      *
@@ -94,45 +93,45 @@ class Examen_InstitucionController extends AppBaseController
     public function edit($id)
     {
         $examenes = Examenes::pluck('name', 'id');
-        $instituciones = Instituciones::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id'); 
         $examenInstitucion = $this->examenInstitucionRepository->findWithoutFail($id);
 
         if (empty($examenInstitucion)) {
-            Flash::error('Examen  Institucion not found');
+            Flash::error('Examen Institucion not found');
 
             return redirect(route('examenInstitucions.index'));
         }
 
-        return view('examen__institucions.edit', ['examenInstitucion' => $examenInstitucion, 'examenes' => $examenes, 'instituciones' => $instituciones]);
+        return view('examen_institucions.edit', ['examenInstitucion' => $examenInstitucion, 'examenes' => $examenes, 'instituciones' => $instituciones]);
     }
 
     /**
-     * Update the specified Examen_Institucion in storage.
+     * Update the specified ExamenInstitucion in storage.
      *
      * @param  int              $id
-     * @param UpdateExamen_InstitucionRequest $request
+     * @param UpdateExamenInstitucionRequest $request
      *
      * @return Response
      */
-    public function update($id, UpdateExamen_InstitucionRequest $request)
+    public function update($id, UpdateExamenInstitucionRequest $request)
     {
         $examenInstitucion = $this->examenInstitucionRepository->findWithoutFail($id);
 
         if (empty($examenInstitucion)) {
-            Flash::error('Examen  Institucion not found');
+            Flash::error('Examen Institucion not found');
 
             return redirect(route('examenInstitucions.index'));
         }
 
         $examenInstitucion = $this->examenInstitucionRepository->update($request->all(), $id);
 
-        Flash::success('Examen  Institucion updated successfully.');
+        Flash::success('Examen Institucion updated successfully.');
 
         return redirect(route('examenInstitucions.index'));
     }
 
     /**
-     * Remove the specified Examen_Institucion from storage.
+     * Remove the specified ExamenInstitucion from storage.
      *
      * @param  int $id
      *
@@ -143,14 +142,14 @@ class Examen_InstitucionController extends AppBaseController
         $examenInstitucion = $this->examenInstitucionRepository->findWithoutFail($id);
 
         if (empty($examenInstitucion)) {
-            Flash::error('Examen  Institucion not found');
+            Flash::error('Examen Institucion not found');
 
             return redirect(route('examenInstitucions.index'));
         }
 
         $this->examenInstitucionRepository->delete($id);
 
-        Flash::success('Examen  Institucion eliminado con éxito.');
+        Flash::success('Examen Institucion deleted successfully.');
 
         return redirect(route('examenInstitucions.index'));
     }

@@ -6,20 +6,20 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Examen_Institucion
+ * Class ExamenInstitucion
  * @package App\Models
- * @version March 12, 2019, 9:21 am UTC
+ * @version March 26, 2019, 7:29 pm UTC
  *
  * @property integer cod_examen
  * @property integer cod_institucion
  * @property integer valor_particular
  * @property integer valor_previser
  */
-class Examen_Institucion extends Model
+class ExamenInstitucion extends Model
 {
     use SoftDeletes;
 
-    public $table = 'examen__institucions';
+    public $table = 'examen_institucions';
     
 
     protected $dates = ['deleted_at'];

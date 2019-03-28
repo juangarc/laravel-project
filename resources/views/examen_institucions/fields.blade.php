@@ -13,13 +13,13 @@
 <!-- Valor Particular Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('valor_particular', 'Valor Particular:') !!}
-    {!! Form::text('valor_particular', null, ['class' => 'form-control']) !!}
+    {!! Form::number('valor_particular', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Valor Previser Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('valor_previser', 'Valor Previser:') !!}
-    {!! Form::text('valor_previser', null, ['class' => 'form-control']) !!}
+    {!! Form::number('valor_previser', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->

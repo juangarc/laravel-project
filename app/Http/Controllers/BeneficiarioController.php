@@ -10,7 +10,7 @@ use App\Repositories\BeneficiarioRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
-use\App\Models\Cupo;
+use App\Models\Cupo;
 
 class BeneficiarioController extends AppBaseController
 {
@@ -57,7 +57,7 @@ class BeneficiarioController extends AppBaseController
 
         $beneficiario = $this->beneficiarioRepository->create($input);
 
-        Flash::success('Beneficiario guardado exitosamente.');
+        Flash::success('Beneficiario saved successfully.');
 
         return redirect(route('beneficiarios.index'));
     }
@@ -147,7 +147,7 @@ class BeneficiarioController extends AppBaseController
 
         $this->beneficiarioRepository->delete($id);
 
-        Flash::success('Beneficiario eliminado con éxito.');
+        Flash::success('Beneficiario deleted successfully.');
 
         return redirect(route('beneficiarios.index'));
     }

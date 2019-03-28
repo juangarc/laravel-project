@@ -8,8 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Beneficiario
  * @package App\Models
- * @version March 17, 2019, 3:57 pm UTC
+ * @version March 24, 2019, 2:53 pm UTC
  *
+ * @property string identificacion
  * @property string name
  * @property string parentesco
  * @property string edad
@@ -26,6 +27,7 @@ class Beneficiario extends Model
 
 
     public $fillable = [
+        'identificacion',
         'name',
         'parentesco',
         'edad',
@@ -38,6 +40,7 @@ class Beneficiario extends Model
      * @var array
      */
     protected $casts = [
+        'identificacion' => 'string',
         'name' => 'string',
         'parentesco' => 'string',
         'edad' => 'string',

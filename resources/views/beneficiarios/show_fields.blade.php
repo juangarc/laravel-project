@@ -4,6 +4,12 @@
     <p>{!! $beneficiario->id !!}</p>
 </div>
 
+<!-- Identificacion Field -->
+<div class="form-group">
+    {!! Form::label('identificacion', 'Identificacion:') !!}
+    <p>{!! $beneficiario->identificacion !!}</p>
+</div>
+
 <!-- Name Field -->
 <div class="form-group">
     {!! Form::label('name', 'Name:') !!}
@@ -28,15 +34,15 @@
     <p>{!! $beneficiario->cod_cupo !!}</p>
 </div>
 
-<!-- Creado en Field -->
+<!-- Created At Field -->
 <div class="form-group">
-    {!! Form::label('created_at', 'Creado en:') !!}
+    {!! Form::label('created_at', 'Created At:') !!}
     <p>{!! $beneficiario->created_at !!}</p>
 </div>
 
-<!-- Actualizado en Field -->
+<!-- Updated At Field -->
 <div class="form-group">
-    {!! Form::label('updated_at', 'Actualizado en:') !!}
+    {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $beneficiario->updated_at !!}</p>
 </div>
 

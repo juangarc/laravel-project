@@ -3,9 +3,9 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
-use App\Models\Examen_Institucion;
+use App\Models\ExamenInstitucion;
 
-class UpdateExamen_InstitucionRequest extends FormRequest
+class CreateExamenInstitucionRequest extends FormRequest
 {
 
     /**
@@ -25,6 +25,6 @@ class UpdateExamen_InstitucionRequest extends FormRequest
      */
     public function rules()
     {
-        return Examen_Institucion::$rules;
+        return ExamenInstitucion::$rules;
     }
 }

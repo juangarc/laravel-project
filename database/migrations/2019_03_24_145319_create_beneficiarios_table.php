@@ -15,9 +15,10 @@ class CreateBeneficiariosTable extends Migration
     {
         Schema::create('beneficiarios', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 45);
-            $table->string('parentesco', 30);
-            $table->string('edad', 15);
+            $table->string('identificacion', 15);
+            $table->string('name', 40);
+            $table->string('parentesco', 25);
+            $table->string('edad', 10);
             $table->integer('cod_cupo')->unsigned();
             $table->timestamps();
             $table->softDeletes();

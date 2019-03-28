@@ -64,6 +64,7 @@ class BeneficiarioDataTable extends DataTable
     protected function getColumns()
     {
         return [
+            'identificacion',
             'name',
             'parentesco',
             'edad',

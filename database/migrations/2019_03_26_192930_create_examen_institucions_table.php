@@ -13,7 +13,7 @@ class CreateExamenInstitucionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('examen__institucions', function (Blueprint $table) {
+        Schema::create('examen_institucions', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('cod_examen')->unsigned();
             $table->integer('cod_institucion')->unsigned();
@@ -33,6 +33,6 @@ class CreateExamenInstitucionsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('examen__institucions');
+        Schema::drop('examen_institucions');
     }
 }
