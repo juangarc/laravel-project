@@ -10,6 +10,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @package App\Models
  * @version March 26, 2019, 8:29 pm UTC
  *
+ * @property \App\Models\cliente cliente
+ * @property \App\Models\Instituciones instituciones
+ * @property \App\Models\TipoExamen tipoExamen
+ * @property \App\Models\Examenes examenes
  * @property date fecha_registro
  * @property integer identificacion
  * @property string nombre
@@ -68,5 +72,23 @@ class Solicitud extends Model
         
     ];
 
-    
+    public function cliente()
+    {
+        return $this->belongsTo(\App\Models\cliente::class, 'cliente');
+    }
+
+    public function instituciones()
+    {
+        return $this->belongsTo(\App\Models\Instituciones::class, 'cod_institucion');
+    }
+
+    public function tipoExamen()
+    {
+        return $this->belongsTo(\App\Models\TipoExamen::class, 'cod_tipo_examen');
+    }
+
+    public function examenes()
+    {
+        return $this->belongsTo(\App\Models\Examenes::class, 'cod_examen');
+    }
 }
