@@ -29,7 +29,7 @@ class AusentismoDataTable extends DataTable
      */
     public function query(Ausentismo $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with(['empleado']);
     }
 
     /**
