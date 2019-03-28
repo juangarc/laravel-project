@@ -87,3 +87,7 @@
 </li>
 
 
+<li class="{{ Request::is('solicituds*') ? 'active' : '' }}">
+    <a href="{!! route('solicituds.index') !!}"><i class="fa fa-edit"></i><span>Solicituds</span></a>
+</li>
+

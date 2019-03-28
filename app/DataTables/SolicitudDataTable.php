@@ -2,11 +2,11 @@
 
 namespace App\DataTables;
 
-use App\Models\Empleado;
+use App\Models\Solicitud;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
-class EmpleadoDataTable extends DataTable
+class SolicitudDataTable extends DataTable
 {
     /**
      * Build DataTable class.
@@ -18,19 +18,18 @@ class EmpleadoDataTable extends DataTable
     {
         $dataTable = new EloquentDataTable($query);
 
-        return $dataTable->addColumn('action', 'empleados.datatables_actions');
+        return $dataTable->addColumn('action', 'solicituds.datatables_actions');
     }
-    
+
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\Empleado $model
+     * @param \App\Models\Solicitud $model
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function query(Empleado $model)
+    public function query(Solicitud $model)
     {
-        //$tipoVinculacion = TipoVinculacion::all();
-        return $model->newQuery()->with(['tipoVinculacion','cargo','sede']);
+        return $model->newQuery()->with(['cliente','instituciones','tipoExamen','examenes']);
     }
 
     /**
@@ -47,9 +46,6 @@ class EmpleadoDataTable extends DataTable
             ->parameters([
                 'dom'     => 'Bfrtip',
                 'order'   => [[0, 'desc']],
-                'language' => [
-                    'url' => url('http://cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json'),//<--here
-                ],
                 'buttons' => [
                     ['extend' => 'create', 'className' => 'btn btn-default btn-sm no-corner',],
                     ['extend' => 'export', 'className' => 'btn btn-default btn-sm no-corner',],
@@ -68,29 +64,17 @@ class EmpleadoDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            ['title' => 'Identificación',
-             'data' => 'identificacion',
-             'name' => 'identificacion'],
-            ['title' => 'Nombre',
-             'data' => 'name',
-             'name' => 'name'],
-            'apellido',
-            'telefono',
-            'correoelectronico',
-            ['title' => 'Tipo Vinculacion',
-             'data' => 'tipo_vinculacion.name',
-             'name' => 'tipo_vinculacion.name'],
-            'fechadenacimiento',
-            'salario',
-            ['title' => 'Cargo',
-            'data' => 'cargo.name',
-            'name' => 'cargo.name'],
-            ['title' => 'Sede',
-            'data' => 'sede.name',
-            'name' => 'sede.name'],
-            'fechadeingreso',
-            'estado',
-            'genero'
+            'fecha_registro',
+            'cliente',
+            'fecha_cita',
+            'hora_cita',
+            ['title' => 'Institucion',
+            'data' => 'institucion.name',
+            'name' => 'institucion.name'],
+            'cod_tipo_examen',
+            'cod_examen',
+            'observacion',
+            'estado'
         ];
     }
 
@@ -101,6 +85,6 @@ class EmpleadoDataTable extends DataTable
      */
     protected function filename()
     {
-        return 'empleadosdatatable_' . time();
+        return 'solicitudsdatatable_' . time();
     }
 }

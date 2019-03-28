@@ -59,3 +59,5 @@ Route::resource('beneficiarios', 'BeneficiarioController');
 Route::resource('examenInstitucions', 'ExamenInstitucionController');
 
 Route::get('chart', 'ChartController@index');
+
+Route::resource('solicituds', 'SolicitudController');
