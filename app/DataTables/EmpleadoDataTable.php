@@ -83,17 +83,11 @@ class EmpleadoDataTable extends DataTable
             'fechadenacimiento',
             'salario',
             ['title' => 'Cargo',
-<<<<<<< HEAD
-             'data' => 'cargo.name',
-             'name' => 'cargo.name'],
-            'id_sede',
-=======
             'data' => 'cargo.name',
             'name' => 'cargo.name'],
             ['title' => 'Sede',
             'data' => 'sede.name',
             'name' => 'sede.name'],
->>>>>>> 2d91977f2035de81e7ae5e49d1d0f2b49e9b2e96
             'fechadeingreso',
             'estado',
             'genero'

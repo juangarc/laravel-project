@@ -29,11 +29,7 @@ class AusentismoDataTable extends DataTable
      */
     public function query(Ausentismo $model)
     {
-<<<<<<< HEAD
-        return $model->newQuery()->with(['empleado']);
-=======
         return $model->newQuery()->with(['empleado','tipoausentismo']);
->>>>>>> 2d91977f2035de81e7ae5e49d1d0f2b49e9b2e96
     }
 
     /**
@@ -71,8 +67,8 @@ class AusentismoDataTable extends DataTable
             'fecha_registro',
             //'id_empleado',
              ['title' => 'Empleado',
-             'data' => 'empleado.name',
-             'name' => 'empleado.name'],
+             'data' => 'empleado.name', ' empleado.apellido',
+             'name' => 'empleado.name', ' empleado.apellido'],
             //'id_tipoausentismo',
             ['title' => 'Tipo de Ausentismo',
             'data' => 'tipoausentismo.name',
