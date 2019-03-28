@@ -22,7 +22,6 @@ class EmpleadoDataTable extends DataTable
         return $dataTable->addColumn('action', 'empleados.datatables_actions');
     }
     
-
     /**
      * Get query source of dataTable.
      *
