@@ -79,7 +79,7 @@ class Ausentismo extends Model
      **/
     public function cargo()
     {
-        return $this->belongsTo(\App\Models\Cargo::class);
+        return $this->belongsTo(\App\Models\Cargo::class, 'id_cargo');
     }
 
     /**

@@ -12,14 +12,14 @@
 
 <!-- Id Empleado Field -->
 <div class="form-group">
-    {!! Form::label('id_empleado', 'Id Empleado:') !!}
-    <p>{!! $ausentismo->id_empleado !!}</p>
+    {!! Form::label('id_empleado', 'Empleado:') !!}
+    <p>{!! $ausentismo->empleado->name !!}</p>
 </div>
 
 <!-- Id Tipoausentismo Field -->
 <div class="form-group">
-    {!! Form::label('id_tipoausentismo', 'Id Tipoausentismo:') !!}
-    <p>{!! $ausentismo->id_tipoausentismo !!}</p>
+    {!! Form::label('id_tipoausentismo', 'Tipo de Ausentismo:') !!}
+    <p>{!! $ausentismo->tipoausentismo->name !!}</p>
 </div>
 
 <!-- Fecha Inicio Field -->

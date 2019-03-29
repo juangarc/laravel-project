@@ -29,7 +29,7 @@ class SolicitudDataTable extends DataTable
      */
     public function query(Solicitud $model)
     {
-        return $model->newQuery()->with(['cliente', 'instituciones', 'tipoExamen', 'examenes']);
+        return $model->newQuery()->with(['clientes', 'instituciones', 'tipoExamen', 'examenes']);
     }
 
     /**
@@ -66,8 +66,8 @@ class SolicitudDataTable extends DataTable
         return [
             'fecha_registro',
             ['title' => 'Cliente',
-            'data' => 'cliente.nombre',
-            'name' => 'cliente.nombre'],
+            'data' => 'clientes.nombre',
+            'name' => 'clientes.nombre'],
             'fecha_cita',
             'hora_cita',
             ['title' => 'Institucion',

@@ -12,7 +12,7 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     <p>{!! $empleado->name !!}</p>
 </div>
 
@@ -36,8 +36,8 @@
 
 <!-- Id Tipovinculacion Field -->
 <div class="form-group">
-    {!! Form::label('id_tipovinculacion', 'Id Tipovinculacion:') !!}
-    <p>{!! $empleado->id_tipovinculacion !!}</p>
+    {!! Form::label('id_tipovinculacion', 'Tipo de Vinculación:') !!}
+    <p>{!! $empleado->tipovinculacion->name !!}</p>
 </div>
 
 <!-- Fechadenacimiento Field -->
@@ -54,14 +54,14 @@
 
 <!-- Id Cargo Field -->
 <div class="form-group">
-    {!! Form::label('id_cargo', 'Id Cargo:') !!}
-    <p>{!! $empleado->id_cargo !!}</p>
+    {!! Form::label('id_cargo', 'Cargo:') !!}
+    <p>{!! $empleado->cargo->name !!}</p>
 </div>
 
 <!-- Id Sede Field -->
 <div class="form-group">
-    {!! Form::label('id_sede', 'Id Sede:') !!}
-    <p>{!! $empleado->id_sede !!}</p>
+    {!! Form::label('id_sede', 'Sede') !!}
+    <p>{!! $empleado->sede->name !!}</p>
 </div>
 
 <!-- Fechadeingreso Field -->

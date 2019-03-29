@@ -12,7 +12,7 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     <p>{!! $beneficiario->name !!}</p>
 </div>
 
@@ -30,8 +30,8 @@
 
 <!-- Cod Cupo Field -->
 <div class="form-group">
-    {!! Form::label('cod_cupo', 'Cod Cupo:') !!}
-    <p>{!! $beneficiario->cod_cupo !!}</p>
+    {!! Form::label('cod_cupo', 'Serial de Cupo') !!}
+    <p>{!! $beneficiario->cupo->serial !!}</p>
 </div>
 
 <!-- Created At Field -->

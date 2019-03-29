@@ -48,8 +48,8 @@
 
 <!-- Cod Ciudad Field -->
 <div class="form-group">
-    {!! Form::label('cod_ciudad', 'Cod Ciudad:') !!}
-    <p>{!! $cliente->cod_ciudad !!}</p>
+    {!! Form::label('cod_ciudad', 'Ciudad:') !!}
+    <p>{!! $cliente->ciudad->name !!}</p>
 </div>
 
 <!-- Creado en Field -->

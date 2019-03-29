@@ -13,7 +13,7 @@
 <!-- Identificacion Field -->
 <div class="form-group">
     {!! Form::label('cliente', 'Cliente:') !!}
-    <p>{!! $solicitud->cliente !!}</p>
+    <p>{!! $solicitud->clientes->nombre !!}</p>
 </div>
 
 <!-- Nombre Field
@@ -36,20 +36,20 @@
 
 <!-- Cod Institucion Field -->
 <div class="form-group">
-    {!! Form::label('cod_institucion', 'Cod Institucion:') !!}
-    <p>{!! $solicitud->cod_institucion !!}</p>
+    {!! Form::label('cod_institucion', 'Institución:') !!}
+    <p>{!! $solicitud->instituciones->name !!}</p>
 </div>
 
 <!-- Cod Tipo Examen Field -->
 <div class="form-group">
-    {!! Form::label('cod_tipo_examen', 'Cod Tipo Examen:') !!}
-    <p>{!! $solicitud->cod_tipo_examen !!}</p>
+    {!! Form::label('cod_tipo_examen', 'Tipo de Examen:') !!}
+    <p>{!! $solicitud->tipoExamen->name !!}</p>
 </div>
 
 <!-- Cod Examen Field -->
 <div class="form-group">
-    {!! Form::label('cod_examen', 'Cod Examen:') !!}
-    <p>{!! $solicitud->cod_examen !!}</p>
+    {!! Form::label('cod_examen', 'Examen:') !!}
+    <p>{!! $solicitud->examenes->name !!}</p>
 </div>
 
 <!-- ObservacioN Field -->

@@ -72,7 +72,7 @@ class Solicitud extends Model
         
     ];
 
-    public function cliente()
+    public function clientes()
     {
         return $this->belongsTo(\App\Models\cliente::class, 'cliente');
     }
