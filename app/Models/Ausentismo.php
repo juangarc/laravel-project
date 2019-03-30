@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  *
  * @property \App\Models\Cargo cargo
  * @property \App\Models\Empleado empleado
- * @property \App\Models\Tipoausentismo tipoausentismo
+ * @property \App\Models\TipoAusentismo tipoausentismo
  * @property \Illuminate\Database\Eloquent\Collection Prorroga
  * @property date fecha_registro
  * @property integer id_empleado
@@ -95,7 +95,7 @@ class Ausentismo extends Model
      **/
     public function tipoausentismo()
     {
-        return $this->belongsTo(\App\Models\Tipoausentismo::class,'id_tipoausentismo');
+        return $this->belongsTo(\App\Models\TipoAusentismo::class,'id_tipoausentismo');
     }
 
     /**

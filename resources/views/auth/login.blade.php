@@ -35,18 +35,18 @@
 <body class="hold-transition login-page" background="img/fondo.png">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>AserWeb</b></a>
+        <a href="{{ url('/home') }} " ><img src="https://www.previser.com.co/wp-content/uploads/2016/10/logo-menu.png" alt="Prev"></a>
     </div>
 
     <!-- /.login-logo -->
-    <div class="login-box-body">
+    <div class="login-box-body" style="border-radius:20px;">
         <p class="login-box-msg">Iniciar sesión</p>
 
         <form method="post" action="{{ url('/login') }}">
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Correo">
+                <input type="email" class="form-control" style="border-radius:20px;" name="email" value="{{ old('email') }}" placeholder="Correo">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 @if ($errors->has('email'))
                     <span class="help-block">
@@ -56,7 +56,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" placeholder="Contraseña" name="password">
+                <input type="password" class="form-control" style="border-radius:20px;" placeholder="Contraseña" name="password">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
                 @if ($errors->has('password'))
                     <span class="help-block">
@@ -90,10 +90,11 @@
 <!-- /.login-box -->
 <style>
 .login-page{
-    background: rgba(30, 115, 190, 1);
+    background: #222d32;
 }
 .login-logo{
-    background-color: #fff;
+  /* background-color: #fff; */
+  
 }
 </style>
 
