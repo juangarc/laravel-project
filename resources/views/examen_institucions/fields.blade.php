@@ -1,12 +1,12 @@
 <!-- Cod Examen Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('cod_examen', 'Cod Examen:') !!}
+    {!! Form::label('cod_examen', 'Examen:') !!}
     {!! Form::select('cod_examen', $examenes, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Cod Institucion Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('cod_institucion', 'Cod Institucion:') !!}
+    {!! Form::label('cod_institucion', 'Institución:') !!}
     {!! Form::select('cod_institucion', $instituciones, null, ['class' => 'form-control']) !!}
 </div>
 

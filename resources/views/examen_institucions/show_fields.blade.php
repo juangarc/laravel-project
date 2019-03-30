@@ -6,14 +6,14 @@
 
 <!-- Cod Examen Field -->
 <div class="form-group">
-    {!! Form::label('cod_examen', 'Cod Examen:') !!}
-    <p>{!! $examenInstitucion->cod_examen !!}</p>
+    {!! Form::label('cod_examen', 'Examen:') !!}
+    <p>{!! $examenInstitucion->examen->name !!}</p>
 </div>
 
 <!-- Cod Institucion Field -->
 <div class="form-group">
-    {!! Form::label('cod_institucion', 'Cod Institucion:') !!}
-    <p>{!! $examenInstitucion->cod_institucion !!}</p>
+    {!! Form::label('cod_institucion', 'Institución:') !!}
+    <p>{!! $examenInstitucion->institucion->name !!}</p>
 </div>
 
 <!-- Valor Particular Field -->

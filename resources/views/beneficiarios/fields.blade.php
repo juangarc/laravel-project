@@ -6,7 +6,7 @@
 
 <!-- Name Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     {!! Form::text('name', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -24,7 +24,7 @@
 
 <!-- Cod Cupo Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('cod_cupo', 'Cod Cupo:') !!}
+    {!! Form::label('cod_cupo', 'Serial de Cupo') !!}
     {!! Form::select('cod_cupo', $cupo, null, ['class' => 'form-control']) !!}
 </div>
 

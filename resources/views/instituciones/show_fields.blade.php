@@ -6,7 +6,7 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     <p>{!! $instituciones->name !!}</p>
 </div>
 
@@ -30,8 +30,8 @@
 
 <!-- Cod Ciudad Field -->
 <div class="form-group">
-    {!! Form::label('cod_ciudad', 'Cod Ciudad:') !!}
-    <p>{!! $instituciones->cod_ciudad !!}</p>
+    {!! Form::label('cod_ciudad', 'Ciudad:') !!}
+    <p>{!! $instituciones->ciudad->name !!}</p>
 </div>
 
 <!-- Creado en Field -->

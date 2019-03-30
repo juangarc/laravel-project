@@ -6,14 +6,14 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     <p>{!! $examenes->name !!}</p>
 </div>
 
 <!-- Cod Tipoexamen Field -->
 <div class="form-group">
     {!! Form::label('cod_tipoexamen', 'Cod Tipoexamen:') !!}
-    <p>{!! $examenes->cod_tipoexamen !!}</p>
+    <p>{!! $examenes->tipoexamen->name !!}</p>
 </div>
 
 <!-- Creado en Field -->

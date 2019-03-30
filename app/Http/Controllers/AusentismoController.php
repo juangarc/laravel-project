@@ -42,6 +42,7 @@ class AusentismoController extends AppBaseController
      */
     public function create()
     {
+        $empleado = Empleado::all();
         $tipoausentismos = Tipoausentismo::all();
         return view('ausentismos.create')->with(['tipoausentismos' => $tipoausentismos]);
     }
@@ -93,6 +94,7 @@ class AusentismoController extends AppBaseController
      */
     public function edit($id)
     {
+        $empleado = Empleado::all();
         $tipoausentismos = Tipoausentismo::all();
         $ausentismo = $this->ausentismoRepository->findWithoutFail($id);
 
@@ -102,7 +104,7 @@ class AusentismoController extends AppBaseController
             return redirect(route('ausentismos.index'));
         }
 
-        return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos]);
+        return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos, 'empleado' => $empleado]);
     }
 
     /**

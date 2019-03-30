@@ -55,6 +55,11 @@ class Beneficiario extends Model
     public static $rules = [
         
     ];
+    public function cupo()
+    {
+        return $this->belongsTo(\App\Models\Cupo::class, 'cod_cupo');
+    }
+
 
     
 }

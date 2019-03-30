@@ -30,14 +30,14 @@
 
 <!-- Cod Cliente Field -->
 <div class="form-group">
-    {!! Form::label('cod_cliente', 'Cod Cliente:') !!}
-    <p>{!! $cupo->cod_cliente !!}</p>
+    {!! Form::label('cod_cliente', 'Cliente:') !!}
+    <p>{!! $cupo->cliente->nombre !!}</p>
 </div>
 
 <!-- Cod Producto Field -->
 <div class="form-group">
-    {!! Form::label('cod_producto', 'Cod Producto:') !!}
-    <p>{!! $cupo->cod_producto !!}</p>
+    {!! Form::label('cod_producto', 'Producto:') !!}
+    <p>{!! $cupo->producto->nombre !!}</p>
 </div>
 
 <!-- Creado en Field -->

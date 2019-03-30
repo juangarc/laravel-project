@@ -3,7 +3,6 @@
 namespace App\DataTables;
 
 use App\Models\Empleado;
-use App\Models\TipoVinculacion;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
@@ -22,7 +21,6 @@ class EmpleadoDataTable extends DataTable
         return $dataTable->addColumn('action', 'empleados.datatables_actions');
     }
     
-
     /**
      * Get query source of dataTable.
      *
@@ -32,7 +30,7 @@ class EmpleadoDataTable extends DataTable
     public function query(Empleado $model)
     {
         //$tipoVinculacion = TipoVinculacion::all();
-        return $model->newQuery()->with(['tipoVinculacion','cargo']);
+        return $model->newQuery()->with(['tipoVinculacion','cargo','sede']);
     }
 
     /**
@@ -84,8 +82,12 @@ class EmpleadoDataTable extends DataTable
              'name' => 'tipo_vinculacion.name'],
             'fechadenacimiento',
             'salario',
-            'id_cargo',
-            'id_sede',
+            ['title' => 'Cargo',
+            'data' => 'cargo.name',
+            'name' => 'cargo.name'],
+            ['title' => 'Sede',
+            'data' => 'sede.name',
+            'name' => 'sede.name'],
             'fechadeingreso',
             'estado',
             'genero'

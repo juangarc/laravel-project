@@ -101,7 +101,7 @@ class Empleado extends Model
      **/
     public function sede()
     {
-        return $this->belongsTo(\App\Models\Sede::class);
+        return $this->belongsTo(\App\Models\Sede::class, 'id_sede');
     }
 
     /**

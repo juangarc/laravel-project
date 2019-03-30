@@ -79,7 +79,7 @@ class Ausentismo extends Model
      **/
     public function cargo()
     {
-        return $this->belongsTo(\App\Models\Cargo::class);
+        return $this->belongsTo(\App\Models\Cargo::class, 'id_cargo');
     }
 
     /**
@@ -87,7 +87,7 @@ class Ausentismo extends Model
      **/
     public function empleado()
     {
-        return $this->belongsTo(\App\Models\Empleado::class);
+        return $this->belongsTo(\App\Models\Empleado::class, 'id_empleado');
     }
 
     /**
@@ -95,7 +95,7 @@ class Ausentismo extends Model
      **/
     public function tipoausentismo()
     {
-        return $this->belongsTo(\App\Models\Tipoausentismo::class);
+        return $this->belongsTo(\App\Models\Tipoausentismo::class,'id_tipoausentismo');
     }
 
     /**
