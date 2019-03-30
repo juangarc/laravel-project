@@ -13,8 +13,8 @@
                     @include('ausentismos.show_fields')
                     <a href="{!! route('ausentismos.index') !!}" class="btn btn-default">Back</a>
                 </div>
-                <a href="#" class="btn btn-primary pull-right" data-toggle="modal" 
-                data-target="#create" id="botonProrroga" >Anadir Prorroga</a>
+                <!-- <a href="#" class="btn btn-primary pull-right" data-toggle="modal" 
+                data-target="#create" id="botonProrroga" >Anadir Prorroga</a> -->
                 
             </div>
         </div>
