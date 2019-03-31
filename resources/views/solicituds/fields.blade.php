@@ -1,10 +1,28 @@
+<div class="form-group col-sm-6">
+    <label>Fecha de Registro* </label>
+    <input type="date" name="fecha_registro" class="form-control">
+</div>
+
+<div class="form-group col-sm-6">
+    <label>Identificacion* </label>
+    <input type="number"  class="form-control" id="codigo">
+    <input type="button" class="btn btn-primary" value="Buscar" onclick="getMessage();">
+    <br>
+</div>
+
+<div class="form-group col-sm-6">
+    <label>Nombre* </label>
+    <input type="text" name="id_ident" class="form-control" id="cod_client" disabled>
+    <input name="cliente" type="hidden" id="iden">
+</div>
+
 <!-- Fecha Registro Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fecha_registro', 'Fecha Registro:') !!}
     {!! Form::date('fecha_registro', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Identificacion Field -->
+{{-- <!-- Identificacion Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('cliente', 'Cliente:') !!}
     {!! Form::select('cliente', $cliente, null, ['class' => 'form-control']) !!}
@@ -14,7 +32,7 @@
 <div class="form-group col-sm-6">
     {!! Form::label('nombre', 'Nombre:') !!}
     {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
-</div> -->
+</div> --> --}}
 
 <!-- Fecha Cita Field -->
 <div class="form-group col-sm-6">

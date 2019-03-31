@@ -160,4 +160,12 @@ class SolicitudController extends AppBaseController
 
         return redirect(route('solicituds.index'));
     }
+
+    
+    public function showDataEmploy ($id)
+    {
+       $employ = Cliente::where('identificacion', '=', $id)->first()->toArray();
+    //    var_dump($employ);
+       echo json_encode($employ);
+   }
 }
