@@ -27,8 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $users = Ausentismo::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
+        $users = Ausentismo::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
                     ->get();          
+                    // Heroku $users = Ausentismo::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
+                    // ->get();          
         $sede = DB::table('empleados')
         ->join('sedes', 'sedes.id','=', 'empleados.id_sede')
         ->select('empleados.*', 'sedes.name as nameSede')->get();
