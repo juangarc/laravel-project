@@ -75,7 +75,7 @@ class SolicitudDataTable extends DataTable
             'name' => 'instituciones.name'],
             ['title' => 'Tipo Examen',
             'data' => 'tipo_examen.name',
-            'name' => 'tipo_examen.name'],
+            'name' => 'tipoExamen.name'],
             ['title' => 'Examen',
             'data' => 'examenes.name',
             'name' => 'examenes.name'],
