@@ -17,7 +17,7 @@ class CreateSolicitudsTable extends Migration
             $table->increments('id');
             $table->date('fecha_registro');
             $table->integer('cliente')->unsigned();
-            // $table->string('nombre', 45);
+            //$table->string('nombre', 45);
             $table->date('fecha_cita');
             $table->time('hora_cita');
             $table->integer('cod_institucion')->unsigned();

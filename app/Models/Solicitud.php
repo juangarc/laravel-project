@@ -38,6 +38,7 @@ class Solicitud extends Model
     public $fillable = [
         'fecha_registro',
         'cliente',
+        //'nombre',
         'fecha_cita',
         'hora_cita',
         'cod_institucion',
@@ -54,7 +55,8 @@ class Solicitud extends Model
      */
     protected $casts = [
         'fecha_registro' => 'date',
-        'identificacion' => 'integer',
+        'cliente' => 'integer',
+        //'nombre' => 'string',
         'fecha_cita' => 'date',
         'cod_institucion' => 'integer',
         'cod_tipo_examen' => 'integer',
