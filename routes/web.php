@@ -11,14 +11,14 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('/', 'HomeController@index');
 
 Route::resource('sedes', 'SedeController');
 
@@ -30,13 +30,14 @@ Route::resource('tipoExamens', 'TipoExamenController');
 
 Route::resource('tipoVinculacions', 'TipoVinculacionController');
 
+Route::group(['middleware' => ['role:admin']], function () {
 Route::resource('empleados', 'EmpleadoController');
-
+});
 Route::resource('ausentismos', 'AusentismoController');
 
 Route::resource('prorrogas', 'ProrrogaController');
 
-Route::resource('empleados', 'EmpleadoController');
+//Route::resource('empleados', 'EmpleadoController');
 
 Route::get('/prueba/{id}', 'AusentismoController@showDataEmploy');
 

@@ -1,5 +1,6 @@
 <li class="treeview">
         <a href="#">
+
             <i class="fa fa-cog"></i> <span>Parametrizacion</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -20,7 +21,6 @@
             </li>
         </ul>
 </li>
-
 <li class="treeview">
         <a href="#">
             <i class="fa fa-clock-o"></i> <span>Modulo de ausentismos</span>
@@ -37,11 +37,11 @@
             </li>
         </ul>
 </li>
-
+@hasanyrole('admin')
 <li class="{{ Request::is('empleados*') ? 'active' : '' }}">
     <a href="{!! route('empleados.index') !!}"><i class="fa fa-group"></i><span>Empleados</span></a>
 </li>
-
+@endhasanyrole
 <li class="treeview">
         <a href="#">
             <i class="fa fa-dashboard"></i> <span>Modulo de citas</span>
