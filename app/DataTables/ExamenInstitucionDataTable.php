@@ -71,7 +71,7 @@ class ExamenInstitucionDataTable extends DataTable
             //'cod_institucion',
             ['title' => 'Institución',
             'data' => 'institucion.name',
-            'name' => 'isntitucion.name'],
+            'name' => 'institucion.name'],
             'valor_particular',
             'valor_previser'
         ];

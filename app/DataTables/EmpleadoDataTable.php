@@ -79,7 +79,7 @@ class EmpleadoDataTable extends DataTable
             'correoelectronico',
             ['title' => 'Tipo Vinculacion',
              'data' => 'tipo_vinculacion.name',
-             'name' => 'tipo_vinculacion.name'],
+             'name' => 'id_tipovinculacion'],
             'fechadenacimiento',
             'salario',
             ['title' => 'Cargo',
