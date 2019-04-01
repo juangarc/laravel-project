@@ -79,6 +79,21 @@ class Solicitud extends Model
         'observacion' => 'required',
         'hora' => 'required'
     ];
+    public function cupo()
+    {
+        return $this->belongsTo(\App\Cupo::class, 'id_serial');
+    }
 
-    
+    public function institucion()
+    {
+        return $this->belongsTo(\App\Instituciones::class, 'id_institucion');
+    }
+    public function examen()
+    {
+        return $this->belongsTo(\App\Examenes::class, 'id_examen');
+    }
+    public function exameninstitucion()
+    {
+        return $this->belongsTo(\App\ExamenInstitucion::class, 'id_examen_institucion');
+    }
 }

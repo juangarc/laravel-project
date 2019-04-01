@@ -6,16 +6,31 @@
 
 <!-- Id Serial -->
 <div class="form-group col-sm-6">
-    {!! Form::label('id_serial', 'Serial:') !!}
-    {!! Form::select('id_serial', $cupo ,null, ['class' => 'form-control']) !!}
+<label>Serial de Cupo </label>
+    <input type="number" name='id_serial' class="form-control" id="codigo">
+    <input type="button" name='id_serial' class="btn btn-primary" value="Buscar" onclick="getMessage();">
+    <br>
 </div>
-
 
 <!-- Estado Field -->
 <div class="form-group col-sm-6">
+    <label>Estado </label>
+    <input type="text" name="id_ident" class="form-control" id="id_serial" disabled>
+    <input name="estado" type="hidden" id="iden">
+</div>
+
+<!-- Id Serial -->
+<!-- <div class="form-group col-sm-6">
+    {!! Form::label('id_serial', 'Serial:') !!}
+    {!! Form::select('id_serial', $cupo ,null, ['class' => 'form-control']) !!}
+</div> -->
+
+
+<!-- Estado Field -->
+<!-- <div class="form-group col-sm-6">
     {!! Form::label('estado', 'Estado:') !!}
     {!! Form::text('estado', null, ['class' => 'form-control']) !!}
-</div>
+</div> -->
 
 <!-- Nombre Field -->
 <div class="form-group col-sm-6">

@@ -29,7 +29,7 @@ class SolicitudDataTable extends DataTable
      */
     public function query(Solicitud $model)
     {
-        return $model->newQuery();
+        return $model->newQuery()->with([]);
     }
 
     /**
@@ -66,11 +66,26 @@ class SolicitudDataTable extends DataTable
         return [
             'fecha_inicio',
             'id_serial',
+            // ['title' => 'Cupo',
+            // 'data' => 'cupo.serial',
+            // 'name' => 'cupo.serial'],
             'estado',
-            'nombre',
+            // ['title' => 'Estado',
+            // 'data' => 'cupo.estado',
+            // 'name' => 'cupo.estado'],
+            // 'nombre',
             'id_institucion',
+            // ['title' => 'Institucion',
+            // 'data' => 'institucion.name',
+            // 'name' => 'institucion.name'],
             'id_examen',
+            // ['title' => 'Examen',
+            // 'data' => 'examen.name',
+            // 'name' => 'iexamen.name'],
             'id_examen_institucion',
+            // ['title' => 'Costo',
+            // 'data' => 'exameninstitucion.valor_previser',
+            // 'name' => 'exameninstitucion.valor_previser'],
             'fecha_cita',
             'progreso',
             'observacion',

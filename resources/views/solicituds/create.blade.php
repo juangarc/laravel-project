@@ -21,4 +21,22 @@
             </div>
         </div>
     </div>
+<script>
+    function getMessage(){
+    var codigo = document.getElementById('codigo')
+    product_id = codigo.value;
+    $.ajax({
+        //headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        type:'GET',
+        url:'/prueba2/'+product_id,
+        dataType: 'json',
+        success:function(data){
+            //console.log(data.name)
+            $('#id_serial').val(data.estado);
+            $('#iden').val(data.id);
+            
+            }
+        });
+    }
+</script>
 @endsection
