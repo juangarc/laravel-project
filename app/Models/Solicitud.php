@@ -9,7 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * Class Solicitud
  * @package App\Models
  * @version March 31, 2019, 9:57 pm UTC
- *
+ * @property \App\Models\Cupo cupo
+ * @property \App\Models\Instituciones institucion
+ * @property \App\Models\Examen examen
+ * @property \App\Models\ExamenInstitucion exameninstitucion
  * @property date fecha_inicio
  * @property integer id_serial
  * @property string estado
@@ -17,6 +20,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer id_institucion
  * @property integer id_examen
  * @property integer id_examen_institucion
+ * @property date fecha_cita
+ * @property string progreso
+ * @property string observacion
  * @property time hora
  */
 class Solicitud extends Model
@@ -79,21 +85,21 @@ class Solicitud extends Model
         'observacion' => 'required',
         'hora' => 'required'
     ];
-    public function cupos()
+    public function cupo()
     {
-        return $this->belongsTo(\App\Cupo::class, 'id_serial');
+        return $this->belongsTo(\App\Models\Cupo::class, 'id_serial');
     }
 
     public function institucion()
     {
-        return $this->belongsTo(\App\Instituciones::class, 'id_institucion');
+        return $this->belongsTo(\App\Models\Instituciones::class, 'id_institucion');
     }
     public function examen()
     {
-        return $this->belongsTo(\App\Examenes::class, 'id_examen');
+        return $this->belongsTo(\App\Models\Examenes::class, 'id_examen');
     }
     public function exameninstitucion()
     {
-        return $this->belongsTo(\App\ExamenInstitucion::class, 'id_examen_institucion');
+        return $this->belongsTo(\App\Models\ExamenInstitucion::class, 'id_examen_institucion');
     }
 }

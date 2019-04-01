@@ -16,7 +16,7 @@
 <div class="form-group col-sm-6">
     <label>Estado </label>
     <input type="text" name="id_ident" class="form-control" id="id_serial" disabled>
-    <input name="id_serial" type="" id="iden">
+    <input name="id_serial" type="hidden" id="iden">
 </div>
 
 <!-- Id Serial -->

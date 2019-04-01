@@ -29,7 +29,7 @@ class SolicitudDataTable extends DataTable
      */
     public function query(Solicitud $model)
     {
-        return $model->newQuery()->with([]);
+        return $model->newQuery()->with(['cupo','institucion','examen','exameninstitucion']);
     }
 
     /**
@@ -65,22 +65,22 @@ class SolicitudDataTable extends DataTable
     {
         return [
             'fecha_inicio',
-            'id_serial',
-            //  ['title' => 'Cupo',
-            //  'data' => 'cupos.serial',
-            //  'name' => 'cupos.serial'],
-            'id_institucion',
-            // ['title' => 'Institucion',
-            // 'data' => 'institucion.name',
-            // 'name' => 'institucion.name'],
-            'id_examen',
-            // ['title' => 'Examen',
-            // 'data' => 'examen.name',
-            // 'name' => 'iexamen.name'],
-            'id_examen_institucion',
-            // ['title' => 'Costo',
-            // 'data' => 'exameninstitucion.valor_previser',
-            // 'name' => 'exameninstitucion.valor_previser'],
+            ['title' => 'Cupo',
+               'data' => 'cupo.serial',
+               'name' => 'id_serial'],
+            'nombre',
+            //'id_institucion',
+             ['title' => 'Institucion',
+             'data' => 'institucion.name',
+             'name' => 'id_institucion'],
+            //'id_examen',
+             ['title' => 'Examen',
+             'data' => 'examen.name',
+             'name' => 'id_examen.name'],
+            //'id_examen_institucion',
+             ['title' => 'Costo',
+             'data' => 'exameninstitucion.valor_previser',
+             'name' => 'id_examen_institucion'],
             'fecha_cita',
             'progreso',
             'observacion',
