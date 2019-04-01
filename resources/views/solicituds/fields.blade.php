@@ -7,8 +7,8 @@
 <!-- Id Serial -->
 <div class="form-group col-sm-6">
 <label>Serial de Cupo </label>
-    <input type="number" name='id_serial' class="form-control" id="codigo">
-    <input type="button" name='id_serial' class="btn btn-primary" value="Buscar" onclick="getMessage();">
+    <input type="text"  class="form-control" id="codigo">
+    <input type="button"  class="btn btn-primary" value="Buscar" onclick="getMessage();">
     <br>
 </div>
 
@@ -16,7 +16,7 @@
 <div class="form-group col-sm-6">
     <label>Estado </label>
     <input type="text" name="id_ident" class="form-control" id="id_serial" disabled>
-    <input name="estado" type="hidden" id="iden">
+    <input name="id_serial" type="" id="iden">
 </div>
 
 <!-- Id Serial -->

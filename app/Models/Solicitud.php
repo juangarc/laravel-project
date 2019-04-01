@@ -32,7 +32,7 @@ class Solicitud extends Model
     public $fillable = [
         'fecha_inicio',
         'id_serial',
-        'estado',
+        //'estado',
         'nombre',
         'id_institucion',
         'id_examen',
@@ -51,7 +51,7 @@ class Solicitud extends Model
     protected $casts = [
         'fecha_inicio' => 'date',
         'id_serial' => 'integer',
-        'estado' => 'string',
+        //'estado' => 'string',
         'nombre' => 'string',
         'id_institucion' => 'integer',
         'id_examen' => 'integer',
@@ -69,7 +69,7 @@ class Solicitud extends Model
     public static $rules = [
         'fecha_inicio' => 'required',
         'id_serial' => 'required',
-        'estado' => 'required',
+        //'estado' => 'required',
         'nombre' => 'required',
         'id_institucion' => 'required',
         'id_examen' => 'required',
@@ -79,7 +79,7 @@ class Solicitud extends Model
         'observacion' => 'required',
         'hora' => 'required'
     ];
-    public function cupo()
+    public function cupos()
     {
         return $this->belongsTo(\App\Cupo::class, 'id_serial');
     }

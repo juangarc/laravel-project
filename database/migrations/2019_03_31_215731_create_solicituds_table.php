@@ -17,7 +17,7 @@ class CreateSolicitudsTable extends Migration
             $table->increments('id');
             $table->date('fecha_inicio');
             $table->integer('id_serial')->unsigned();
-            $table->string('estado', 25);
+            //$table->string('estado', 25);
             $table->string('nombre', 50);
             $table->integer('id_institucion')->unsigned();
             $table->integer('id_examen')->unsigned();
