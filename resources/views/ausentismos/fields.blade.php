@@ -25,8 +25,10 @@
                     <input  type="number" name="costo_ausencia" id="costo_ausencia" class="form-control">
                     <label>Grado* </label>
                     <select name="Grado" id="grado" class="form-control">
+                    <option value=""></option>
                     <option value="LEVE">LEVE</option>
                     <option value="SEVERO">SEVERO</option>
+                    <option value="MORTAL">MORTAL</option>
                     </select>                
                     <label>Observacion* </label>
                     <input type="text" name="observacion" class="form-control">

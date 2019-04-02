@@ -71,6 +71,14 @@ class Ausentismo extends Model
      * @var array
      */
     public static $rules = [
+        'fecha_registro' => 'required',
+        'id_empleado' => 'required',
+        'id_tipoausentismo' => 'required',
+        'fecha_inicio' => 'required',
+        'tiempo_ausencia' => 'required',
+        'costo_ausencia' =>'required',
+        'Grado' => 'required',
+        'observacion' => 'required'
         
     ];
 
