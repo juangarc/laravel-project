@@ -65,3 +65,5 @@ Route::get('chart', 'ChartController@index');
 
 
 Route::resource('estadisticas', 'EstadisticaController');
+
+Route::resource('solicituds', 'SolicitudController');
