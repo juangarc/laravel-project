@@ -50,6 +50,10 @@ class Producto extends Model
      * @var array
      */
     public static $rules = [
+        'nombre' => 'required',
+        'fecha_inicio' => 'required',
+        'fecha_fin' => 'required',
+        'valor' => 'numeric'
         
     ];
 

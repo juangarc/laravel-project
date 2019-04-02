@@ -45,6 +45,7 @@ class TipoExamen extends Model
      * @var array
      */
     public static $rules = [
+        'name' => 'required'
         
     ];
 

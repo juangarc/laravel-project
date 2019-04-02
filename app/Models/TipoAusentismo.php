@@ -46,6 +46,7 @@ class TipoAusentismo extends Model
      * @var array
      */
     public static $rules = [
+        'name' => 'required'
         
     ];
 

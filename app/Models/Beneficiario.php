@@ -53,6 +53,11 @@ class Beneficiario extends Model
      * @var array
      */
     public static $rules = [
+        'identificacion' => 'required',
+        'name' => 'required',
+        'parentesco' => 'required',
+        'edad' => 'required',
+        'cod_cupo' => 'required'
         
     ];
     public function cupo()

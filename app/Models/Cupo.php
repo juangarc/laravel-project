@@ -56,6 +56,12 @@ class Cupo extends Model
      * @var array
      */
     public static $rules = [
+        'serial' => 'required',
+        'fecha_inicio' => 'required',
+        'fecha_fin' => 'required',
+        'estado' => 'required',
+        'cod_cliente' => 'required',
+        'cod_producto' => 'required'
         
     ];
 

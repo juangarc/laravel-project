@@ -62,6 +62,15 @@ class Cliente extends Model
      * @var array
      */
     public static $rules = [
+
+        'identificacion' => 'numeric',
+        'nombre' => 'required',
+        'apellido' => 'required',
+        'telefono' => 'required',
+        'direccion' => 'required',
+        'correo' => 'required',
+        'genero' => 'required',
+        'cod_ciudad' => 'required'
         
     ];
 

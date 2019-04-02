@@ -44,6 +44,8 @@ class Examenes extends Model
      * @var array
      */
     public static $rules = [
+        'name' => 'required',
+        'cod_tipoexamen' => 'required'
         
     ];
         /**

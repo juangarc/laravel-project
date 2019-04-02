@@ -46,6 +46,7 @@ class TipoVinculacion extends Model
      * @var array
      */
     public static $rules = [
+        'name' => 'required'
         
     ];
 

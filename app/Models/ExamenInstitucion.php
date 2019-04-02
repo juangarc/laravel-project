@@ -50,7 +50,10 @@ class ExamenInstitucion extends Model
      * @var array
      */
     public static $rules = [
-        
+        'cod_examen' => 'required',
+        'cod_institucion' => 'required',
+        'valor_particular' => 'numeric',
+        'valor_previser' => 'numeric'
     ];
     public function examen()
     {

@@ -46,7 +46,8 @@ class Sede extends Model
      * @var array
      */
     public static $rules = [
-        
+        'name' => 'required'
+      
     ];
 
     /**

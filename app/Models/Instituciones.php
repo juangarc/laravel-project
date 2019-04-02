@@ -53,7 +53,11 @@ class Instituciones extends Model
      * @var array
      */
     public static $rules = [
-        
+        'name' => 'required',
+        'direccion' => 'required',
+        'telefono' => 'required',
+        'correo_electronico' => 'required',
+        'cod_ciudad' => 'required'
     ];
 
     public function ciudad()

@@ -85,6 +85,19 @@ class Empleado extends Model
      * @var array
      */
     public static $rules = [
+        'identificacion' => 'required',
+        'name' => 'required',
+        'apellido' => 'required',
+        'telefono' => 'numeric',
+        'correoelectronico' => 'required',
+        'id_tipovinculacion' => 'required',
+        'fechadenacimiento' => 'required',
+        'salario' => 'numeric',
+        'id_cargo' => 'required',
+        'id_sede' => 'required',
+        'fechadeingreso' => 'required',
+        'estado' => 'required',
+        'genero' => 'required'
         
     ];
 

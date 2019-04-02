@@ -60,6 +60,11 @@ class Prorroga extends Model
      * @var array
      */
     public static $rules = [
+        'fechainicio' => 'required',
+        'incapacidad' => 'required',
+        '%incapacidad' => 'numeric',
+        'seguimiento_incapacidad' => 'required',
+        'id_ausentismo' => 'required'
         
     ];
 
