@@ -6,20 +6,26 @@
 
 <!-- Ia Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('ia', 'Ia:') !!}
-    {!! Form::number('ia', $totalTasaAccidentalidad,null, ['class' => 'form-control']) !!}
+    {!! Form::label('ta', 'Ta:') !!}
+    {!! Form::number('ta', $totalTasaAccidentalidad,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Is Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('is', 'Is:') !!}
-    {!! Form::number('is', null, ['class' => 'form-control']) !!}
+    {!! Form::number('is', $totalSeveridadAccidente,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- If Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('if', 'If:') !!}
     {!! Form::number('if', $totalFrecuenciaAccidentes,null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Ma Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('ma', 'Ma:') !!}
+    {!! Form::number('ma', $TotalMortalidadAccidente,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Ili Field -->

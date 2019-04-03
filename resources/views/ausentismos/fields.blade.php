@@ -17,7 +17,7 @@
                         </select> -->
                     <label>Fecha de Inicio* </label>
                     <input type="date" name="fecha_inicio" class="form-control">
-                    <label>Tiempo de Ausencia / Dias* </label>
+                    <label>Tiempo de Ausencia / Horas* </label>
                     <input type="text" name="tiempo_ausencia" id="tiempo_ausencia" class="form-control">
                     <input type="button" class="btn btn-primary" value="Calcular" onclick="sumar();">
                     <br>
