@@ -52,4 +52,16 @@
     });
 
 </script>
+
+<script>
+    $("#institucion").change(function(event){
+        $.get('/prueba4/'+event.target.value+"",function(response,state){
+            $("#costoExamen").empty();
+            for(i=0; i<response.length; i++) {
+                $("#costoExamen").append("<option value='"+response[i].id+"'> "+response[i].costoExamen+"</option>");
+            }
+        });
+    });
+
+</script>
 @endsection

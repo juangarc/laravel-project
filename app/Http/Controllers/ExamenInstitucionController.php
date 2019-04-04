@@ -41,6 +41,13 @@ class ExamenInstitucionController extends AppBaseController
             return response()->json($institucion);
         }
     }
+
+    public function getValor(Request $request, $id, $id2) {
+        if($request->ajax()){
+            $valor = ExamenInstitucion::findValor($id, $id2);
+            return response()->json($valor);
+        }
+    }
     /**
      * Show the form for creating a new ExamenInstitucion.
      *
