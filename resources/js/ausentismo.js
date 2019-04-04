@@ -66,3 +66,14 @@ $("#examen").change(function(event){
 //     });
 
 // })
+
+// $("#institucion").change(function(event){
+//     var exa = document.getElementById('examen').value;
+//     console.log(exa);
+//     $.get('/prueba4/'+event.target.value+""+'/'+exa,function(response,state){
+//         $("#costoExamen").empty();
+//         for(i=0; i<response.length; i++) {
+//             $("#costoExamen").append("<option value='"+response[i].id+"'> "+response[i].costoExamen+"</option>");
+//         }
+//     });
+// });

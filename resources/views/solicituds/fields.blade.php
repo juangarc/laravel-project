@@ -1,6 +1,6 @@
 <!-- Fecha Inicio Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('fecha_inicio', 'Fecha Inicio:') !!}
+    {!! Form::label('fecha_inicio', 'Fecha Registro:') !!}
     {!! Form::date('fecha_inicio', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -38,22 +38,24 @@
     {!! Form::text('nombre', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Id Instituicon -->
-<div class="form-group col-sm-6">
-    {!! Form::label('id_institucion', 'Institucion:') !!}
-    {!! Form::select('id_institucion', $instituciones ,null, ['class' => 'form-control', 'id' => 'institucion', 'placeholder' => 'Seleccione Institucion']) !!}
-</div>
-
 <!-- Id Examenes -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_examen', 'Examen :') !!}
     {!! Form::select('id_examen', $examenes , null, ['class' => 'form-control', 'id' => 'examen', 'placeholder' => 'Seleccione Examen']) !!}
 </div>
 
+<!-- Id Instituicon -->
+<div class="form-group col-sm-6">
+    {!! Form::label('id_institucion', 'Institucion:') !!}
+    {!! Form::select('id_institucion', $instituciones, null, ['class' => 'form-control', 'id' => 'institucion', 'placeholder' => 'Seleccione Institucion', 'disabled']) !!}
+</div>
+
 <!-- Id ExamenInsticion -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_examen_institucion', 'Valor:') !!}
-    {!! Form::select('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control', 'id' => 'costoExamen', 'placeholder' => 'Valor a pagar']) !!}
+    {!! Form::input('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control', 'id' => 'costoExamen', 'placeholder' => 'Valor a pagar', 'disabled']) !!}
+    <input name="id_examen_institucion" type="hidden" id="costoExamenId">
+    <!-- {!! Form::input('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control', 'id' => 'costoExamenId', 'type' => 'hidden']) !!} -->
 </div>
 
 <!-- Fecha Cita Field -->
@@ -66,9 +68,7 @@
 <div class="form-group col-sm-6">
     <label>Progreso </label>
     <select name="progreso" id="progreso" class="form-control">
-    <option value="DESAPROBADO">DESAPROBADO</option>
     <option value="PENDIENTE">PENDIENTE</option>
-    <option value="APROBADO">APROBADO</option>
     </select>
 </div>
 

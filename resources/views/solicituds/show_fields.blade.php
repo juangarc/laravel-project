@@ -12,8 +12,8 @@
 
 <!-- Id Serial Field -->
 <div class="form-group">
-    {!! Form::label('id_serial', 'Id Serial:') !!}
-    <p>{!! $solicitud->id_serial !!}</p>
+    {!! Form::label('id_serial', 'Serial:') !!}
+    <p>{!! $solicitud->cupo->serial !!}</p>
 </div>
 
 
@@ -31,20 +31,20 @@
 
 <!-- Id Institucion Field -->
 <div class="form-group">
-    {!! Form::label('id_institucion', 'Id Institucion:') !!}
-    <p>{!! $solicitud->id_institucion !!}</p>
+    {!! Form::label('id_institucion', 'Institucion:') !!}
+    <p>{!! $solicitud->institucion->name !!}</p>
 </div>
 
 <!-- Id Examen Field -->
 <div class="form-group">
-    {!! Form::label('id_examen', 'Id Examen:') !!}
-    <p>{!! $solicitud->id_examen !!}</p>
+    {!! Form::label('id_examen', 'Examen:') !!}
+    <p>{!! $solicitud->examen->name !!}</p>
 </div>
 
 <!-- Id Examen Institucion Field -->
 <div class="form-group">
-    {!! Form::label('id_examen_institucion', 'Id Examen Institucion:') !!}
-    <p>{!! $solicitud->id_examen_institucion !!}</p>
+    {!! Form::label('id_examen_institucion', 'Costo:') !!}
+    <p>{!! $solicitud->exameninstitucion->valor !!}</p>
 </div>
 
 <!-- Hora Field -->
