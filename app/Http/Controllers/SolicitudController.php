@@ -98,7 +98,7 @@ class SolicitudController extends AppBaseController
      */
     public function edit($id)
     {
-        $institucion = Instituciones::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id');
         $cupo = Cupo::pluck('serial' , 'id');
         $examenes = Examenes::pluck('name', 'id');
         $exameninstitucion = ExamenInstitucion::pluck('valor_previser', 'id');
@@ -110,7 +110,7 @@ class SolicitudController extends AppBaseController
             return redirect(route('solicituds.index'));
         }
 
-        return view('solicituds.edit',['solicitud', $solicitud , 'institucion' => $institucion, 'cupo' => $cupo,
+        return view('solicituds.edit',['solicitud' => $solicitud , 'instituciones' => $instituciones, 'cupo' => $cupo,
         'examenes' => $examenes,'exameninstitucion' => $exameninstitucion]);
     }
 

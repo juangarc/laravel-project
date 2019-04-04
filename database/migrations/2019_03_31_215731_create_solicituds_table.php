@@ -19,19 +19,19 @@ class CreateSolicitudsTable extends Migration
             $table->integer('id_serial')->unsigned();
             //$table->string('estado', 25);
             $table->string('nombre', 50);
-            $table->integer('id_institucion')->unsigned();
             $table->integer('id_examen')->unsigned();
+            $table->integer('id_institucion')->unsigned();
             $table->integer('id_examen_institucion')->unsigned();
             $table->date('fecha_cita');
             $table->time('hora');
             $table->unique('id');
             $table->timestamps();
             $table->softDeletes();
-            $table->enum('progreso',['REPROBADO','PENDIENTE','APROBADO']);
+            $table->enum('progreso',['PENDIENTE','APROBADO','NO APROBADO']);
             $table->string('observacion',100);
             $table->foreign('id_serial')->references('id')->on('cupos');
-            $table->foreign('id_institucion')->references('id')->on('instituciones');
             $table->foreign('id_examen')->references('id')->on('examenes');
+            $table->foreign('id_institucion')->references('id')->on('instituciones');
             $table->foreign('id_examen_institucion')->references('id')->on('examen_institucions');
         });
     }
