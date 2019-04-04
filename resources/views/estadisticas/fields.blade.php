@@ -31,7 +31,7 @@
 <!-- Ili Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ili', 'Ili:') !!}
-    {!! Form::number('ili', null, ['class' => 'form-control']) !!}
+    {!! Form::number('ili', $indiceLeccionesIncapacitantes, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Iel Field -->

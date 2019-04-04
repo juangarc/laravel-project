@@ -70,11 +70,15 @@ class EstadisticaController extends AppBaseController
 
         $TotalMortalidadAccidente = $accidenteMortal/$accidenteTrabajo * 100;
 
+        //ili
+        $indiceLeccionesIncapacitantes = $totalFrecuenciaAccidentes*$totalSeveridadAccidente/1000;
+
         return view('estadisticas.create', ['tasaAccidentalidad' => $tasaAccidentalidad, 
         'totalTasaAccidentalidad' => $totalTasaAccidentalidad, 
         'totalFrecuenciaAccidentes' => $totalFrecuenciaAccidentes,
         'totalSeveridadAccidente' => $totalSeveridadAccidente,
-        'TotalMortalidadAccidente' => $TotalMortalidadAccidente]);
+        'TotalMortalidadAccidente' => $TotalMortalidadAccidente,
+        'indiceLeccionesIncapacitantes' => $indiceLeccionesIncapacitantes]);
     }
 
     /**
