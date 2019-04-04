@@ -11,6 +11,8 @@ use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use DB;
+use Charts;
+use App\Models\Estadistica;
 
 class EstadisticaController extends AppBaseController
 {
@@ -30,7 +32,15 @@ class EstadisticaController extends AppBaseController
      */
     public function index(EstadisticaDataTable $estadisticaDataTable)
     {
-        return $estadisticaDataTable->render('estadisticas.index');
+
+        $total = Estadistica::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))->get();
+
+        $pie  =	 Charts::database($total, 'pie', 'highcharts')
+        ->title('Tasa de Accidentalidad (por meses)')
+        ->dimensions(1000,500)
+        ->groupByMonth(date('Y'), true)
+        ->responsive(true);
+        return $estadisticaDataTable->render('estadisticas.index', ['pie' => $pie]);
     }
 
     /**
