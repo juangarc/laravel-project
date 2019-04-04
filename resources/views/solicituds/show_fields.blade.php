@@ -18,21 +18,15 @@
 
 
 <!-- Estado Field -->
-<div class="form-group">
+<!-- <div class="form-group">
     {!! Form::label('estado', 'Estado:') !!}
     <p>{!! $solicitud->estado !!}</p>
-</div>
+</div> -->
 
 <!-- Nombre Field -->
 <div class="form-group">
     {!! Form::label('nombre', 'Nombre:') !!}
     <p>{!! $solicitud->nombre !!}</p>
-</div>
-
-<!-- Id Institucion Field -->
-<div class="form-group">
-    {!! Form::label('id_institucion', 'Institucion:') !!}
-    <p>{!! $solicitud->institucion->name !!}</p>
 </div>
 
 <!-- Id Examen Field -->
@@ -41,10 +35,22 @@
     <p>{!! $solicitud->examen->name !!}</p>
 </div>
 
+<!-- Id Institucion Field -->
+<div class="form-group">
+    {!! Form::label('id_institucion', 'Institucion:') !!}
+    <p>{!! $solicitud->institucion->name !!}</p>
+</div>
+
 <!-- Id Examen Institucion Field -->
 <div class="form-group">
     {!! Form::label('id_examen_institucion', 'Costo:') !!}
-    <p>{!! $solicitud->exameninstitucion->valor !!}</p>
+    <p>{!! $solicitud->exameninstitucion->valor_previser !!}</p>
+</div>
+
+<!-- Id Progreso Field -->
+<div class="form-group">
+    {!! Form::label('progreso', 'Progreso:') !!}
+    <p>{!! $solicitud->progreso !!}</p>
 </div>
 
 <!-- Hora Field -->
@@ -57,6 +63,12 @@
 <div class="form-group">
     {!! Form::label('hora', 'Hora:') !!}
     <p>{!! $solicitud->hora !!}</p>
+</div>
+
+<!-- Observacion Field -->
+<div class="form-group">
+    {!! Form::label('observacion', 'Observacion:') !!}
+    <p>{!! $solicitud->observacion !!}</p>
 </div>
 
 <!-- Created At Field -->
@@ -72,6 +84,8 @@
 </div>
 
 <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
+<a href="#" class="btn btn-danger pull-right"   id="btn-enviar" >Rechazar Solicitud</a>
+<a href="#" class="btn btn-success pull-right"   id="btn-enviar" >Aprobar Solicitud</a>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>     
     $('#btn-enviar').click(function(){

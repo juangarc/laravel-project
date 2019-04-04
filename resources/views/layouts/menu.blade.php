@@ -1,6 +1,6 @@
+@hasanyrole('admin')
 <li class="treeview">
         <a href="#">
-
             <i class="fa fa-cog"></i> <span>Parametrizacion</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
@@ -21,6 +21,8 @@
             </li>
         </ul>
 </li>
+@endhasanyrole
+@hasanyrole('admin|user')
 <li class="treeview">
         <a href="#">
             <i class="fa fa-clock-o"></i> <span>Modulo de ausentismos</span>
@@ -37,11 +39,13 @@
             </li>
         </ul>
 </li>
+@endhasanyrole
 @hasanyrole('admin')
 <li class="{{ Request::is('empleados*') ? 'active' : '' }}">
     <a href="{!! route('empleados.index') !!}"><i class="fa fa-group"></i><span>Empleados</span></a>
 </li>
 @endhasanyrole
+@hasanyrole('admin')
 <li class="treeview">
         <a href="#">
             <i class="fa fa-dashboard"></i> <span>Modulo de citas</span>
@@ -50,9 +54,6 @@
             </span>
         </a>
         <ul class="treeview-menu">
-            <!--<li class="nav-item {{ Request::is('tipoEspecialidads*') ? 'active' : '' }}">
-                <a href="{!! route('tipoEspecialidads.index') !!}"><i class="fa fa-edit"></i><span>Tipos de Especialidad</span></a>
-            </li>-->
             <li class="{{ Request::is('clientes*') ? 'active' : '' }}">
                 <a href="{!! route('clientes.index') !!}"><i class="fa fa-edit"></i><span>Clientes</span></a>
             </li>
@@ -85,9 +86,15 @@
             </li>
           </ul>
 </li>
+@endhasanyrole
+@hasanyrole('admin|user')
 <li class="{{ Request::is('estadisticas*') ? 'active' : '' }}">
     <a href="{!! route('estadisticas.index') !!}"><i class="fa fa-edit"></i><span>Estadisticas</span></a>
+</li>
+@endhasanyrole
+@hasanyrole('admin|user|costumer')
 <li class="{{ Request::is('solicituds*') ? 'active' : '' }}">
     <a href="{!! route('solicituds.index') !!}"><i class="fa fa-edit"></i><span>Solicituds</span></a>
 </li>
+@endhasanyrole
 
