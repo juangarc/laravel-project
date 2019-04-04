@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\Solicitud;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
@@ -31,7 +32,11 @@ class SolicitudMail extends Mailable
     public function build()
     {
         return $this->view('emails.aprobado');
-        $receivers = 'gustin1220@gmail.com';
-        Mail::to($receivers)->send(new solicitudCall($call));
+
     }
+    // public function solicituds()
+    // {
+    //     return $this->belongsTo(Soicitud::class, 'id');
+    // }
+
 }

@@ -71,4 +71,18 @@
     <p>{!! $solicitud->updated_at !!}</p>
 </div>
 
-
+<a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>     
+    $('#btn-enviar').click(function(){
+        $.ajax({                        
+           type: "GET",                 
+           url: '/solicituds1',                     
+           //data: $("#formulario").serialize(), 
+           success: function(data)             
+           {
+               alert("Solicitud aprobada y enviada");
+        }
+       });
+    });
+    </script>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SolicitudMail;
 use App\DataTables\SolicitudDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateSolicitudRequest;
@@ -171,18 +172,29 @@ class SolicitudController extends AppBaseController
        echo json_encode($employ);
    }
 
-   public function sendEmail(){
+   public function sendEmail(){    
+     //$receivers = "andres.gustin@correounivalle.edu.co";
+     //Mail::to($receivers)->send();
+    //$data = Solicitud::all();
+    //  $data = array(
+    //      'nombre' => "nombre",
+    //      'fechaincio' => 'fecha_inicio',
+    //      //'estado',
+    //      'Institucion' => 'id_institucion',
+    //      'Examen ' => 'id_examen',
+    //      'costo' => 'id_examen_institucion',
+    //      'fechacita' => 'fecha_cita',
+    //      'progreso' => 'progreso',
+    //      'observaciones antes de' => 'observacion',
+    //      'hora de examne' => 'hora'
+    //  );
 
-    $data = array(
-        'email' => "Solicitud",
-    );
+     Mail::send('emails.aprobado', $data, function($message){
 
-    Mail::send('emails.aprobado', $data, function($message){
+         $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
 
-        $message->from('mosquera.ivan@correounivalle.edu.co', 'Informacion de su solicitud');
+         $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
 
-        $message->to('mosquera.ivan@correounivalle.edu.co')->subject('test email Solicitud');
-
-    });
-   }
+     });
+    }
 }

@@ -43,11 +43,11 @@
     function sumar() {   
     var diasAusencia = document.getElementById('tiempo_ausencia').value;
     var costoAusencia = document.getElementById('costo_ausencia').value;
-    if (parseInt(diasAusencia) > 2) {
-        var totalPago = ((parseInt(costoAusencia)/30) * parseInt(diasAusencia) * 0.666);    
+    if (parseInt(diasAusencia) > 48) {
+        var totalPago = (((parseInt(costoAusencia)/30)/8) * parseInt(diasAusencia) * 0.666);    
     }
     else {
-        var totalPago = ((parseInt(costoAusencia)/30) * parseInt(diasAusencia));
+        var totalPago = (((parseInt(costoAusencia)/30)/8) * parseInt(diasAusencia));
     }
     
 

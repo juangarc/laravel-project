@@ -8,6 +8,15 @@ function sumar() {
 
 }
 
+$("#examen").change(function(event){
+    $.get('/prueba3/'+event.target.value+"",function(response,state){
+        $("#institucion").empty();
+        for(i=0; i<response.length; i++) {
+            $("#institucion").append("<option value='"+response[i].id+"'> "+response[i].nameInstitucion+"</option>");
+        }
+    });
+});
+
 // function getMessage(){
 //     var codigo = document.getElementById('codigo')
 //     product_id = parseInt(codigo.value);

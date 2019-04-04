@@ -57,17 +57,16 @@ Route::resource('cupos', 'CupoController');
 
 Route::resource('beneficiarios', 'BeneficiarioController');
 
-
-
 Route::resource('examenInstitucions', 'ExamenInstitucionController');
 
 Route::get('chart', 'ChartController@index');
-
 
 Route::resource('estadisticas', 'EstadisticaController');
 
 Route::resource('solicituds', 'SolicitudController');
 
-//Correo: https://myaccount.google.com/security?pli=1#connectedapps
-//Route::get('solicituds', 'SolicitudController@sendEmail');
+Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
 
+Route::get('prueba4/{id, $id2}', 'ExamenInstitucionController@getValor');
+
+Route::get('solicituds1', 'SolicitudController@sendEmail' );

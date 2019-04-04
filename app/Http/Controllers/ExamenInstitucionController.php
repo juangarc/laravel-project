@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
 
 use App\DataTables\ExamenInstitucionDataTable;
 use App\Http\Requests;
@@ -12,6 +13,7 @@ use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\Examenes;
 use App\Models\Instituciones;
+use App\Models\ExamenInstitucion;
 class ExamenInstitucionController extends AppBaseController
 {
     /** @var  ExamenInstitucionRepository */
@@ -33,6 +35,19 @@ class ExamenInstitucionController extends AppBaseController
         return $examenInstitucionDataTable->render('examen_institucions.index');
     }
 
+    public function getInstitucion(Request $request, $id) {
+        if($request->ajax()){
+            $institucion = ExamenInstitucion::findInstitucion($id);
+            return response()->json($institucion);
+        }
+    }
+
+    public function getValor(Request $request, $id, $id2) {
+        if($request->ajax()){
+            $valor = ExamenInstitucion::findValor($id, $id2);
+            return response()->json($valor);
+        }
+    }
     /**
      * Show the form for creating a new ExamenInstitucion.
      *

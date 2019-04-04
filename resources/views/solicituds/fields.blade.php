@@ -41,19 +41,19 @@
 <!-- Id Instituicon -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_institucion', 'Institucion:') !!}
-    {!! Form::select('id_institucion', $instituciones ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('id_institucion', $instituciones ,null, ['class' => 'form-control', 'id' => 'institucion', 'placeholder' => 'Seleccione Institucion']) !!}
 </div>
 
 <!-- Id Examenes -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_examen', 'Examen :') !!}
-    {!! Form::select('id_examen', $examenes ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('id_examen', $examenes , null, ['class' => 'form-control', 'id' => 'examen', 'placeholder' => 'Seleccione Examen']) !!}
 </div>
 
 <!-- Id ExamenInsticion -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_examen_institucion', 'Valor:') !!}
-    {!! Form::select('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control', 'id' => 'costoExamen', 'placeholder' => 'Valor a pagar']) !!}
 </div>
 
 <!-- Fecha Cita Field -->
