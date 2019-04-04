@@ -67,3 +67,7 @@ Route::get('chart', 'ChartController@index');
 Route::resource('estadisticas', 'EstadisticaController');
 
 Route::resource('solicituds', 'SolicitudController');
+
+//Correo: https://myaccount.google.com/security?pli=1#connectedapps
+//Route::get('solicituds', 'SolicitudController@sendEmail');
+

@@ -16,6 +16,7 @@
     <p>{!! $solicitud->id_serial !!}</p>
 </div>
 
+
 <!-- Estado Field -->
 <div class="form-group">
     {!! Form::label('estado', 'Estado:') !!}
@@ -48,6 +49,12 @@
 
 <!-- Hora Field -->
 <div class="form-group">
+    {!! Form::label('fecha_cita', 'Fecha cita:') !!}
+    <p>{!! $solicitud->fecha_cita !!}</p>
+</div>
+
+<!-- Hora Field -->
+<div class="form-group">
     {!! Form::label('hora', 'Hora:') !!}
     <p>{!! $solicitud->hora !!}</p>
 </div>
@@ -63,4 +70,5 @@
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $solicitud->updated_at !!}</p>
 </div>
+
 

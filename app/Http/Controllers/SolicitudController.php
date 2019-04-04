@@ -14,6 +14,7 @@ use App\Models\Instituciones;
 use App\Models\Cupo;
 use App\Models\Examenes;
 use App\Models\ExamenInstitucion;
+use Illuminate\Support\Facades\Mail;
 
 class SolicitudController extends AppBaseController
 {
@@ -98,7 +99,7 @@ class SolicitudController extends AppBaseController
      */
     public function edit($id)
     {
-        $institucion = Instituciones::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id');
         $cupo = Cupo::pluck('serial' , 'id');
         $examenes = Examenes::pluck('name', 'id');
         $exameninstitucion = ExamenInstitucion::pluck('valor_previser', 'id');
@@ -109,8 +110,7 @@ class SolicitudController extends AppBaseController
 
             return redirect(route('solicituds.index'));
         }
-
-        return view('solicituds.edit',['solicitud', $solicitud , 'institucion' => $institucion, 'cupo' => $cupo,
+        return view('solicituds.edit',['solicitud' => $solicitud , 'instituciones' => $instituciones, 'cupo' => $cupo,
         'examenes' => $examenes,'exameninstitucion' => $exameninstitucion]);
     }
 
@@ -133,8 +133,9 @@ class SolicitudController extends AppBaseController
         }
 
         $solicitud = $this->solicitudRepository->update($request->all(), $id);
+       
 
-        Flash::success('Solicitud updated successfully.');
+        Flash::success('Solicitud updated successfully and email send.');
 
         return redirect(route('solicituds.index'));
     }
@@ -168,5 +169,20 @@ class SolicitudController extends AppBaseController
        $employ = Cupo::where('serial', '=', $id)->first()->toArray();
     //    var_dump($employ);
        echo json_encode($employ);
+   }
+
+   public function sendEmail(){
+
+    $data = array(
+        'email' => "Solicitud",
+    );
+
+    Mail::send('emails.aprobado', $data, function($message){
+
+        $message->from('mosquera.ivan@correounivalle.edu.co', 'Informacion de su solicitud');
+
+        $message->to('mosquera.ivan@correounivalle.edu.co')->subject('test email Solicitud');
+
+    });
    }
 }
