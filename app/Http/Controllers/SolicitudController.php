@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SolicitudMail;
 use App\DataTables\SolicitudDataTable;
 use App\Http\Requests;
 use App\Http\Requests\CreateSolicitudRequest;
@@ -14,6 +15,7 @@ use App\Models\Instituciones;
 use App\Models\Cupo;
 use App\Models\Examenes;
 use App\Models\ExamenInstitucion;
+use Illuminate\Support\Facades\Mail;
 
 class SolicitudController extends AppBaseController
 {
@@ -98,7 +100,7 @@ class SolicitudController extends AppBaseController
      */
     public function edit($id)
     {
-        $institucion = Instituciones::pluck('name', 'id');
+        $instituciones = Instituciones::pluck('name', 'id');
         $cupo = Cupo::pluck('serial' , 'id');
         $examenes = Examenes::pluck('name', 'id');
         $exameninstitucion = ExamenInstitucion::pluck('valor_previser', 'id');
@@ -109,8 +111,7 @@ class SolicitudController extends AppBaseController
 
             return redirect(route('solicituds.index'));
         }
-
-        return view('solicituds.edit',['solicitud', $solicitud , 'institucion' => $institucion, 'cupo' => $cupo,
+        return view('solicituds.edit',['solicitud' => $solicitud , 'instituciones' => $instituciones, 'cupo' => $cupo,
         'examenes' => $examenes,'exameninstitucion' => $exameninstitucion]);
     }
 
@@ -133,6 +134,7 @@ class SolicitudController extends AppBaseController
         }
 
         $solicitud = $this->solicitudRepository->update($request->all(), $id);
+       
 
         Flash::success('Solicitud updated successfully.');
 
@@ -169,4 +171,30 @@ class SolicitudController extends AppBaseController
     //    var_dump($employ);
        echo json_encode($employ);
    }
+
+   public function sendEmail(){    
+     //$receivers = "andres.gustin@correounivalle.edu.co";
+     //Mail::to($receivers)->send();
+    //$data = Solicitud::all();
+    //  $data = array(
+    //      'nombre' => "nombre",
+    //      'fechaincio' => 'fecha_inicio',
+    //      //'estado',
+    //      'Institucion' => 'id_institucion',
+    //      'Examen ' => 'id_examen',
+    //      'costo' => 'id_examen_institucion',
+    //      'fechacita' => 'fecha_cita',
+    //      'progreso' => 'progreso',
+    //      'observaciones antes de' => 'observacion',
+    //      'hora de examne' => 'hora'
+    //  );
+
+     Mail::send('emails.aprobado', $data, function($message){
+
+         $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
+
+         $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
+
+     });
+    }
 }

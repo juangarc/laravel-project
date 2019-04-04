@@ -44,7 +44,11 @@
 <script>
     $("#examen").change(function(event){
         $.get('/prueba3/'+event.target.value+"",function(response,state){
+            $('#institucion').prop('disabled', false);
             $("#institucion").empty();
+            $("#institucion").append("<option value=''</option>")
+            $('#costoExamen').val("");
+            $('#costoExamen').text("Valor a pagar");
             for(i=0; i<response.length; i++) {
                 $("#institucion").append("<option value='"+response[i].cod_institucion+"'> "+response[i].nameInstitucion+"</option>");
             }
@@ -56,12 +60,11 @@
 <script>
     $("#institucion").change(function(event){
         var exa = document.getElementById('examen').value;
-        console.log(exa);
+        // console.log(exa);
         $.get('/prueba4/'+event.target.value+""+'/'+exa,function(response,state){
-            $("#costoExamen").empty();
-            for(i=0; i<response.length; i++) {
-                $("#costoExamen").append("<option value='"+response[i].id+"'> "+response[i].costoExamen+"</option>");
-            }
+            // $("#costoExamen").empty();
+            $('#costoExamen').val(response[0].valor_previser);
+            $('#costoExamenId').val(response[0].id);
         });
     });
 
