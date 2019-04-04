@@ -21,6 +21,7 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
     function getMessage(){
     var codigo = document.getElementById('codigo')
@@ -38,5 +39,17 @@
             }
         });
     }
+</script>
+
+<script>
+    $("#examen").change(function(event){
+        $.get('/prueba3/'+event.target.value+"",function(response,state){
+            $("#institucion").empty();
+            for(i=0; i<response.length; i++) {
+                $("#institucion").append("<option value='"+response[i].cod_institucion+"'> "+response[i].nameInstitucion+"</option>");
+            }
+        });
+    });
+
 </script>
 @endsection

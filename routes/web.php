@@ -64,3 +64,5 @@ Route::get('chart', 'ChartController@index');
 Route::resource('estadisticas', 'EstadisticaController');
 
 Route::resource('solicituds', 'SolicitudController');
+
+Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
