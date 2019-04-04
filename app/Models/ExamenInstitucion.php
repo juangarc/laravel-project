@@ -71,4 +71,12 @@ class ExamenInstitucion extends Model
         ->where('examen_institucions.cod_examen', '=', $id)
         ->select('examen_institucions.*', 'instituciones.name as nameInstitucion')->get();
     }
+
+    public static function findValor($id, $id2) {
+        return DB::table('examen_institucions')
+        ->join('instituciones', 'instituciones.id', '=', 'examen_institucions.cod_institucion')
+        ->join('examenes', 'examenes.id', '=', 'examen_institucions.cod_examen')
+        ->where([['examen_institucions.cod_institucion', '=', $id], ['examen_institucions.cod_examen', '=', $id2]])
+        ->select('examen_institucions.*', 'examen_institucions.valor_previser as costoExamen')->get();
+    }
 }

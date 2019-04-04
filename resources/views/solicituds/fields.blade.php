@@ -53,7 +53,7 @@
 <!-- Id ExamenInsticion -->
 <div class="form-group col-sm-6">
     {!! Form::label('id_examen_institucion', 'Valor:') !!}
-    {!! Form::select('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control']) !!}
+    {!! Form::select('id_examen_institucion', $exameninstitucion ,null, ['class' => 'form-control', 'id' => 'costoExamen', 'placeholder' => 'Valor a pagar']) !!}
 </div>
 
 <!-- Fecha Cita Field -->

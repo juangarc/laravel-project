@@ -66,3 +66,5 @@ Route::resource('estadisticas', 'EstadisticaController');
 Route::resource('solicituds', 'SolicitudController');
 
 Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
+
+Route::get('prueba4/{id, $id2}', 'ExamenInstitucionController@getValor');
