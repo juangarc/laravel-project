@@ -180,21 +180,29 @@ class SolicitudController extends AppBaseController
 
 
 
-//    public function sendEmail(){
-//       $solicitudes = Solicitud::join('cupos', 'id_cupo','=', 'solicituds.id')->where('cupos.cod_cliente','=','clientes.id')
-//       ->select('clientes.id','clientes.correo');
-//          $solicitud = $this->solicitudRepository->findWithoutFail($id);
+   public function sendEmail($id){
+      $solicitudes = DB::table('solicituds')
+      ->join('cupos', 'cupos.id','=', 'solicituds.id_cupo')
+      ->join('clientes', 'clientes.id','=', 'cupos.cod_cliente')
+      ->where('cupos.cod_cliente','=',$id)
+      ->select('clientes.id','clientes.correo as correoCliente')->get();
+         $solicitud = $this->solicitudRepository->findWithoutFail($id);
 
-//         $data = array(
-//             'nombre' => "nombre",
-//             'fechaincio' => 'fecha_inicio'
-//         );
-//           Mail::send('emails.aprobado', $data, function($message){
+         return DB::table('examen_institucions')
+         ->join('instituciones', 'instituciones.id', '=', 'examen_institucions.cod_institucion')
+         ->where('examen_institucions.cod_examen', '=', $id)
+         ->select('examen_institucions.*', 'instituciones.name as nameInstitucion')->get();
 
-//             $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
+        $data = array(
+            'nombre' => "nombre",
+            'fechaincio' => 'fecha_inicio'
+        );
+          Mail::send('emails.aprobado', $data, function($message){
 
-//             $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
+            $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
 
-//        });     
-//    }
+            $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
+
+       });     
+   }
 }
