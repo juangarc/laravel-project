@@ -10,10 +10,8 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
-                    {!! Form::model($solicitud, ['route' => ['solicituds.update', $solicitud->id], 'method' => 'patch']) !!}
                     @include('solicituds.show_fields')
-                    <a href="{!! route('solicituds.index') !!}" class="btn btn-default">Back</a>
-                    {!! Form::close() !!}
+                    <a href="{!! route('solicituds.index') !!}" class="btn btn-default">Atrás</a>
                 </div>
             </div>
         </div>

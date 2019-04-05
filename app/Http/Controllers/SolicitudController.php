@@ -139,8 +139,9 @@ class SolicitudController extends AppBaseController
 
         $solicitud = $this->solicitudRepository->update($request->all(), $id);
        
+        // Mail::to('gustin1220@gmail.com')->send(new SolicitudMail);
 
-        Flash::success('Solicitud updated successfully.');
+        // Flash::success('Solicitud updated successfully.');
 
         return redirect(route('solicituds.index'));
     }

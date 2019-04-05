@@ -15,12 +15,13 @@ class CreateEstadisticasTable extends Migration
     {
         Schema::create('estadisticas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('ano');
+            $table->integer('año');
             $table->double('ta');
             $table->double('is');
             $table->double('if');
             $table->double('ma');
             $table->double('ili');
+            $table->unique('id');
             $table->timestamps();
             $table->softDeletes();
         });
