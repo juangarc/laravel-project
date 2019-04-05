@@ -5,20 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Aserweb</title>
+    <input type="hidden" name="id" class="form-group">
+    <input type="hidden" name="fecha_inicio" class="fecha_inicio">
+    <input type="hidden" name="id_serial" class="form-group">
+    <input type="hidden" name="nombre" class="form-group">
+    <input type="hidden" name="id_examen" class="form-group">
+    <input type="hidden" name="id_institucion" class="form-group">
+    <input type="hidden" name="fecha_cita" class="form-group">
+    <input type="hidden" name="hora" class="form-group">
+    <input type="hidden" name="observacion" class="form-group">
 </head>
 <body>
     <div>
         Respuesta a Solicitud 
     </div>
 
-<p>var_dum{{$solicitud}}</p>
 
-    {{-- <p>Hola!  Su cita registrada el dia {{ $solicitudCall->nombre }}</p>
-    <p>Ha sido aprobada</p>
-    <ul>
-        <li>Lugar o institucion: </li>
-        <li>Dia: {{ $solicitudCall->ident }}</li>
-        <li>Hora: {{ $solicitudCall->ident }}</li> --}}
-    </ul>
 </body>
 </html>

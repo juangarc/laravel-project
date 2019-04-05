@@ -5,7 +5,7 @@
 </div>
 
 <!-- Fecha Inicio Field -->
-<div class="form-group">
+<div class="form-group fecha_inicio">
     {!! Form::label('fecha_inicio', 'Fecha Inicio:') !!}
     <p>{!! $solicitud->fecha_inicio !!}</p>
 </div>
@@ -84,13 +84,15 @@
 </div>
 
 <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
+
+
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>     
      $('#btn-enviar').click(function(){
          $.ajax({                        
             type: "GET",                 
-            url: '/solicituds/prueba5/',                     
-            //data: $("#formulario").serialize(), 
+            url: '/correo/',                     
+            //data: $("#formulario").serialize()
             success: function(data)             
             {
                 alert("Solicitud aprobada y enviada");
