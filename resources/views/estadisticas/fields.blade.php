@@ -31,31 +31,7 @@
 <!-- Ili Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ili', 'Ili:') !!}
-    {!! Form::number('ili', $indiceLeccionesIncapacitantes, null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Iel Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('iel', 'Iel:') !!}
-    {!! Form::number('iel', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Pel Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('pel', 'Pel:') !!}
-    {!! Form::number('pel', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Ieg Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('ieg', 'Ieg:') !!}
-    {!! Form::number('ieg', null, ['class' => 'form-control']) !!}
-</div>
-
-<!-- Peg Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('peg', 'Peg:') !!}
-    {!! Form::number('peg', null, ['class' => 'form-control']) !!}
+    {!! Form::number('ili', $indiceLeccionesIncapacitantes, null, ['class' => 'form-control', 'onChange' => 'setTwoNumberDecimal']) !!}
 </div>
 
 <!-- Submit Field -->

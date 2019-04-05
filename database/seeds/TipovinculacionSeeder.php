@@ -19,19 +19,19 @@ class TipovinculacionSeeder extends Seeder
         ]);
 
         DB::table('tipo_vinculacions')->insert([
-            'name' => 'planta',
+            'name' => 'Planta',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipo_vinculacions')->insert([
-            'name' => 'estudiante',
+            'name' => 'Estudiante',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipo_vinculacions')->insert([
-            'name' => 'contratista',
+            'name' => 'Contratista',
             'created_at' => now(),
             'updated_at' => now()
         ]);

@@ -73,17 +73,17 @@ class Solicitud extends Model
      * @var array
      */
     public static $rules = [
-        'fecha_inicio' => 'required',
-        'id_serial' => 'required',
+        'fecha_inicio',
+        'id_serial' ,
         //'estado' => 'required',
-        'nombre' => 'required',
-        'id_examen' => 'required',
-        'id_institucion' => 'required',
-        'id_examen_institucion' => 'required',
-        'fecha_cita' => 'required',
+        'nombre' ,
+        'id_examen',
+        'id_institucion' ,
+        'id_examen_institucion' ,
+        'fecha_cita',
         'progreso' => 'required',
-        'observacion' => 'required',
-        'hora' => 'required'
+        'observacion',
+        'hora' 
     ];
     public function cupo()
     {

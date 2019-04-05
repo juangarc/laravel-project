@@ -13,17 +13,17 @@ class ExamenSeeder extends Seeder
     public function run()
     {
         DB::table('examenes')->insert([
-            'name' => '· Hemograma tipo I',
+            'name' => 'Hemograma tipo I',
             'cod_tipoexamen' => '1'
         ]);
 
         DB::table('examenes')->insert([
-            'name' => '· Hemograma tipo II',
+            'name' => 'Hemograma tipo II',
             'cod_tipoexamen' => '1'
         ]);
 
         DB::table('examenes')->insert([
-            'name' => '· Hemograma tipo III',
+            'name' => 'Hemograma tipo III',
             'cod_tipoexamen' => '1'
         ]);
 

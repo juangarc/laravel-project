@@ -13,8 +13,18 @@
                <div class="row">
                    {!! Form::model($solicitud, ['route' => ['solicituds.update', $solicitud->id], 'method' => 'patch']) !!}
 
-                        @include('solicituds.fields')
-
+                        <div class="form-group col-sm-6">
+                        <label>Progreso </label>
+                        <select name="progreso" id="progreso" class="form-control">
+                        <option value="PENDIENTE">PENDIENTE</option>
+                        <option value="APROBADO">APROBADO</option>
+                        <option value="NO APROBADO">NO APROBADO</option>
+                        </select>
+                        </div>
+<div class="form-group col-sm-12">
+    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('solicituds.index') !!}" class="btn btn-default">Cancel</a>
+</div>
                    {!! Form::close() !!}
                </div>
            </div>
