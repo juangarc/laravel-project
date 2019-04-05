@@ -67,12 +67,24 @@ class EstadisticaDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'año',
-            'ta',
-            'is',
-            'if',
-            'ma',
-            'ili'
+            ['title' => 'Año',
+            'data' => 'año',
+            'name' => 'año'],
+            ['title' => 'Tasa de Accidentalidad %',
+            'data' => 'ta',
+            'name' => 'ta'],
+            ['title' => 'Severidad Accidentes',
+            'data' => 'is',
+            'name' => 'is'],
+            ['title' => 'Frecuencia de Accidentes',
+            'data' => 'if',
+            'name' => 'if'],
+            ['title' => 'Mortalidad Accidentes %',
+            'data' => 'ma',
+            'name' => 'ma'],
+            ['title' => 'Indice de lesiones incapacitantes',
+            'data' => 'ili',
+            'name' => 'ili'],
         ];
     }
 

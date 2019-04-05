@@ -32,16 +32,16 @@ class EstadisticaController extends AppBaseController
      */
     public function index(EstadisticaDataTable $estadisticaDataTable)
     {
-        // $total = Estadistica::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))->get();
-    $total = Estadistica::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
-                ->get();          
+        //  $total = Estadistica::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))->get();
+    // $total = Estadistica::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
+    //             ->get();          
 
-        $pie  =  Charts::database($total, 'pie', 'highcharts')
-        ->title('Tasa de Accidentalidad (por meses)')
-        ->dimensions(1000,500)
-        ->groupByMonth(date('Y'), true)
-        ->responsive(true);
-        return $estadisticaDataTable->render('estadisticas.index', ['pie' => $pie]);
+        // $pie  =  Charts::database($total, 'pie', 'highcharts')
+        // ->title('Tasa de Accidentalidad (por meses)')
+        // ->dimensions(1000,500)
+        // ->groupByMonth(date('Y'), true)
+        // ->responsive(true);
+         return $estadisticaDataTable->render('estadisticas.index');
 
     }
 
