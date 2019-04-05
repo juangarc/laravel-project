@@ -21,5 +21,8 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
     <script>
+=======
+>>>>>>> decf8382a7361bc880ac329a8c3ff29e986192a1
 @endsection

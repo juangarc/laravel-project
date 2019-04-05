@@ -15,7 +15,7 @@ class CreateEstadisticasTable extends Migration
     {
         Schema::create('estadisticas', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('año');
+            $table->integer('ano');
             $table->double('ta');
             $table->double('is');
             $table->double('if');

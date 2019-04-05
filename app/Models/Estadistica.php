@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 /**
  * Class Estadistica
  * @package App\Models
- * @version March 31, 2019, 10:35 pm UTC
+ * @version April 5, 2019, 4:49 am UTC
  *
- * @property integer año
+ * @property integer ano
  * @property double ta
  * @property double is
  * @property double if
@@ -28,7 +28,7 @@ class Estadistica extends Model
 
 
     public $fillable = [
-        'año',
+        'ano',
         'ta',
         'is',
         'if',
@@ -42,7 +42,7 @@ class Estadistica extends Model
      * @var array
      */
     protected $casts = [
-        'año' => 'integer',
+        'ano' => 'integer',
         'ta' => 'double',
         'is' => 'double',
         'if' => 'double',
@@ -56,12 +56,7 @@ class Estadistica extends Model
      * @var array
      */
     public static $rules = [
-        'año' => 'required',
-        'ta' => 'required',
-        'is' => 'required',
-        'if' => 'required',
-        'ma' => 'required',
-        'ili' => 'required'
+        
     ];
 
     

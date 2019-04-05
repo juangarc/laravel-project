@@ -21,13 +21,6 @@
         <div class="text-center">
         
         </div>
-        <div class="panel-body">
-                    {!! $pie->html() !!}
-                </div>
     </div>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    {!! Charts::scripts() !!}
-    {!! $pie->script() !!}
 @endsection
-
 
