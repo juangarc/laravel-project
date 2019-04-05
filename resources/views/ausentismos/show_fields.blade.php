@@ -82,13 +82,37 @@
      var diasAniadir = document.getElementById("tiempo_ausencia").value;
      
      var diasAnadir = parseInt(diasAniadir);
+     if(diasAnadir <= 8) {
+         var pro = 1;
+         var cc = parseInt(pro);
+     }
+     else if ((diasAnadir > 8 && diasAnadir <= 16)) {
+            var pro = 2;
+            var cc = parseInt(pro);
+     }
+     else  {
+            var pro = 3;
+            var cc = parseInt(pro);
+     }
+    
+
+     var ano = Fecha1.getFullYear();
+     var mes = Fecha1.getMonth() + 1;
+     var dia = Fecha1.getDate();
 
      var AnyoFecha = Fecha1.getFullYear();
      var MesFecha = Fecha1.getMonth() + 1;
-     var DiaFecha = Fecha1.getDate() + diasAnadir;
+     var DiaFecha = Fecha1.getDate() + cc;
      if (MesFecha < 10 && DiaFecha < 10) {
         var Fecha2 = AnyoFecha+"-0"+MesFecha+"-0"+DiaFecha;     
-     }else {
+     }
+     else if (MesFecha < 10 && DiaFecha >= 10) {
+        var Fecha2 = AnyoFecha+"-0"+MesFecha+"-"+DiaFecha;     
+     }
+     else if (MesFecha >= 10 && DiaFecha < 10) {
+        var Fecha2 = AnyoFecha+"-"+MesFecha+"-0"+DiaFecha;     
+     }
+     else {
      var Fecha2 = AnyoFecha+"-"+MesFecha+"-"+DiaFecha; 
      }
     //  var Fecha3 = Date.parse(Fecha2);
@@ -101,7 +125,7 @@
      var DiaHoy = Hoy.getDate();
 
      var producto1 = document.getElementById('botonProrroga');
-                 if (AnyoFecha <= AnyoHoy && MesFecha <= MesHoy && DiaFecha <= DiaHoy){
+                 if (ano <= AnyoHoy && mes <= MesHoy && dia <= DiaHoy){
                     producto1.style.display = 'inline';
                  }
                  else{

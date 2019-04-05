@@ -11,7 +11,7 @@
             <form id="formulario">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label>Cantidad de Dias* </label>
+                    <label>Cantidad de Horas* </label>
                     <input type="number" name="cantidad_dia_prorroga" class="form-control">
                     <input name="id_ausentismo" type="hidden" id="iden" value={{$ausentismo->id}}>
                 </div>            
@@ -27,7 +27,7 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>%Incapacidad* </label>
+                    <label>Costo incapacidad* </label>
                     <input type="number" name="%incapacidad" class="form-control">
                 </div>
                 <div class="form-group">

@@ -68,9 +68,13 @@ class ProrrogaDataTable extends DataTable
     {
         return [
             'cantidad_dia_prorroga',
-            'fechainicio',
+            ['title' => 'Fecha de inicio',
+            'data' => 'fechainicio',
+            'name' => 'fechainicio'],
             'incapacidad',
-            '%incapacidad',
+            ['title' => 'Costo incapacidad',
+            'data' => '%incapacidad',
+            'name' => '%incapacidad'],
             'seguimiento_incapacidad',
             'id_ausentismo'
         ];
