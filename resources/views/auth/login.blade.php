@@ -81,7 +81,7 @@
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">Ólvide mi contraseña</a><br>
+        <!-- <a href="{{ url('/password/reset') }}">Ólvide mi contraseña</a><br> -->
         <a href="{{ url('/register') }}" class="text-center">Registrar una nueva cuenta</a>
 
     </div>
