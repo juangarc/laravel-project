@@ -21,7 +21,7 @@ class SolicitudMail extends Mailable
      */
     public function __construct($solicitud)
     {
-        $this->solicitud = $solicitud;
+        $this->solicitud = $solicitud; 
     }
 
     /**
