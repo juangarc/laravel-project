@@ -38,7 +38,7 @@ class HomeController extends Controller
         ->select('empleados.*', 'sedes.name as nameSede')->get();
         $total = DB::table('ausentismos')
         ->join('empleados', 'empleados.id','=', 'ausentismos.id_empleado')
-        ->join('sedes', 'sedes.id','=', 'ausentismos.id_empleado')
+        ->join('sedes', 'sedes.id','=', 'empleados.id_sede')
         ->select('ausentismos.*', 'sedes.name as nameSede')->get();
 
         $chart = Charts::database($users, 'bar', 'highcharts')
