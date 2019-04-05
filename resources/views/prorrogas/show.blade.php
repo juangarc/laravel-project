@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('prorrogas.show_fields')
-                    <a href="{!! route('prorrogas.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('prorrogas.index') !!}" class="btn btn-default">Atrás</a>
                 </div>
             </div>
         </div>

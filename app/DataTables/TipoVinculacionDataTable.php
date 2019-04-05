@@ -67,7 +67,9 @@ class TipoVinculacionDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'name'
+            ['title' => 'Nombre',
+            'data' => 'name',
+            'name' => 'name'],
         ];
     }
 

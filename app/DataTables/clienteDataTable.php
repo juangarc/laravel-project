@@ -72,7 +72,9 @@ class ClienteDataTable extends DataTable
             'apellido',
             'telefono',
             'direccion',
-            'correo',
+            ['title' => 'Correo Electronico',
+            'data' => 'correo',
+            'name' => 'correo'],
             'genero',
             //'cod_ciudad'
             ['title' => 'Ciudad',
