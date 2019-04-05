@@ -69,4 +69,4 @@ Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
 
 Route::get('prueba4/{id}/{id2}', 'ExamenInstitucionController@getValor');
 
-Route::get('solicituds1', 'SolicitudController@sendEmail' );
+Route::get('/solicituds/prueba5/{id}', 'SolicitudController@sendEmail' );

@@ -12,16 +12,16 @@ class SolicitudMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-    public $solicitudCall;
+    public $solicitud;
 
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct(Solicitud $solicitudCall)
+    public function __construct($solicitud)
     {
-        $this->solicitudCall = $solicitudCall;
+        $this->solicitud = $solicitud;
     }
 
     /**
@@ -34,9 +34,9 @@ class SolicitudMail extends Mailable
         return $this->view('emails.aprobado');
 
     }
-    // public function solicituds()
-    // {
-    //     return $this->belongsTo(Soicitud::class, 'id');
-    // }
+    //  public function solicituds()
+    //  {
+    //      return $this->belongsTo(Soicitud::class, 'id');
+    //  }
 
 }

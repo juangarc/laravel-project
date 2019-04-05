@@ -44,7 +44,7 @@
 <!-- Id Examen Institucion Field -->
 <div class="form-group">
     {!! Form::label('id_examen_institucion', 'Costo:') !!}
-    <p>{!! $solicitud->exameninstitucion->valor !!}</p>
+    <p>{!! $solicitud->exameninstitucion->valor_previser !!}</p>
 </div>
 
 <!-- Hora Field -->
@@ -74,15 +74,15 @@
 <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>     
-    $('#btn-enviar').click(function(){
-        $.ajax({                        
-           type: "GET",                 
-           url: '/solicituds1',                     
-           //data: $("#formulario").serialize(), 
-           success: function(data)             
-           {
-               alert("Solicitud aprobada y enviada");
-        }
-       });
-    });
+     $('#btn-enviar').click(function(){
+         $.ajax({                        
+            type: "GET",                 
+            url: '/solicituds/prueba5/',                     
+            //data: $("#formulario").serialize(), 
+            success: function(data)             
+            {
+                alert("Solicitud aprobada y enviada");
+         }
+        });
+     });
     </script>
