@@ -13,13 +13,13 @@
 <!-- Is Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('is', 'Is:') !!}
-    {!! Form::number('is', $totalSeveridadAccidente,null, ['class' => 'form-control']) !!}
+    {!! Form::number('is', $totalFrecuenciaAccidentes,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- If Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('if', 'If:') !!}
-    {!! Form::number('if', $totalFrecuenciaAccidentes,null, ['class' => 'form-control']) !!}
+    {!! Form::number('if', $totalSeveridadAccidente,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Ma Field -->
@@ -31,7 +31,7 @@
 <!-- Ili Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('ili', 'Ili:') !!}
-    {!! Form::number('ili', $indiceLeccionesIncapacitantes, null, ['class' => 'form-control', 'onChange' => 'setTwoNumberDecimal']) !!}
+    {!! Form::number('ili', $indiceLeccionesIncapacitantes,null, ['class' => 'form-control', 'onChange' => 'setTwoNumberDecimal']) !!}
 </div>
 
 <!-- Submit Field -->

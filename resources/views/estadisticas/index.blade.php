@@ -16,11 +16,19 @@
         <div class="box box-primary">
             <div class="box-body">
                     @include('estadisticas.table')
+                    <div class="panel-body">
+                    {!! $pie->html() !!}
+                </div>
             </div>
         </div>
         <div class="text-center">
         
         </div>
+
+
     </div>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {!! Charts::scripts() !!}
+    {!! $pie->script() !!}
 @endsection
 

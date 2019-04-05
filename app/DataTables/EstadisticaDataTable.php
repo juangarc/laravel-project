@@ -64,7 +64,7 @@ class EstadisticaDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'ano',
+            'año',
             'ta',
             'is',
             'if',
