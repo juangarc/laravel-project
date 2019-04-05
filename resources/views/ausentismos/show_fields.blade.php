@@ -69,7 +69,7 @@
     <p>{!! $ausentismo->updated_at !!}</p>
 </div>
 
-<a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Anadir Prorroga</a>
+<a href="#" class="btn btn-primary pull-right" data-toggle="modal" data-target="#create" id="botonProrroga" >Añadir Prorroga</a>
 @include('ausentismos.modal')
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
          <script>
@@ -94,7 +94,7 @@
     //  var Fecha3 = Date.parse(Fecha2);
     //  var Fecha4 = new Date(Fecha3);
     document.getElementById('fecha_final').value=Fecha2;
-    console.log(Fecha2);
+    // console.log(Fecha2);
       
      var AnyoHoy = Hoy.getFullYear();
      var MesHoy = Hoy.getMonth() + 1;
@@ -117,7 +117,7 @@
            data: $("#formulario").serialize(), 
            success: function(data)             
            {
-               alert("Prorroga anadida");
+               alert("Prorroga añadida");
         }
        });
     });

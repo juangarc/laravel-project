@@ -68,7 +68,9 @@ class BeneficiarioDataTable extends DataTable
     {
         return [
             'identificacion',
-            'name',
+            ['title' => 'Nombre',
+            'data' => 'name',
+            'name' => 'name'],
             'parentesco',
             'edad',
             //'cod_cupo'
