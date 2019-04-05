@@ -47,7 +47,7 @@
     <p>{!! $solicitud->exameninstitucion->valor_previser !!}</p>
 </div>
 
-<!-- Id Progreso Field -->
+<!-- Progreso -->
 <div class="form-group">
     {!! Form::label('progreso', 'Progreso:') !!}
     <p>{!! $solicitud->progreso !!}</p>
@@ -83,9 +83,12 @@
     <p>{!! $solicitud->updated_at !!}</p>
 </div>
 
+<div class="form-group col-sm-12">
+    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('solicituds.index') !!}" class="btn btn-default">Cancel</a>
+</div>
+
 <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
-<a href="#" class="btn btn-danger pull-right"   id="btn-enviar" >Rechazar Solicitud</a>
-<a href="#" class="btn btn-success pull-right"   id="btn-enviar" >Aprobar Solicitud</a>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>     
     $('#btn-enviar').click(function(){
