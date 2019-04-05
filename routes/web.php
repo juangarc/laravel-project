@@ -65,9 +65,9 @@ Route::resource('examenInstitucions', 'ExamenInstitucionController');
 
 Route::get('chart', 'ChartController@index');
 
-Route::group(['middleware' => ['role:admin|user']], function () {
-Route::resource('estadisticas', 'EstadisticaController');
-});
+// Route::group(['middleware' => ['role:admin|user']], function () {
+// Route::resource('estadisticas', 'EstadisticaController');
+// });
 
 Route::group(['middleware' => ['role:admin|user|costumer']], function () {
 Route::resource('solicituds', 'SolicitudController');
@@ -79,5 +79,6 @@ Route::get('prueba4/{id}/{id2}', 'ExamenInstitucionController@getValor');
 
 //Route::get('/correo/{id}', 'SolicitudController@sendEmail' );
 
-
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('estadisticas', 'EstadisticaController');
+});
