@@ -188,11 +188,6 @@ class SolicitudController extends AppBaseController
       ->select('clientes.id','clientes.correo as correoCliente')->get();
          $solicitud = $this->solicitudRepository->findWithoutFail($id);
 
-         return DB::table('examen_institucions')
-         ->join('instituciones', 'instituciones.id', '=', 'examen_institucions.cod_institucion')
-         ->where('examen_institucions.cod_examen', '=', $id)
-         ->select('examen_institucions.*', 'instituciones.name as nameInstitucion')->get();
-
         $data = array(
             'nombre' => "nombre",
             'fechaincio' => 'fecha_inicio'
