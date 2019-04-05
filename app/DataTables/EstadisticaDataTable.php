@@ -69,11 +69,7 @@ class EstadisticaDataTable extends DataTable
             'is',
             'if',
             'ma',
-            'ili',
-            'iel',
-            'pel',
-            'ieg',
-            'peg'
+            'ili'
         ];
     }
 

@@ -20,34 +20,37 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
+Route::group(['middleware' => ['role:admin']], function () {
+Route::resource('cargos', 'CargoController');
+
 Route::resource('sedes', 'SedeController');
 
 Route::resource('tipoAusentismos', 'TipoAusentismoController');
 
-Route::resource('tipoEspecialidads', 'TipoEspecialidadController');
-
-Route::resource('tipoExamens', 'TipoExamenController');
-
 Route::resource('tipoVinculacions', 'TipoVinculacionController');
+});
 
 Route::group(['middleware' => ['role:admin']], function () {
 Route::resource('empleados', 'EmpleadoController');
 });
+
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('ausentismos', 'AusentismoController');
 
 Route::resource('prorrogas', 'ProrrogaController');
-
+});
 //Route::resource('empleados', 'EmpleadoController');
 
 Route::get('/prueba/{id}', 'AusentismoController@showDataEmploy');
 
 Route::get('/prueba2/{id}', 'SolicitudController@showDataEmploy');
 
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('instituciones', 'InstitucionesController');
 
 Route::resource('examenes', 'ExamenesController');
 
-Route::resource('cargos', 'CargoController');
+Route::resource('tipoExamens', 'TipoExamenController');
 
 Route::resource('clientes', 'ClienteController');
 
@@ -58,12 +61,17 @@ Route::resource('cupos', 'CupoController');
 Route::resource('beneficiarios', 'BeneficiarioController');
 
 Route::resource('examenInstitucions', 'ExamenInstitucionController');
+});
 
 Route::get('chart', 'ChartController@index');
 
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('estadisticas', 'EstadisticaController');
+});
 
+Route::group(['middleware' => ['role:admin|user|costumer']], function () {
 Route::resource('solicituds', 'SolicitudController');
+});
 
 Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
 

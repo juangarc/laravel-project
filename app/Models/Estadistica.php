@@ -16,10 +16,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property double if
  * @property double ma
  * @property double ili
- * @property double iel
- * @property double pel
- * @property double ieg
- * @property double peg
  */
 class Estadistica extends Model
 {
@@ -37,11 +33,7 @@ class Estadistica extends Model
         'is',
         'if',
         'ma',
-        'ili',
-        'iel',
-        'pel',
-        'ieg',
-        'peg'
+        'ili'
     ];
 
     /**
@@ -55,11 +47,7 @@ class Estadistica extends Model
         'is' => 'double',
         'if' => 'double',
         'ma' => 'double',
-        'ili' => 'double',
-        'iel' => 'double',
-        'pel' => 'double',
-        'ieg' => 'double',
-        'peg' => 'double'
+        'ili' => 'double'
     ];
 
     /**
@@ -73,11 +61,7 @@ class Estadistica extends Model
         'is' => 'required',
         'if' => 'required',
         'ma' => 'required',
-        'ili' => 'required',
-        'iel' => 'required',
-        'pel' => 'required',
-        'ieg' => 'required',
-        'peg' => 'required'
+        'ili' => 'required'
     ];
 
     

@@ -18,21 +18,15 @@
 
 
 <!-- Estado Field -->
-<div class="form-group">
+<!-- <div class="form-group">
     {!! Form::label('estado', 'Estado:') !!}
     <p>{!! $solicitud->estado !!}</p>
-</div>
+</div> -->
 
 <!-- Nombre Field -->
 <div class="form-group">
     {!! Form::label('nombre', 'Nombre:') !!}
     <p>{!! $solicitud->nombre !!}</p>
-</div>
-
-<!-- Id Institucion Field -->
-<div class="form-group">
-    {!! Form::label('id_institucion', 'Institucion:') !!}
-    <p>{!! $solicitud->institucion->name !!}</p>
 </div>
 
 <!-- Id Examen Field -->
@@ -41,10 +35,22 @@
     <p>{!! $solicitud->examen->name !!}</p>
 </div>
 
+<!-- Id Institucion Field -->
+<div class="form-group">
+    {!! Form::label('id_institucion', 'Institucion:') !!}
+    <p>{!! $solicitud->institucion->name !!}</p>
+</div>
+
 <!-- Id Examen Institucion Field -->
 <div class="form-group">
     {!! Form::label('id_examen_institucion', 'Costo:') !!}
     <p>{!! $solicitud->exameninstitucion->valor_previser !!}</p>
+</div>
+
+<!-- Progreso -->
+<div class="form-group">
+    {!! Form::label('progreso', 'Progreso:') !!}
+    <p>{!! $solicitud->progreso !!}</p>
 </div>
 
 <!-- Hora Field -->
@@ -59,6 +65,12 @@
     <p>{!! $solicitud->hora !!}</p>
 </div>
 
+<!-- Observacion Field -->
+<div class="form-group">
+    {!! Form::label('observacion', 'Observacion:') !!}
+    <p>{!! $solicitud->observacion !!}</p>
+</div>
+
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
@@ -69,6 +81,11 @@
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
     <p>{!! $solicitud->updated_at !!}</p>
+</div>
+
+<div class="form-group col-sm-12">
+    {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
+    <a href="{!! route('solicituds.index') !!}" class="btn btn-default">Cancel</a>
 </div>
 
 <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>

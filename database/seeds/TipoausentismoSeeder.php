@@ -13,61 +13,61 @@ class TipoausentismoSeeder extends Seeder
     public function run()
     {
         DB::table('tipoausentismos')->insert([
-            'name' => 'incapacidad por enfermedad general',
+            'name' => 'Incapacidad por enfermedad general',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'incapacidad por accidente de trabajo',
+            'name' => 'Incapacidad por accidente de trabajo',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'ausencia sin excusa',
+            'name' => 'Ausencia sin excusa',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'cita médica',
+            'name' => 'Cita médica',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'incapacidad por enfermedad laboral',
+            'name' => 'Incapacidad por enfermedad laboral',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'exámenes médicos laborales',
+            'name' => 'Exámenes médicos laborales',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'exámenes médicos generales',
+            'name' => 'Exámenes médicos generales',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'licencia de paternidad',
+            'name' => 'Licencia de paternidad',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'licencia de maternidad',
+            'name' => 'Licencia de maternidad',
             'created_at' => now(),
             'updated_at' => now()
         ]);
 
         DB::table('tipoausentismos')->insert([
-            'name' => 'suspensión',
+            'name' => 'Suspensión',
             'created_at' => now(),
             'updated_at' => now()
         ]);
