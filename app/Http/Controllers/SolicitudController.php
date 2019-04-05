@@ -178,101 +178,23 @@ class SolicitudController extends AppBaseController
        echo json_encode($employ);
    }
 
-   public function sendEmail(){
-    //  $solicitudes = Solicitud::join('cupos', 'id_cupo','=', 'solicituds.id')->where('cupos.cod_cliente','=','clientes.id')
-    //  ->select('clientes.id','clientes.correo');
-        // $solicitud = $this->solicitudRepository->findWithoutFail($id);
-
-        $data = array(
-            'nombre' => "nombre",
-            'fechaincio' => 'fecha_inicio',
-            //'estado',
-            'Institucion' => 'id_institucion',
-            'Examen ' => 'id_examen',
-            'costo' => 'id_examen_institucion',
-            'fechacita' => 'fecha_cita',
-            'progreso' => 'progreso',
-            'observaciones antes de' => 'observacion',
-            'hora de examne' => 'hora'
-        );
-          Mail::send('emails.aprobado', $data, function($message){
-
-            $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
-
-            $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
-
-       });
-    
-         // Mail::to("gustin1220@gmail.com")->send(new SolicitudMail($solicitud));
-        
-   }
 
 
+//    public function sendEmail(){
+//       $solicitudes = Solicitud::join('cupos', 'id_cupo','=', 'solicituds.id')->where('cupos.cod_cliente','=','clientes.id')
+//       ->select('clientes.id','clientes.correo');
+//          $solicitud = $this->solicitudRepository->findWithoutFail($id);
 
+//         $data = array(
+//             'nombre' => "nombre",
+//             'fechaincio' => 'fecha_inicio'
+//         );
+//           Mail::send('emails.aprobado', $data, function($message){
 
+//             $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
 
-    //$correo = $request->input("nombre");
-    // Mail::send("emails.aprobado", $request->all(),function($msj) use($correo){
+//             $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
 
-    //     $msj->subject("Solicitud Aprobada ");
-    //     $msj->to("gustin1220@gmail.com");
-
-            //$data = Solicitud::all();
-    //    $data = array(
-    //        'nombre' => "nombre",
-    //        'fechaincio' => 'fecha_inicio',
-    //        //'estado',
-    //        'Institucion' => 'id_institucion',
-    //        'Examen ' => 'id_examen',
-    //        'costo' => 'id_examen_institucion',
-    //        'fechacita' => 'fecha_cita',
-    //        'progreso' => 'progreso',
-    //        'observaciones antes de' => 'observacion',
-    //        'hora de examne' => 'hora'
-    //    );
-    // //  $receivers = "andres.gustin@correounivalle.edu.co";
-    // //  Mail::to($receivers)->send(new SolicitudMail($call));
-
-    //   Mail::send('emails.aprobado', $data, function($message){
-
-    //       $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
-
-    //       $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
-
-    // });
-
-    //$solicitud = $this->solicitudRepository->findWithoutFail($id);
-    //Mail::to('gustin1220@gmail.com')->send(new SolicitudMail($solicitud)); 
-//    public function sendEmail(){ 
-//     $solicitud = new\App\Models\Solicitud([
-//         'nombre' => "cliente",
-//         'fechacita' =>'09/20/2019',
-//         'hora' => '19:00:00'
-//     ]);
-//     Mail::to('gustin1220@gmail.com')->send(new SolicitudMail($solicitud));
-     //Mail::to($receivers)->send();
-    //$data = Solicitud::all();
-    //   $data = array(
-    //       'nombre' => "nombre",
-    //       'fechaincio' => 'fecha_inicio',
-    //       //'estado',
-    //       'Institucion' => 'id_institucion',
-    //       'Examen ' => 'id_examen',
-    //       'costo' => 'id_examen_institucion',
-    //       'fechacita' => 'fecha_cita',
-    //       'progreso' => 'progreso',
-    //       'observaciones antes de' => 'observacion',
-    //       'hora de examne' => 'hora'
-    //   );
-    // $receivers = "andres.gustin@correounivalle.edu.co";
-    // Mail::to($receivers)->send(new SolicitudMail($call));
-
-    //  Mail::send('emails.aprobado', $data, function($message){
-
-    //      $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
-
-    //      $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
-
-    // });
-    //}
+//        });     
+//    }
 }

@@ -77,7 +77,7 @@ Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
 
 Route::get('prueba4/{id}/{id2}', 'ExamenInstitucionController@getValor');
 
-Route::get('/correo/', 'SolicitudController@sendEmail' );
+//Route::get('/correo/{id}', 'SolicitudController@sendEmail' );
 
 
 Route::resource('estadisticas', 'EstadisticaController');

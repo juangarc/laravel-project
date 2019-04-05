@@ -5,7 +5,7 @@
 </div>
 
 <!-- Fecha Inicio Field -->
-<div class="form-group fecha_inicio">
+<div class="form-group">
     {!! Form::label('fecha_inicio', 'Fecha Inicio:') !!}
     <p>{!! $solicitud->fecha_inicio !!}</p>
 </div>
@@ -83,7 +83,7 @@
     <p>{!! $solicitud->updated_at !!}</p>
 </div>
 
-<a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
+<!-- <a href="#" class="btn btn-primary pull-right"   id="btn-enviar" >Enviar Solicitud</a>
 
 
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -99,4 +99,4 @@
          }
         });
      });
-    </script>
+    </script> -->
