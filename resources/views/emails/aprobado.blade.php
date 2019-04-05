@@ -11,12 +11,14 @@
         Respuesta a Solicitud 
     </div>
 
-    <p>Hola!  Su cita registrada el dia </p>
+<p>var_dum{{$solicitud}}</p>
+
+    {{-- <p>Hola!  Su cita registrada el dia {{ $solicitudCall->nombre }}</p>
     <p>Ha sido aprobada</p>
     <ul>
         <li>Lugar o institucion: </li>
-        <li>Dia: {{ $solicitudCall->$fecha_cita }}</li>
-        <li>Hora: {{ $solicitudCall->hora }}</li>
+        <li>Dia: {{ $solicitudCall->ident }}</li>
+        <li>Hora: {{ $solicitudCall->ident }}</li> --}}
     </ul>
 </body>
 </html>
