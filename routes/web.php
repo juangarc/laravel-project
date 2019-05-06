@@ -30,7 +30,7 @@ Route::resource('tipoAusentismos', 'TipoAusentismoController');
 Route::resource('tipoVinculacions', 'TipoVinculacionController');
 });
 
-Route::group(['middleware' => ['role:admin']], function () {
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('empleados', 'EmpleadoController');
 });
 
@@ -77,7 +77,7 @@ Route::get('prueba3/{id}', 'ExamenInstitucionController@getInstitucion');
 
 Route::get('prueba4/{id}/{id2}', 'ExamenInstitucionController@getValor');
 
-//Route::get('/correo/{id}', 'SolicitudController@sendEmail' );
+Route::get('/correo', 'SolicitudController@sendEmail' );
 
 
 Route::resource('estadisticas', 'EstadisticaController');

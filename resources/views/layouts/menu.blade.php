@@ -40,7 +40,7 @@
         </ul>
 </li>
 @endhasanyrole
-@hasanyrole('admin')
+@hasanyrole('admin|user')
 <li class="{{ Request::is('empleados*') ? 'active' : '' }}">
     <a href="{!! route('empleados.index') !!}"><i class="fa fa-group"></i><span>Empleados</span></a>
 </li>

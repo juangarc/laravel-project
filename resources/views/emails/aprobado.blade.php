@@ -17,7 +17,7 @@
 </head>
 <body>
     <div>
-        Respuesta a Solicitud 
+        RSu Solicitud de cita fue aprobada
     </div>
 
 

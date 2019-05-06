@@ -104,6 +104,16 @@ class SolicitudController extends AppBaseController
      */
     public function edit($id)
     {
+        $solicitudes = DB::table('solicituds')
+      ->join('cupos', 'cupos.id','=', 'solicituds.id_serial')
+      ->join('clientes', 'clientes.id','=', 'cupos.cod_cliente')
+      ->where('cupos.cod_cliente','=',$id)
+      ->select('clientes.id','clientes.correo as correoCliente', 'fecha_cita', 'hora')->get();
+
+      $comment = 'Su Solicitud de cita fue aprobada';
+      $toEmail = $solicitudes[0]->correoCliente;
+      Mail::to($toEmail)->send(new SolicitudMail($comment));
+
         $instituciones = Instituciones::pluck('name', 'id');
         $cupo = Cupo::pluck('serial' , 'id');
         $examenes = Examenes::pluck('name', 'id');
@@ -180,24 +190,29 @@ class SolicitudController extends AppBaseController
 
 
 
-   public function sendEmail($id){
-      $solicitudes = DB::table('solicituds')
-      ->join('cupos', 'cupos.id','=', 'solicituds.id_cupo')
-      ->join('clientes', 'clientes.id','=', 'cupos.cod_cliente')
-      ->where('cupos.cod_cliente','=',$id)
-      ->select('clientes.id','clientes.correo as correoCliente')->get();
-         $solicitud = $this->solicitudRepository->findWithoutFail($id);
+   public function sendEmail(){
+    //   $solicitudes = DB::table('solicituds')
+    //   ->join('cupos', 'cupos.id','=', 'solicituds.id_cupo')
+    //   ->join('clientes', 'clientes.id','=', 'cupos.cod_cliente')
+    //   ->where('cupos.cod_cliente','=',$id)
+    //   ->select('clientes.id','clientes.correo as correoCliente')->get();
+    //      $solicitud = $this->solicitudRepository->findWithoutFail($id);
 
-        $data = array(
-            'nombre' => "nombre",
-            'fechaincio' => 'fecha_inicio'
-        );
-          Mail::send('emails.aprobado', $data, function($message){
+    //     $data = array(
+    //         'nombre' => "nombre",
+    //         'fechaincio' => 'fecha_inicio'
+    //     );
+    //       Mail::send('emails.aprobado', $data, function($message){
 
-            $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
+    //         $message->from('gustin1220@gmail.com', 'Informacion de su solicitud');
 
-            $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
+    //         $message->to('gustin1220@gmail.com')->subject('test email Solicitud');
 
-       });     
+    //    });     
+    $comment = 'Hi, This test feedback.';
+    $toEmail = "codejonville@gmail.com";
+    Mail::to($toEmail)->send(new SolicitudMail($comment));
+    
+    return 'Email has been sent to '. $toEmail;
    }
 }
