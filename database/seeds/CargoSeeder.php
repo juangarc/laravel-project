@@ -66,6 +66,53 @@ class CargoSeeder extends Seeder
             'updated_at' => now()
         ]);
 
+        DB::table('cargos')->insert([
+            'name' => 'Asistente de Produccion',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
 
+        DB::table('cargos')->insert([
+            'name' => 'Auxiliar de Mercadeo',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Gerente',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Jefe de Publicidad',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Subgerente',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Auxiliar de Cartera',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Mensajeria y Relaciones Externas',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('cargos')->insert([
+            'name' => 'Archivo',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+        
     }
 }

@@ -24,5 +24,9 @@ class DepartamentoSeeder extends Seeder
             'name' => 'Risaralda',
         ]);
 
+        DB::table('departamentos')->insert([
+            'name' => 'Cauca',
+        ]);
+
     }
 }
