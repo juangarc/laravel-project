@@ -24,7 +24,7 @@
 
 <!-- Correoelectronico Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('correoelectronico', 'Correoelectronico:') !!}
+    {!! Form::label('correoelectronico', 'Correo electronico:') !!}
     {!! Form::text('correoelectronico', null, ['class' => 'form-control']) !!}
 </div>
 
@@ -37,8 +37,17 @@
 <!-- Fechadenacimiento Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('fechadenacimiento', 'Fecha de nacimiento:') !!}
-    {!! Form::date('fechadenacimiento', null, ['class' => 'form-control']) !!}
+    {!! Form::date('fechadenacimiento', $empleado->fechadenacimiento, ['class' => 'form-control']) !!}
 </div>
+@section('scripts')
+    <script type="text/javascript">
+        $('#fechadenacimiento').datetpicker({
+            format: 'YYYY-MM-DD',
+            useCurrent: true    
+
+        })
+    </script>
+@endsection
 
 <!-- Salario Field -->
 <div class="form-group col-sm-6">
@@ -60,14 +69,25 @@
 
 <!-- Fechadeingreso Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('fechadeingreso', 'Fechadeingreso:') !!}
-    {!! Form::date('fechadeingreso', null, ['class' => 'form-control']) !!}
+    {!! Form::label('fechadeingreso', 'Fecha de ingreso:') !!}
+    {!! Form::date('fechadeingreso', $empleado->fechadeingreso, ['class' => 'form-control']) !!}
 </div>
+@section('scripts')
+    <script type="text/javascript">
+        $('#fechadeingreso').datetpicker({
+            format: 'YYYY-MM-DD',
+            useCurrent: true    
+
+        })
+    </script>
+@endsection
+
 
 <!-- Estado Field -->
 <div class="form-group col-sm-6">
         <label>Estado </label>
         <select name="estado" id="estado" class="form-control">
+        <option value=""></option>
         <option value="ACTIVO">ACTIVO</option>
         <option value="INACTIVO">INACTIVO</option>
         </select>
@@ -76,7 +96,8 @@
 <!-- Genero Field -->
 <div class="form-group col-sm-6">
         <label>Genero </label>
-        <select name="genero" id="genero" class="form-control">
+        <select name="genero" id="genero" value="{{$empleado->genero}}" class="form-control">
+      <!  <option value=""></option>
         <option value="MASCULINO">MASCULINO</option>
         <option value="FEMENINO">FEMENINO</option>
         </select>

@@ -71,5 +71,17 @@ class TipoausentismoSeeder extends Seeder
             'created_at' => now(),
             'updated_at' => now()
         ]);
+
+        DB::table('tipoausentismos')->insert([
+            'name' => 'Permiso no remunerado',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
+
+        DB::table('tipoausentismos')->insert([
+            'name' => 'Permiso remunerado',
+            'created_at' => now(),
+            'updated_at' => now()
+        ]);
     }
 }

@@ -105,7 +105,7 @@ class EmpleadoController extends AppBaseController
 
             return redirect(route('empleados.index'));
         }
-
+        
         return view('empleados.edit', ['empleado' => $empleado, 'cargo' => $cargo, 'sede' => $sede, 'tipoVinculacion' => $tipoVinculacion]);
     }
 

@@ -70,11 +70,11 @@ class Empleado extends Model
         'telefono' => 'integer',
         'correoelectronico' => 'string',
         'id_tipovinculacion' => 'integer',
-        'fechadenacimiento' => 'date',
+        'fechadenacimiento' => 'datetime:m-d-Y',
         'salario' => 'float',
         'id_cargo' => 'integer',
         'id_sede' => 'integer',
-        'fechadeingreso' => 'date',
+        'fechadeingreso' => 'datetime:m-d-Y',
         'estado' => 'string',
         'genero' => 'string'
     ];

@@ -26,11 +26,12 @@
                     <label>Grado* </label>
                     <select name="Grado" id="grado" class="form-control">
                     <option value=""></option>
+                    <option value="LEVE">N/A</option>
                     <option value="LEVE">LEVE</option>
                     <option value="SEVERO">SEVERO</option>
                     <option value="MORTAL">MORTAL</option>
                     </select>                
-                    <label>Observacion* </label>
+                    <label>Observacion</label>
                     <input type="text" name="observacion" class="form-control">
                     </div>
                     <!-- Submit Field -->

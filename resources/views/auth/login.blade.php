@@ -35,7 +35,7 @@
 <body class="hold-transition login-page" background="img/fondo.png">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }} " ><img src="https://www.previser.com.co/wp-content/uploads/2016/10/logo-menu.png" alt="Prev"></a>
+        <a href="{{ url('/home') }} " ><img src="http://www.previser.com.co/wp-content/uploads/2016/10/logo-menu2.png" alt="Prev"></a>
     </div>
 
     <!-- /.login-logo -->

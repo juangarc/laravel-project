@@ -77,8 +77,7 @@ class Ausentismo extends Model
         'fecha_inicio' => 'required',
         'tiempo_ausencia' => 'required',
         'costo_ausencia' =>'required',
-        'Grado' => 'required',
-        'observacion' => 'required'
+        'Grado' => 'required'
         
     ];
 
