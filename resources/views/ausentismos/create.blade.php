@@ -13,9 +13,7 @@
             <div class="box-body">
                 <div class="row">
                     {!! Form::open(['route' => 'ausentismos.store']) !!}
-
-                        @include('ausentismos.fields')
-
+                        @include('ausentismos.fields1')
                     {!! Form::close() !!}
                 </div>
             </div>

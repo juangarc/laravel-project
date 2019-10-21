@@ -94,16 +94,18 @@ class AusentismoController extends AppBaseController
      */
     public function edit($id)
     {
-        $empleado = Empleado::all();
+       
+        
         $tipoausentismos = Tipoausentismo::all();
         $ausentismo = $this->ausentismoRepository->findWithoutFail($id);
+        $empleado = Empleado::find($ausentismo->id_empleado);
 
-        if (empty($ausentismo)) {
+        if (empty($ausentismo)) { 
             Flash::error('Ausentismo not found');
 
             return redirect(route('ausentismos.index'));
         }
-
+        //var_dump($empleado["name"] . " " . $empleado["apellido"]);
         return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos, 'empleado' => $empleado]);
     }
 
