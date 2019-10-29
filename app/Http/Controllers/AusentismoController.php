@@ -94,10 +94,9 @@ class AusentismoController extends AppBaseController
      */
     public function edit($id)
     {
-       
-        
         $tipoausentismos = Tipoausentismo::all();
         $ausentismo = $this->ausentismoRepository->findWithoutFail($id);
+        $tipoAusentismo = Tipoausentismo::find($ausentismo->id_tipoausentismo);
         $empleado = Empleado::find($ausentismo->id_empleado);
 
         if (empty($ausentismo)) { 
@@ -105,8 +104,9 @@ class AusentismoController extends AppBaseController
 
             return redirect(route('ausentismos.index'));
         }
-        //var_dump($empleado["name"] . " " . $empleado["apellido"]);
-        return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos, 'empleado' => $empleado]);
+       // var_dump($tipoAusentismo["name"]);
+        return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos, 
+        'empleado' => $empleado, 'tipoAusentismo' => $tipoAusentismo]);
     }
 
     /**
@@ -163,5 +163,11 @@ class AusentismoController extends AppBaseController
        $employ = Empleado::where('identificacion', '=', $id)->first()->toArray();
     //    var_dump($employ);
        echo json_encode($employ);
+   }
+
+   public function showDataEmployName ($name) {
+       $employ = Empleado::where('name', 'like', "%$name%")->get()->toArray();
+       echo json_encode($employ);
+
    }
 }
