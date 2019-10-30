@@ -28,7 +28,8 @@ class AusentismoRepository extends BaseRepository
         'tiempo_ausencia',
         'costo_ausencia',
         'Grado',
-        'observacion'
+        'observacion',
+        'id_cie10'
     ];
 
     /**

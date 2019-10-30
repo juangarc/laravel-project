@@ -99,6 +99,7 @@ class AusentismoController extends AppBaseController
         $ausentismo = $this->ausentismoRepository->findWithoutFail($id);
         $tipoAusentismo = Tipoausentismo::find($ausentismo->id_tipoausentismo);
         $empleado = Empleado::find($ausentismo->id_empleado);
+        $cie = cie10::find($ausentismo->id_cie10);
 
         if (empty($ausentismo)) { 
             Flash::error('Ausentismo not found');
@@ -107,7 +108,7 @@ class AusentismoController extends AppBaseController
         }
        // var_dump($tipoAusentismo["name"]);
         return view('ausentismos.edit', ['ausentismo' => $ausentismo , 'tipoausentismos' => $tipoausentismos, 
-        'empleado' => $empleado, 'tipoAusentismo' => $tipoAusentismo]);
+        'empleado' => $empleado, 'tipoAusentismo' => $tipoAusentismo, 'cie' => $cie]);
     }
 
     /**

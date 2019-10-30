@@ -45,7 +45,9 @@ class Ausentismo extends Model
         'tiempo_ausencia',
         'costo_ausencia',
         'Grado',
-        'observacion'
+        'observacion',
+        'id_cie10'
+
     ];
 
     /**
@@ -62,7 +64,8 @@ class Ausentismo extends Model
         'tiempo_ausencia' => 'integer',
         'costo_ausencia' => 'float',
         'Grado' => 'string',
-        'observacion' => 'string'
+        'observacion' => 'string',
+        'id_cie10' => 'integer'
     ];
 
     /**
@@ -77,7 +80,8 @@ class Ausentismo extends Model
         'fecha_inicio' => 'required',
         'tiempo_ausencia' => 'required',
         'costo_ausencia' =>'required',
-        'Grado' => 'required'
+        'Grado' => 'required',
+        'id_cie10' => 'required'
         
     ];
 

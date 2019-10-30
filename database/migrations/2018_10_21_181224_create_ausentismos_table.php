@@ -25,6 +25,8 @@ class CreateAusentismosTable extends Migration
             $table->double('costo_ausencia');
             $table->enum('Grado',['N/A','LEVE','SEVERO','MORTAL']);
             $table->text('observacion',100)->nullable();
+            $table->integer('id_cie10')->unsigned();
+            $table->foreign('id_cie10')->references('id')->on('cie10s');
             $table->unique('id');
 
             

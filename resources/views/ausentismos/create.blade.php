@@ -102,7 +102,7 @@
                                 $('#costo_ausencia').val(data.salario);
                                 $('#iden').val(data.id);
                                 $('#myModal').modal('hide');
-                            }
+                            } 
                         });
                     });
                 }

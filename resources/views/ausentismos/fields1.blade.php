@@ -67,7 +67,7 @@
             </div>
             <div class="modal-body" id="getCode">
                 <div>
-                    <ul id="resultingTeams">
+                    <ul id="resultingTeams" style="cursor:pointer">
                     </ul>
                 </div>
             </div>
