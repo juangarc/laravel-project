@@ -47,6 +47,8 @@ Route::get('/prueba2/{id}', 'SolicitudController@showDataEmploy');
 
 Route::get('/prueba3/{name}', 'AusentismoController@showDataEmployName');
 
+Route::get('/cie/{id}', 'AusentismoController@showDataCie10');
+
 Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('instituciones', 'InstitucionesController');
 

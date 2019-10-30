@@ -12,8 +12,16 @@ class Cie10 extends Migration
      * @return void
      */
     public function up()
-    {
-        //
+    { 
+        Schema::create('cie10s', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('codigo', 20);
+            $table->text('descripcion', 100);
+            $table->unique('id');
+
+            $table->timestamps();
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -23,6 +31,6 @@ class Cie10 extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('cie10s');
     }
 }

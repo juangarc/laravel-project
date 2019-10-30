@@ -11,6 +11,7 @@ use Flash;
 use App\Http\Controllers\AppBaseController;
 use Response;
 use App\Models\Empleado;
+use App\cie10;
 use App\Models\TipoAusentismo;
 
 
@@ -170,4 +171,11 @@ class AusentismoController extends AppBaseController
        echo json_encode($employ);
 
    }
+
+   public function showDataCie10 ($id)
+   {
+      $cie = cie10::where('codigo', '=', $id)->first()->toArray();
+       /* var_dump($cie); */
+      echo json_encode($cie);
+  }
 }

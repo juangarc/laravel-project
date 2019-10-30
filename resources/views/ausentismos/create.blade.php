@@ -30,6 +30,24 @@
             console.log("hola")
     });
      */
+
+    function getCie10() {
+            var codigo = document.getElementById('codigoCie')
+            product_id = String(codigo.value);
+            $.ajax({
+                //headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                type: 'GET',
+                url: '/cie/'+ product_id,
+                dataType: 'json',
+                success: function(data) {
+                    //console.log(data.name)
+                    $('#descripcionCie').val(data.descripcion);
+                    $('#ci').val(data.id);
+                }
+            });
+    }
+        
+
     function getMessage() {
         if ($('#check1').prop('checked')) {
             var codigo = document.getElementById('codigo')
