@@ -45,8 +45,7 @@
     <a href="{!! route('empleados.index') !!}"><i class="fa fa-group"></i><span>Empleados</span></a>
 </li>
 @endhasanyrole
-@hasanyrole('admin')
-<li class="treeview">
+<!-- <li class="treeview">
         <a href="#">
             <i class="fa fa-dashboard"></i> <span>Modulo de citas</span>
             <span class="pull-right-container">
@@ -85,18 +84,17 @@
                 <a href="{!! route('beneficiarios.index') !!}"><i class="fa fa-edit"></i><span>Beneficiarios</span></a>
             </li>
           </ul>
-</li>
-@endhasanyrole
+</li> -->
 @hasanyrole('admin|user')
 <li class="{{ Request::is('estadisticas*') ? 'active' : '' }}">
     <a href="{!! route('estadisticas.index') !!}"><i class="fa fa-edit"></i><span>Estadisticas</span></a>
 </li>
 @endhasanyrole
-@hasanyrole('admin|user|costumer')
-<li class="{{ Request::is('solicituds*') ? 'active' : '' }}">
+
+<!-- <li class="{{ Request::is('solicituds*') ? 'active' : '' }}">
     <a href="{!! route('solicituds.index') !!}"><i class="fa fa-edit"></i><span>Solicitudes</span></a>
 </li>
-@endhasanyrole
+ -->
 
 
 

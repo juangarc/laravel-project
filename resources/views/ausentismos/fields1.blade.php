@@ -1,6 +1,6 @@
 <div class="container">
     <label>Fecha de Registro* </label>
-    <input type="date" name="fecha_registro" value="fecha_registro" class="form-control">
+    <input type="date" name="fecha_registro" value="fecha_registro" class="form-control"><br>
     <label>Consultar Empleado por:* </label><br>
     <label for="" style="margin-right:20px;"><input type="checkbox" id="check1" OnClick="Disable(1);"> Cedula</label> <label for=""><input type="checkbox" id="check2" OnClick="Disable(2);"> Nombre</label><br>
     <div class="form-group col-sm-3">
@@ -20,22 +20,20 @@
         @foreach ($tipoausentismos as $tipoausentismo)
         <option value="{{ $tipoausentismo['id'] }}">{{ $tipoausentismo['name'] }}</option>
         @endforeach
-        </select> 
-        <br>
-        <div class="form-group col-sm-3">
-        <label >Codigo CIE10* </label>
-        <input type="text" class="form-control" id="codigoCie">
-        </div>
-        <div class="form-group col-sm-9">
+    </select>
+    <br>
+    <div class="form-group col-sm-3">
+        <label>Codigo CIE10* </label>
+        <input type="text" class="form-control" id="codigoCie" onkeyup="this.value = this.value.toUpperCase();">
+    </div>
+    <div class="form-group col-sm-9">
         <label>Descripción* </label>
         <input type="text" class="form-control" id="descripcionCie" onkeyup="this.value = this.value.toUpperCase();">
-        </div>
+    </div>
     <input type="button" class="btn btn-primary openBtn" value="Buscar" onclick="getCie10();">
     <br>
     <input name="id_cie10" type="hidden" id="ci">
-
-
-   
+    <br>
     <label>Fecha de Inicio* </label>
     <input type="date" name="fecha_inicio" class="form-control">
     <label>Tiempo de Ausencia / Horas* </label>
