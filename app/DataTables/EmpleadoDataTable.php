@@ -75,13 +75,13 @@ class EmpleadoDataTable extends DataTable
              'data' => 'name',
              'name' => 'name'],
             'apellido',
-            'telefono',
-            ['title' => 'Correo Electronico',
+            /* 'telefono', */
+            /* ['title' => 'Correo Electronico',
              'data' => 'correoelectronico',
              'name' => 'correoelectronico'],
             ['title' => 'Tipo de Vinculacion',
              'data' => 'tipo_vinculacion.name',
-             'name' => 'id_tipovinculacion'],
+             'name' => 'id_tipovinculacion'], */
             // 'fechadenacimiento',
             // 'salario',
             ['title' => 'Cargo',

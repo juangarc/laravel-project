@@ -87,7 +87,7 @@
 <div class="form-group col-sm-6">
         <label>Estado </label>
         <select name="estado" id="estado" class="form-control">
-        <option value=""></option>
+        <option value="{{$empleado->estado}}">{{$empleado->estado}}</option>
         <option value="ACTIVO">ACTIVO</option>
         <option value="INACTIVO">INACTIVO</option>
         </select>
@@ -98,6 +98,7 @@
         <label>Genero </label>
         <select name="genero" id="genero" value="{{$empleado->genero}}" class="form-control">
       <!  <option value=""></option>
+        <option value="{{$empleado->genero}}">{{$empleado->genero}}</option>
         <option value="MASCULINO">MASCULINO</option>
         <option value="FEMENINO">FEMENINO</option>
         </select>
