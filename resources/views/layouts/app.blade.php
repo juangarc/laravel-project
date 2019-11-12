@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>AserWeb</title>
+    <title>Aserweb</title>
     
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
 
@@ -26,6 +26,7 @@
 
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="icon" type="image/png" href="img/logo.png"/>
 
     @yield('css')
 </head>
