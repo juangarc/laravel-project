@@ -17,7 +17,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property integer identificacion
  * @property string name
  * @property string apellido
- * @property integer telefono
+ * @property string telefono
  * @property string correoelectronico
  * @property integer id_tipovinculacion
  * @property date fechadenacimiento
@@ -67,7 +67,7 @@ class Empleado extends Model
         'identificacion' => 'integer',
         'name' => 'string',
         'apellido' => 'string',
-        'telefono' => 'integer',
+        'telefono' => 'string',
         'correoelectronico' => 'string',
         'id_tipovinculacion' => 'integer',
         'fechadenacimiento' => 'datetime:m-d-Y',
@@ -88,7 +88,7 @@ class Empleado extends Model
         'identificacion' => 'required',
         'name' => 'required',
         'apellido' => 'required',
-        'telefono' => 'numeric',
+        'telefono' => 'required',
         'correoelectronico' => 'required',
         'id_tipovinculacion' => 'required',
         'fechadenacimiento' => 'required',

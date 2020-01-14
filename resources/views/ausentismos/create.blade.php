@@ -21,6 +21,9 @@
 </div>
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 <script>
+
+document.getElementById('datePicker').valueAsDate = new Date();
+
     /*  $('#resultingTeams li').on('click', function() {
         console.log('algo'); // gets text contents of clicked li
     }); */

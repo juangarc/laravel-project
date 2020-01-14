@@ -19,7 +19,7 @@
 <!-- Telefono Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('telefono', 'Telefono:') !!}
-    {!! Form::number('telefono', null, ['class' => 'form-control']) !!}
+    {!! Form::text('telefono', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Correoelectronico Field -->

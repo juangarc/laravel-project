@@ -1,6 +1,6 @@
 <div class="container">
     <label>Fecha de Registro* </label>
-    <input type="date" name="fecha_registro" value="fecha_registro" class="form-control"><br>
+    <input type="date" name="fecha_registro" id="datePicker" value="fecha_registro" class="form-control"><br>
     <label>Consultar Empleado por:* </label><br>
     <label for="" style="margin-right:20px;"><input type="checkbox" id="check1" OnClick="Disable(1);"> Cedula</label> <label for=""><input type="checkbox" id="check2" OnClick="Disable(2);"> Nombre</label><br>
     <div class="form-group col-sm-3">
@@ -28,7 +28,7 @@
     </div>
     <div class="form-group col-sm-9">
         <label>Descripción* </label>
-        <input type="text" class="form-control" id="descripcionCie" onkeyup="this.value = this.value.toUpperCase();">
+        <input type="text" class="form-control" id="descripcionCie" onkeyup="this.value = this.value.toUpperCase();" disabled>
     </div>
     <input type="button" class="btn btn-primary openBtn" value="Buscar" onclick="getCie10();">
     <br>

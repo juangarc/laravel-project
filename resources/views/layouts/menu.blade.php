@@ -1,4 +1,4 @@
-@hasanyrole('admin')
+@hasanyrole('admin|user')
 <li class="treeview">
         <a href="#">
             <i class="fa fa-cog"></i> <span>Parametrizacion</span>
