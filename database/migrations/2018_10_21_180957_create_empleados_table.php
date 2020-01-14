@@ -18,7 +18,7 @@ class CreateEmpleadosTable extends Migration
             $table->integer('identificacion');
             $table->string('name',50);
             $table->string('apellido',50);
-            $table->integer('telefono');
+            $table->string('telefono', 20);
             $table->string('correoelectronico',50);
             $table->integer('id_tipovinculacion')->unsigned();
             $table->foreign('id_tipovinculacion')->references('id')->on('tipo_vinculacions');
