@@ -27,48 +27,57 @@ class HomeController extends Controller
      */
     public function index()
     {
-           $users = Ausentismo::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"),date('Y'))
-                       ->get();
-                  
-                   // Heroku  
-          //           $users = Ausentismo::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
-            //          ->get();          
+        $users = Ausentismo::where(DB::raw("(DATE_FORMAT(created_at,'%Y'))"), date('Y'))
+            ->get();
+
+        // Heroku  
+        //           $users = Ausentismo::where(DB::raw("(to_char(created_at,'YYYY'))"),date('Y'))
+        //          ->get();          
         $sede = DB::table('empleados')
-        ->join('sedes', 'sedes.id','=', 'empleados.id_sede')
-        ->select('empleados.*', 'sedes.name as nameSede')->get();
+            ->join('sedes', 'sedes.id', '=', 'empleados.id_sede')
+            ->select('empleados.*', 'sedes.name as nameSede')->get();
         $total = DB::table('ausentismos')
-        ->join('empleados', 'empleados.id','=', 'ausentismos.id_empleado')
-        ->join('sedes', 'sedes.id','=', 'empleados.id_sede')
-        ->select('ausentismos.*', 'sedes.name as nameSede')->get();
+            ->join('empleados', 'empleados.id', '=', 'ausentismos.id_empleado')
+            ->join('sedes', 'sedes.id', '=', 'empleados.id_sede')
+            ->select('ausentismos.*', 'sedes.name as nameSede')->get();
+        $enfermedad = DB::table('ausentismos')
+            ->join('tipoausentismos', 'tipoausentismos.id', '=', 'ausentismos.id_tipoausentismo')
+            ->select('ausentismos.*', 'tipoausentismos.name as tipo')->get();
 
         $chart = Charts::database($users, 'bar', 'highcharts')
-			      ->title("Evaluacion de ausentismos")
-			      ->elementLabel("Total Ausentismos")
-			      ->dimensions(500, 500)
-			      ->responsive(true)
-			      ->groupByMonth(date('Y'), true);
-	  
-		$pie  =	 Charts::database($total, 'pie', 'highcharts')
-				    ->title('Total de ausentismos por Sede')
-				    ->elementLabel("Total Ausentismos Por sede")
-                    ->dimensions(1000,500)
-                    ->groupBy('nameSede')
-                    ->responsive(true);
-		$donut = Charts::database($total, 'donut', 'highcharts')
-					->title('My nice chart')
-                    ->elementLabel("Total Ausentismos Por sede")
-                    ->dimensions(1000,500)
-                    ->groupBy('nameSede')
-					->responsive(true);
+            ->title("Evaluacion de ausentismos")
+            ->elementLabel("Total Ausentismos")
+            ->dimensions(500, 500)
+            ->responsive(true)
+            ->groupByMonth(date('Y'), true);
 
-		$geo = 	Charts::create('geo', 'highcharts')
-					->title('My nice chart')
-					->elementLabel('My nice label')
-					->labels(['CO', 'US'])
-					->colors(['#C5CAE9', '#283593'])
-					->values([5,10,20])
-					->dimensions(1000,500)
-					->responsive(false);
-        return view('home',compact('chart','pie', 'donut', 'geo'));
+        $pie  =     Charts::database($total, 'pie', 'highcharts')
+            ->title('Total de ausentismos por Sede')
+            ->elementLabel("Total Ausentismos Por sede")
+            ->dimensions(1000, 500)
+            ->groupBy('nameSede')
+            ->responsive(true);
+        $donut = Charts::database($total, 'donut', 'highcharts')
+            ->title('Total de ausentismos por Sede')
+            ->elementLabel("Total Ausentismos Por sede")
+            ->dimensions(1000, 500)
+            ->groupBy('nameSede')
+            ->responsive(true);
+        $donutTipoAusentismo = Charts::database($enfermedad, 'donut', 'highcharts')
+            ->title('Tipos de ausentismo')
+            ->elementLabel("Total Ausentismos Por tipo de ausentismo")
+            ->dimensions(1000, 500)
+            ->groupBy('tipo')
+            ->responsive(true);
+
+        $geo =     Charts::create('geo', 'highcharts')
+            ->title('My nice chart')
+            ->elementLabel('My nice label')
+            ->labels(['CO', 'US'])
+            ->colors(['#C5CAE9', '#283593'])
+            ->values([5, 10, 20])
+            ->dimensions(1000, 500)
+            ->responsive(false);
+        return view('home', compact('chart', 'pie', 'donut', 'geo', 'donutTipoAusentismo'));
     }
 }

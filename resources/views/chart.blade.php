@@ -11,8 +11,10 @@
                         <div class="caja_inline" style="float:left;width: 50%;"> {!! $pie->html() !!}</div>
                     </div>
                     <div class="content">
-                    <div class="caja_inline" style="float:left;width: 50%;">{!! $donut->html() !!}</div>
+                        <div class="caja_inline" style="float:left;width: 50%;">{!! $donut->html() !!}</div>
                         <hr>
+
+                        <div class="caja_inline" style="float:left;width: 50%;">{!! $donutTipoAusentismo->html() !!}</div>
                     </div>
 
                 </div>
@@ -31,5 +33,6 @@
 {!! $pie->script() !!}
 
 {!! $donut->script() !!}
+{!! $donutTipoAusentismo->script() !!}
 
 {!! $geo->script() !!}
