@@ -11,7 +11,7 @@
                         <div class="caja_inline" style="float:left;width: 50%;"> {!! $pie->html() !!}</div>
                     </div>
                     <div class="content">
-                    <div class="caja_inline" style="float:left;width: 30%;">{!! $donut->html() !!}</div>
+                    <div class="caja_inline" style="float:left;width: 50%;">{!! $donut->html() !!}</div>
                         <hr>
                     </div>
 
