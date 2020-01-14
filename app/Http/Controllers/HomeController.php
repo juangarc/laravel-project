@@ -54,12 +54,12 @@ class HomeController extends Controller
                     ->dimensions(1000,500)
                     ->groupBy('nameSede')
                     ->responsive(true);
-		$donut = Charts::create('donut', 'highcharts')
+		$donut = Charts::database($total, 'donut', 'highcharts')
 					->title('My nice chart')
-					->labels(['First', 'Second', 'Third'])
-					->values([5,10,20])
-					->dimensions(1000,500)
-					->responsive(false);
+                    ->elementLabel("Total Ausentismos Por sede")
+                    ->dimensions(1000,500)
+                    ->groupBy('nameSede')
+					->responsive(true);
 
 		$geo = 	Charts::create('geo', 'highcharts')
 					->title('My nice chart')

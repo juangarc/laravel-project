@@ -5,12 +5,18 @@
                 <div class="panel-heading">Estadisticas</div>
 
                 <div class="panel-body">
-                    {!! $chart->html() !!}
-                </div>
+                    <div class="content">
+                        <div class="caja_inline" style="float:left;width: 50%;"> {!! $chart->html() !!}</div>
+                        <hr>
+                        <div class="caja_inline" style="float:left;width: 50%;"> {!! $pie->html() !!}</div>
+                    </div>
+                    <div class="content">
+                    <div class="caja_inline" style="float:left;width: 30%;">{!! $donut->html() !!}</div>
+                        <hr>
+                    </div>
 
-                <hr>
-               {!! $pie->html() !!}
-                 <!-- <hr>
+                </div>
+                <!-- <hr>
                {!! $donut->html() !!}
 
                 <hr>
