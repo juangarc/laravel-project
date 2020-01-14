@@ -20,7 +20,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
-Route::group(['middleware' => ['role:admin']], function () {
+Route::group(['middleware' => ['role:admin|user']], function () {
 Route::resource('cargos', 'CargoController');
 
 Route::resource('sedes', 'SedeController');
